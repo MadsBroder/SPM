@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPI Data Flow Visualization</title>
+    <style>
+        :root {
+            --node-l1: #003B5C; --node-l2: #005A8C; --node-l3: #0077B6;
+            --node-l4: #48A2D4; --node-l5: #87CEEB;
+            --manual-bg: #FFEBEB; --manual-border: #E57373;
+            --auto-bg: #E3F2FD; --auto-border: #64B5F6;
+            --disabled-bg: #F5F5F5;
+            --text-light: #FFFFFF; --text-dark: #333333;
+            --status-review-bg: #FFEBEE; --status-review-text: #D32F2F;
+            --status-approved-bg: #E8F5E9; --status-approved-text: #388E3C;
+        }
+        html, body {
+            height: 100vh; max-height: 100vh; overflow: hidden; margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .page-container { display: flex; flex-direction: column; height: 100%; }
+        .page-header, .page-footer {
+            flex-shrink: 0; background-color: #f8f9fa; padding: 15px; z-index: 10;
+        }
+        .page-header { position: relative; border-bottom: 1px solid #e0e0e0; }
+        .page-footer { border-top: 1px solid #e0e0e0; }
+        .page-main { flex-grow: 1; overflow-y: auto; overflow-x: hidden; position: relative; }
+        h1 { color: var(--node-l1); text-align: center; margin: 0 0 15px 0; }
+        .controls { display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; }
+        .controls label, .controls select, .controls .toggle-btn { font-size: 14px; }
+        .toggle-container { display: flex; gap: 10px; }
+        .toggle-btn { padding: 8px 12px; border-radius: 8px; border: 1px solid #ccc; cursor: pointer; background-color: white; }
+        .toggle-btn.active { background-color: var(--node-l3); color: var(--text-light); border-color: var(--node-l3); }
+        .status-indicator {
+            position: absolute; top: 15px; right: 15px; padding: 6px 12px;
+            border-radius: 16px; font-size: 12px; font-weight: 600;
+        }
+        .status-indicator.under-review { background-color: var(--status-review-bg); color: var(--status-review-text); }
+        .status-indicator.approved { background-color: var(--status-approved-bg); color: var(--status-approved-text); }
+        .hierarchy-container {
+            display: flex; flex-direction: column; align-items: center;
+            padding: 20px 10px; position: relative;
+        }
+        #connector-svg {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 1;
+        }
+        .hierarchy-level {
+            display: flex; justify-content: center; flex-wrap: wrap;
+            gap: 20px; width: 100%; margin-bottom: 40px;
+        }
+        .node-wrapper {
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            position: relative; z-index: 2; background: #f8f9fa; padding: 0 5px;
+        }
+        .node {
+            padding: 8px 15px; border-radius: 8px; color: var(--text-light);
+            font-weight: 500; width: 180px; text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .node-l-1 { background-color: #003B5C; } .node-l-2 { background-color: #005A8C; }
+        .node-l-3 { background-color: #0077B6; } .node-l-4 { background-color: #48A2D4; }
+        .node-l-5 { background-color: #87CEEB; } .node-l-6 { background-color: #00b4d8; }
+        .node-l-7 { background-color: #48cae4; } .node-l-8 { background-color: #90e0ef; }
+        .node.disabled { background-color: #BDBDBD; }
+        .info-box {
+            padding: 10px; border: 2px dashed; border-radius: 8px;
+            width: 180px; min-height: 70px;
+            display: flex; flex-direction: column; justify-content: center;
+            position: relative; text-align: center;
+        }
+        .info-box::before {
+            content: attr(data-type); position: absolute; top: -12px; left: 50%;
+            transform: translateX(-50%); background: #f8f9fa; padding: 2px 8px;
+            border-radius: 12px; font-size: 12px; font-weight: bold;
+            border: 1px solid #e0e0e0; white-space: nowrap;
+        }
+        .info-box.manual { background-color: var(--manual-bg); border-color: var(--manual-border); }
+        .info-box.auto { background-color: var(--auto-bg); border-color: var(--auto-border); }
+        .info-box.disabled { background-color: var(--disabled-bg); border-color: #ddd; }
+        .info-box p { margin: 2px 0; white-space: normal; }
+        .info-box .maintext { font-size: 12px; }
+        .info-box .subtext { font-size: 11px; color: #666; margin-top: 4px; }
+        #kpi-details-footer { background-color: white; padding: 20px; }
+        #kpi-details-footer h2 { margin-top: 0; color: var(--node-l1); }
+        .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .detail-item strong { display: block; color: var(--node-l3); margin-bottom: 4px; }
+        .loader { text-align: center; padding: 40px; font-size: 18px; color: #666; }
+    </style>
+</head>
+<body>
+<div class="page-container">
+    <header class="page-header">
+        <div id="status-indicator" class="status-indicator"></div>
+        <h1>KPI Data Flow Visualization</h1>
+        <div class="controls">
+            <label for="kpi-select">Select KPI:</label>
+            <select id="kpi-select">
+                <!-- Options will be dynamically populated -->
+            </select>
+            <div class="toggle-container">
+                <button class="toggle-btn active" data-view="budget">Budget Targets</button>
+                <button class="toggle-btn" data-view="running">Running Targets</button>
+                <button class="toggle-btn" data-view="manual">Manual Input</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <div id="hierarchy-container" class="hierarchy-container">
+            <svg id="connector-svg"></svg>
+            <div id="hierarchy-nodes">
+                 <div class="loader">Loading KPI data...</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div id="kpi-details-footer"></div>
+    </footer>
+</div>
+
+<script>
+    // This variable will hold the data processed from the fetched CSV files.
+    let kpiDataStore = {};
+
+    // HIERARCHY TREE: Defines the static structure of the organization.
+    const hierarchyTree = {
+        id: 'n-company',
+        name: 'Company',
+        type: 'company',
+        level: 1,
+        children: [
+            { id: 'n-non-div', name: 'Non Division', type: 'division', level: 2, children: [] },
+            { id: 'n-div1', name: 'Division 1', type: 'division', level: 2, children: [] },
+            {
+                id: 'n-div2',
+                name: 'Division 2',
+                type: 'division',
+                level: 2,
+                children: [
+                    { id: 'n-area-a', name: 'Division Area A', type: 'area', level: 3, children: [] },
+                    {
+                        id: 'n-area-b',
+                        name: 'Division Area B',
+                        type: 'area',
+                        level: 3,
+                        children: [
+                            { id: 'n-reg1', name: 'Regional Division 1', type: 'regional', level: 4, children: [] },
+                            {
+                                id: 'n-reg2',
+                                name: 'Regional Division 2',
+                                type: 'regional',
+                                level: 4,
+                                children: [
+                                    { id: 'n-plant-a', name: 'Plant A', type: 'plant', level: 5, children: [] },
+                                    {
+                                        id: 'n-plant-b',
+                                        name: 'Plant B',
+                                        type: 'plant',
+                                        level: 5,
+                                        children: [
+                                            { id: 'n-pbo', name: 'Plant B Other*', type: 'plant_other_group', level: 6, children: [] },
+                                            { id: 'n-apu1', name: 'APU 1', type: 'apu', level: 6, children: [] },
+                                            {
+                                                id: 'n-apu2',
+                                                name: 'APU 2',
+                                                type: 'apu',
+                                                level: 6,
+                                                children: [
+                                                    { id: 'n-apu2o', name: 'APU 2 Other**', type: 'apu_other_group', level: 7, children: [] },
+                                                    { id: 'n-totem-a', name: 'Totem A', type: 'totem', level: 7, children: [] },
+                                                    {
+                                                        id: 'n-totem-b',
+                                                        name: 'Totem B',
+                                                        type: 'totem',
+                                                        level: 7,
+                                                        children: [
+                                                            {
+                                                                id: 'n-eg1',
+                                                                name: 'Equipment Group 1',
+                                                                type: 'equipment_group',
+                                                                level: 8,
+                                                                children: []
+                                                            },
+                                                            {
+                                                                id: 'n-eg2',
+                                                                name: 'Equipment Group 2',
+                                                                type: 'equipment_group',
+                                                                level: 8,
+                                                                children: [
+                                                                    { id: 'n-equip-b', name: 'Equipment B', type: 'equipment', level: 9, children: [] },
+                                                                    { id: 'n-equip-a', name: 'Equipment A', type: 'equipment', level: 9, children: [] }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    };
+    
+    // DOM Element references
+    const nodesContainer = document.getElementById('hierarchy-nodes');
+    const detailsFooter = document.getElementById('kpi-details-footer');
+    const kpiSelect = document.getElementById('kpi-select');
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    const statusIndicator = document.getElementById('status-indicator');
+    const mainContent = document.querySelector('.page-main');
+    let currentView = 'budget';
+
+    /**
+     * Fetches a CSV file from a specified URL.
+     * @param {string} url - The URL of the CSV file.
+     * @returns {Promise<string>} A promise that resolves with the text content of the file.
+     */
+    async function fetchCsvData(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+        }
+        return response.text();
+    }
+
+    /**
+     * Parses a CSV string into an array of objects.
+     * @param {string} csvText - The CSV content as a string.
+     * @param {string} delimiter - The delimiter used in the CSV file.
+     * @returns {Array<Object>} An array of objects representing the CSV rows.
+     */
+    function parseCSV(csvText, delimiter = ',') {
+        const lines = csvText.trim().split('\r\n').filter(line => line);
+        const headers = lines[0].split(delimiter).map(h => h.trim());
+        const rows = [];
+
+        for (let i = 1; i < lines.length; i++) {
+            const values = lines[i].split(new RegExp(`${delimiter}(?=(?:(?:[^"]*"){2})*[^"]*$)`));
+            const rowObject = {};
+            headers.forEach((header, index) => {
+                let value = (values[index] || '').trim();
+                if (value.startsWith('"') && value.endsWith('"')) {
+                    value = value.substring(1, value.length - 1);
+                }
+                rowObject[header] = value;
+            });
+            rows.push(rowObject);
+        }
+        return rows;
+    }
+
+    /**
+     * Processes the fetched CSV data and populates the data store.
+     */
+    async function loadAndProcessData() {
+        try {
+            // Construct the raw GitHub content URLs
+            const user = "MadsBroder";
+            const repo = "SPM";
+            const branch = "main";
+            
+            const detailsFileUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/detailsCsvData.csv`;
+            const nodeFileUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/nodeCsvData.csv`;
+
+            // Fetch both CSV files concurrently
+            const [detailsCsvText, nodeCsvText] = await Promise.all([
+                fetchCsvData(detailsFileUrl),
+                fetchCsvData(nodeFileUrl)
+            ]);
+            
+            const detailsData = parseCSV(detailsCsvText, ';');
+            const nodeData = parseCSV(nodeCsvText, ';');
+            
+            const processedData = {};
+
+            // Process details and create the main structure
+            detailsData.forEach(detail => {
+                const kpiShortName = detail.kpi_short_name;
+                if (!processedData[kpiShortName]) {
+                    processedData[kpiShortName] = {
+                        kpi_expanded_name: detail.kpi_expanded_name
+                    };
+                }
+                const view = detail.view_id.toLowerCase();
+                processedData[kpiShortName][view] = {
+                    nodes: {},
+                    details: {
+                        title: detail.detail_title,
+                        status: {
+                            state: detail.status_state.toLowerCase().replace(' ', '-'),
+                            text: detail.status_text
+                        },
+                        inputValueType: detail.input_value_type,
+                        period: detail.period,
+                        functionalScope: detail.functional_scope,
+                        aggregationSplit: detail.aggregation_split,
+                        guardRails: detail.guard_rails
+                    }
+                };
+            });
+
+            // Process node data and populate the nodes within the structure
+            nodeData.forEach(node => {
+                const kpiShortName = node.kpi_short_name;
+                const view = node.view_id.toLowerCase();
+                if (processedData[kpiShortName] && processedData[kpiShortName][view]) {
+                    processedData[kpiShortName][view].nodes[node.node_type] = {
+                        type: node.input_type ? node.input_type.toLowerCase() : 'disabled',
+                        text: node.main_text,
+                        sub: node.sub_text
+                    };
+                }
+            });
+            
+            kpiDataStore = processedData;
+            
+            // Dynamically populate the KPI select dropdown in alphabetical order
+            const sortedKpis = Object.keys(kpiDataStore).sort((a, b) => {
+                const nameA = kpiDataStore[a].kpi_expanded_name.toLowerCase();
+                const nameB = kpiDataStore[b].kpi_expanded_name.toLowerCase();
+                if (nameA < nameB) return -1;
+                if (nameA > nameB) return 1;
+                return 0;
+            });
+
+            kpiSelect.innerHTML = sortedKpis.map(kpiShortName => 
+                `<option value="${kpiShortName}">${kpiDataStore[kpiShortName].kpi_expanded_name}</option>`
+            ).join('');
+
+            // Initial view update after successful data load
+            updateView();
+
+        } catch (error) {
+            console.error("Error loading or processing data:", error);
+            nodesContainer.innerHTML = `<p style="color:red; text-align:center;">Failed to load visualization data from GitHub. Please check the repository structure and file names. See console for details.</p>`;
+        }
+    }
+
+    /**
+     * Draws SVG connecting lines between parent and child nodes in the hierarchy.
+     */
+    function drawConnectingLines() {
+        const svg = document.getElementById('connector-svg');
+        const container = document.getElementById('hierarchy-container');
+        if (!svg || !container) return;
+        
+        svg.innerHTML = '';
+        svg.style.height = container.scrollHeight + 'px';
+
+        function draw(node) {
+            if (!node.children || node.children.length === 0) return;
+            const parentWrapper = document.querySelector(`[data-node-id='${node.id}']`);
+            if (!parentWrapper) return;
+            
+            const pX = parentWrapper.offsetLeft + parentWrapper.offsetWidth / 2;
+            const pY = parentWrapper.offsetTop + parentWrapper.offsetHeight;
+
+            let minX = Infinity, maxX = -Infinity;
+            const childElements = node.children.map(childNode => {
+                const childWrapper = document.querySelector(`[data-node-id='${childNode.id}']`);
+                if (childWrapper) {
+                    const cX = childWrapper.offsetLeft + childWrapper.offsetWidth / 2;
+                    minX = Math.min(minX, cX);
+                    maxX = Math.max(maxX, cX);
+                }
+                return childWrapper;
+            }).filter(Boolean);
+
+            if (!childElements.length) return; 
+
+            const busY = pY + 20;
+
+            const parentPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            parentPath.setAttribute('d', `M ${pX} ${pY} V ${busY}`);
+            parentPath.setAttribute('stroke', '#6c757d');
+            parentPath.setAttribute('stroke-width', '1.5');
+            parentPath.setAttribute('fill', 'none');
+            svg.appendChild(parentPath);
+            
+            if (childElements.length > 1 || Math.abs(pX - minX) > 1) {
+                const busPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                busPath.setAttribute('d', `M ${minX} ${busY} H ${maxX}`);
+                busPath.setAttribute('stroke', '#6c757d');
+                busPath.setAttribute('stroke-width', '1.5');
+                busPath.setAttribute('fill', 'none');
+                svg.appendChild(busPath);
+            }
+            
+            childElements.forEach(childWrapper => {
+                const cX = childWrapper.offsetLeft + childWrapper.offsetWidth / 2;
+                const cY = childWrapper.offsetTop;
+                const childPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                childPath.setAttribute('d', `M ${cX} ${busY} V ${cY}`);
+                childPath.setAttribute('stroke', '#6c757d');
+                childPath.setAttribute('stroke-width', '1.5');
+                childPath.setAttribute('fill', 'none');
+                svg.appendChild(childPath);
+            });
+            
+            node.children.forEach(draw);
+        }
+        draw(hierarchyTree);
+    }
+
+    /**
+     * Main function to update the entire view based on current selections.
+     */
+    function updateView() {
+        try {
+            if (Object.keys(kpiDataStore).length === 0) {
+                // Data is not loaded yet, do not render.
+                return;
+            }
+            const selectedKpi = kpiSelect.value;
+            if (!selectedKpi || !kpiDataStore[selectedKpi]) {
+                 nodesContainer.innerHTML = `<p style="text-align:center;">Select a KPI to begin.</p>`;
+                 return;
+            }
+
+            const kpi = kpiDataStore[selectedKpi];
+            const data = kpi[currentView];
+
+            if (!data || !data.nodes) {
+                nodesContainer.innerHTML = `<p style="color:red; text-align:center;">Error: Data for this view is not available.</p>`;
+                detailsFooter.innerHTML = '';
+                statusIndicator.style.display = 'none';
+                return;
+            }
+            
+            const levels = {};
+            function traverse(node) {
+                if (!levels[node.level]) levels[node.level] = [];
+                levels[node.level].push(node);
+                if (node.children) node.children.forEach(traverse);
+            }
+            traverse(hierarchyTree);
+
+            let finalHtml = '';
+            const sortedLevels = Object.keys(levels).sort((a, b) => a - b);
+            sortedLevels.forEach(level => {
+                const nodesHtml = levels[level].map(node => {
+                    const defaultNodeData = { type: 'disabled', text: 'Data not defined', sub: `For type: ${node.type}` };
+                    const nodeData = data.nodes[node.type] || defaultNodeData;
+
+                    const typeLabel = nodeData.type.charAt(0).toUpperCase() + nodeData.type.slice(1);
+                    const nodeColorClass = `node-l-${Math.min(node.level, 8)}`;
+                    return `
+                        <div class="node-wrapper" data-node-id="${node.id}">
+                            <div class="node ${nodeColorClass} ${nodeData.type === 'disabled' ? 'disabled' : ''}">${node.name}</div>
+                            <div class="info-box ${nodeData.type}" data-type="⚪ ${typeLabel}">
+                                <p class="maintext">${nodeData.text || ''}</p>
+                                ${nodeData.sub ? `<p class="subtext">${nodeData.sub}</p>` : ''}
+                            </div>
+                        </div>`;
+                }).join('');
+                finalHtml += `<div class="hierarchy-level">${nodesHtml}</div>`;
+            });
+            nodesContainer.innerHTML = finalHtml;
+            
+            renderFooterDetails(data.details);
+            updateStatus(data.details.status);
+
+            document.querySelectorAll('.info-box.manual').forEach(el => el.dataset.type = '🔴 Manual');
+            document.querySelectorAll('.info-box.auto').forEach(el => el.dataset.type = '🔵 Automatic');
+            
+            requestAnimationFrame(() => setTimeout(drawConnectingLines, 50));
+        } catch (error) {
+            console.error("A critical error occurred during view update:", error);
+            nodesContainer.innerHTML = `<p style="color:red; text-align:center;">A critical error occurred. Please check the console for details.</p>`;
+        }
+    }
+    
+    function updateStatus(status) {
+        if (!status || !status.state) {
+            statusIndicator.style.display = 'none';
+            return;
+        }
+        statusIndicator.style.display = 'inline-block';
+        statusIndicator.textContent = status.text;
+        statusIndicator.className = 'status-indicator';
+        statusIndicator.classList.add(status.state);
+    }
+
+    function renderFooterDetails(details) {
+        detailsFooter.innerHTML = `
+            <h2>KPI Details: ${details.title || ''}</h2>
+            <div class="details-grid">
+                <div class="detail-item"><strong>Input Value Type</strong> ${details.inputValueType || 'N/A'}</div>
+                <div class="detail-item"><strong>Period</strong> ${details.period || 'N/A'}</div>
+                <div class="detail-item"><strong>Functional Scope</strong> ${details.functionalScope || 'N/A'}</div>
+                <div class="detail-item"><strong>Aggregation/Split</strong> ${details.aggregationSplit || 'N/A'}</div>
+                <div class="detail-item"><strong>Guard Rails</strong> ${details.guardRails || 'N/A'}</div>
+            </div>`;
+    }
+
+    function handleToggleClick(e) {
+        toggleButtons.forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+        currentView = e.target.dataset.view;
+        updateView();
+    }
+
+    // --- EVENT LISTENERS ---
+    kpiSelect.addEventListener('change', updateView);
+    toggleButtons.forEach(btn => btn.addEventListener('click', handleToggleClick));
+    
+    new ResizeObserver(drawConnectingLines).observe(nodesContainer);
+    mainContent.addEventListener('scroll', drawConnectingLines);
+    
+    // --- INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', () => {
+        loadAndProcessData();
+    });
+</script>
+</body>
+</html>
