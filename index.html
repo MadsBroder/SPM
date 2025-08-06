@@ -25,7 +25,7 @@
             flex-shrink: 0; background-color: #f8f9fa; padding: 15px; z-index: 10;
         }
         .page-header { position: relative; border-bottom: 1px solid #e0e0e0; }
-        .page-footer { border-top: 1px solid #e0e0e0; }
+        .page-footer { border-top: 1px solid #e0e0e0; position: relative; }
         .page-main { flex-grow: 1; overflow-y: auto; overflow-x: hidden; position: relative; }
         h1 { color: var(--node-l1); text-align: center; margin: 0 0 15px 0; }
         .controls { display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; }
@@ -148,6 +148,13 @@
             visibility: visible;
             opacity: 1;
         }
+        .priority-toggle-container {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
@@ -179,12 +186,18 @@
 
     <footer class="page-footer">
         <div id="kpi-details-footer"></div>
+        <div class="priority-toggle-container">
+            <button class="toggle-btn active" data-priority="1">Active KPIs</button>
+            <button class="toggle-btn" data-priority="0">Inactive KPIs</button>
+        </div>
     </footer>
 </div>
 
 <script>
     // This variable will hold the data processed from the fetched CSV files.
     let kpiDataStore = {};
+    let currentView = 'budget_target';
+    let kpiFilter = '1'; // '1' for Active, '0' for Inactive
 
     // HIERARCHY TREE: Defines the static structure of the organization.
     const hierarchyTree = {
@@ -274,11 +287,11 @@
     const nodesContainer = document.getElementById('hierarchy-nodes');
     const detailsFooter = document.getElementById('kpi-details-footer');
     const kpiSelect = document.getElementById('kpi-select');
-    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    const toggleButtons = document.querySelectorAll('.toggle-container .toggle-btn');
+    const priorityToggleButtons = document.querySelectorAll('.priority-toggle-container .toggle-btn');
     const statusIndicator = document.getElementById('status-indicator');
     const mainContent = document.querySelector('.page-main');
-    let currentView = 'budget_target';
-
+    
     /**
      * Fetches a CSV file from a specified URL.
      * @param {string} url - The URL of the CSV file.
@@ -341,13 +354,23 @@
             const nodeData = parseCSV(nodeCsvText, ';');
             
             const processedData = {};
+            console.log("--- Reading KPI Priorities from CSV ---");
 
             // Process details and create the main structure
             detailsData.forEach(detail => {
                 const kpiShortName = detail.kpi_short_name;
+                
+                // Find the priority key regardless of case ('Priority', 'priority', 'PRIORITY', etc.)
+                const priorityKey = Object.keys(detail).find(key => key.toLowerCase() === 'priority');
+                const priorityValue = priorityKey ? detail[priorityKey] : undefined;
+                
+                // Log the found KPI and its priority for debugging
+                console.log(`KPI: ${kpiShortName}, Priority Value: '${priorityValue}'`);
+
                 if (!processedData[kpiShortName]) {
                     processedData[kpiShortName] = {
-                        kpi_expanded_name: detail.kpi_expanded_name
+                        kpi_expanded_name: detail.kpi_expanded_name,
+                        priority: priorityValue
                     };
                 }
                 const view = detail.view_id.toLowerCase();
@@ -367,6 +390,7 @@
                     }
                 };
             });
+             console.log("------------------------------------");
 
             // Process node data and populate the nodes within the structure
             nodeData.forEach(node => {
@@ -383,25 +407,44 @@
             
             kpiDataStore = processedData;
             
-            // Dynamically populate the KPI select dropdown in alphabetical order
-            const sortedKpis = Object.keys(kpiDataStore).sort((a, b) => {
-                const nameA = kpiDataStore[a].kpi_expanded_name.toLowerCase();
-                const nameB = kpiDataStore[b].kpi_expanded_name.toLowerCase();
-                if (nameA < nameB) return -1;
-                if (nameA > nameB) return 1;
-                return 0;
-            });
-
-            kpiSelect.innerHTML = sortedKpis.map(kpiShortName => 
-                `<option value="${kpiShortName}">${kpiDataStore[kpiShortName].kpi_expanded_name}</option>`
-            ).join('');
-
-            // Initial view update after successful data load
+            populateKpiSelect();
             updateView();
 
         } catch (error) {
             console.error("Error loading or processing data:", error);
             nodesContainer.innerHTML = `<p style="color:red; text-align:center;">Failed to load visualization data from GitHub. Please check the repository structure and file names. See console for details.</p>`;
+        }
+    }
+
+    /**
+     * Filters and populates the KPI dropdown based on the selected priority.
+     */
+    function populateKpiSelect() {
+        const kpiNames = Object.keys(kpiDataStore);
+
+        const filteredKpis = kpiNames.filter(kpiShortName => {
+            // Use loose equality (==) to handle potential type differences (e.g., 1 == '1')
+            return kpiDataStore[kpiShortName].priority == kpiFilter;
+        });
+
+        const sortedKpis = filteredKpis.sort((a, b) => {
+            const nameA = kpiDataStore[a].kpi_expanded_name.toLowerCase();
+            const nameB = kpiDataStore[b].kpi_expanded_name.toLowerCase();
+            if (nameA < nameB) return -1;
+            if (nameA > nameB) return 1;
+            return 0;
+        });
+
+        kpiSelect.innerHTML = sortedKpis.map(kpiShortName => 
+            `<option value="${kpiShortName}">${kpiDataStore[kpiShortName].kpi_expanded_name}</option>`
+        ).join('');
+
+        if (sortedKpis.length === 0) {
+            nodesContainer.innerHTML = `<p style="text-align:center;">No ${kpiFilter === '1' ? 'Active' : 'Inactive'} KPIs found.</p>`;
+            detailsFooter.innerHTML = '';
+            statusIndicator.style.display = 'none';
+            const svg = document.getElementById('connector-svg');
+            if (svg) svg.innerHTML = '';
         }
     }
 
@@ -477,12 +520,14 @@
     function updateView() {
         try {
             if (Object.keys(kpiDataStore).length === 0) {
-                // Data is not loaded yet, do not render.
                 return;
             }
             const selectedKpi = kpiSelect.value;
-            if (!selectedKpi || !kpiDataStore[selectedKpi]) {
-                 nodesContainer.innerHTML = `<p style="text-align:center;">Select a KPI to begin.</p>`;
+            if (!selectedKpi) {
+                 // Message is already handled by populateKpiSelect if list is empty
+                 if (kpiSelect.options.length > 0) {
+                    nodesContainer.innerHTML = `<p style="text-align:center;">Select a KPI to begin.</p>`;
+                 }
                  return;
             }
 
@@ -623,9 +668,18 @@
         updateView();
     }
 
+    function handlePriorityToggleClick(e) {
+        priorityToggleButtons.forEach(btn => btn.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+        kpiFilter = e.currentTarget.dataset.priority;
+        populateKpiSelect();
+        updateView();
+    }
+
     // --- EVENT LISTENERS ---
     kpiSelect.addEventListener('change', updateView);
     toggleButtons.forEach(btn => btn.addEventListener('click', handleToggleClick));
+    priorityToggleButtons.forEach(btn => btn.addEventListener('click', handlePriorityToggleClick));
     
     new ResizeObserver(drawConnectingLines).observe(nodesContainer);
     mainContent.addEventListener('scroll', drawConnectingLines);
