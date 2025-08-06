@@ -102,9 +102,9 @@
                 <!-- Options will be dynamically populated -->
             </select>
             <div class="toggle-container">
-                <button class="toggle-btn active" data-view="budget">Budget Targets</button>
-                <button class="toggle-btn" data-view="running">Running Targets</button>
-                <button class="toggle-btn" data-view="manual">Manual Input</button>
+                <button class="toggle-btn active" data-view="budget_target">Budget Targets</button>
+                <button class="toggle-btn" data-view="running_target">Running Targets</button>
+                <button class="toggle-btn" data-view="manual_input_actual">Manual Input - Actuals</button>
             </div>
         </div>
     </header>
@@ -218,7 +218,7 @@
     const toggleButtons = document.querySelectorAll('.toggle-btn');
     const statusIndicator = document.getElementById('status-indicator');
     const mainContent = document.querySelector('.page-main');
-    let currentView = 'budget';
+    let currentView = 'budget_target';
 
     /**
      * Fetches a CSV file from a specified URL.
