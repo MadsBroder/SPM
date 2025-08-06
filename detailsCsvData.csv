@@ -1,4 +1,4 @@
-﻿kpi_id;kpi_short_name;kpi_expanded_name;view_id;detail_title;status_state;status_text;input_value_type;period;functional_scope;aggregation_split;guard_rails;Priority1
+﻿kpi_id;kpi_short_name;kpi_expanded_name;view_id;detail_title;status_state;status_text;input_value_type;period;functional_scope;aggregation_split;guard_rails;Priority
 S4;LTI;Lost Time Injuries;budget_target;LTI - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;Comming from Sphera - external;0 is 0, blank is 0;1
 S4;LTI;Lost Time Injuries;running_target;LTI - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;Comming from Sphera - external;0 is 0, blank is 0;1
 S4;LTI;Lost Time Injuries;manual_input_actual;LTI - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;Comming from Sphera - external;This should be none - cause no manual input;1
@@ -140,3 +140,4 @@ D17;SOTTR;Supplier On Time To Request;manual_input_actual;SOTTR - Manual Data In
 I5;Inventory Value ;Inventory Value ;budget_target;Inventory Value  - Budget Targets;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
 I5;Inventory Value ;Inventory Value ;running_target;Inventory Value  - Running Targets;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
 I5;Inventory Value ;Inventory Value ;manual_input_actual;Inventory Value  - Manual Data Input;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
+
