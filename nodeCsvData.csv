@@ -1,1255 +1,1255 @@
-﻿kpi_id;kpi_short_name;view_id;node_type;input_type;main_text;sub_text;Priority;;;;;
-S4;LTI;budget_target;company;auto;Target is automatically calculated as sum of all QTY from level below;;1;;;;;
-S4;LTI;budget_target;division;auto;Target is automatically calculated as sum of all QTY from level below;;1;;;;;
-S4;LTI;budget_target;area;auto;Target is automatically calculated as sum of all QTY from level below;;1;;;;;
-S4;LTI;budget_target;regional;auto;Target is automatically calculated as sum of all QTY from level below;;1;;;;;
-S4;LTI;budget_target;plant;manual;Enter Target in QTY for the entire Plant;;1;;;;;
-S4;LTI;budget_target;plant_other_group;auto;Target in QTY is automatically calculated as a Plant target minus the sum of level below;(if applicable).;1;;;;;
-S4;LTI;budget_target;apu;manual;Enter Target for full year in January, in QTY for the full specific APU considering all headcounts in that specific APU;;1;;;;;
-S4;LTI;budget_target;apu_other_group;manual;Enter Target for full year in January, in QTY for the Headcount belonging to the APU  and not to the Totems below;;1;;;;;
-S4;LTI;budget_target;totem;auto;Target is always 0;;1;;;;;
-S4;LTI;budget_target;equipment_group;disabled;No entry;;1;;;;;
-S4;LTI;budget_target;equipment;disabled;No entry;;1;;;;;
-S4;LTI;running_target;company;auto;Target is automatically calculated as sum of all QTY from level below;;1;;;;;
-S4;LTI;running_target;division;auto;Target is automatically calculated as sum of all QTY from level below;;1;;;;;Budget and Running are target input
-S4;LTI;running_target;area;auto;Target is automatically calculated as sum of all QTY from level below;;1;;;;;manual = Manual Actual numbers
-S4;LTI;running_target;regional;auto;Target is automatically calculated as sum of all QTY from level below;;1;;;;;
-S4;LTI;running_target;plant;manual;Enter Target in QTY for the entire Plant;;1;;;;;
-S4;LTI;running_target;plant_other_group;auto;Target in QTY is automatically calculated as a Plant target minus the sum of level below;;1;;;;;
-S4;LTI;running_target;apu;manual;Enter Target for full year in January, in QTY for the full specific APU considering all headcounts in that specific APU;;1;;;;;
-S4;LTI;running_target;apu_other_group;manual;Enter Target for full year in January, in QTY for the Headcount belonging to the APU  and not to the Totems below;;1;;;;;
-S4;LTI;running_target;totem;auto;Target is always 0;;1;;;;;
-S4;LTI;running_target;equipment_group;disabled;No entry;;1;;;;;
-S4;LTI;running_target;equipment;disabled;No entry;;1;;;;;
-S4;LTI;manual_input_actual_input_actual;company;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;division;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;area;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;equipment_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S4;LTI;manual_input_actual;equipment;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S2;Hazard Observation;budget_target;company;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;budget_target;division;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;budget_target;area;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;budget_target;regional;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;budget_target;plant;manual;Enter Target in QTY for the entire Plant;;1;;;;;
-S2;Hazard Observation;budget_target;plant_other_group;auto;Target in QTY is automatically calculated as a Plant target minus the sum of level below;;1;;;;;
-S2;Hazard Observation;budget_target;apu;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;budget_target;apu_other_group;manual;Enter Target in QTY for the areas belonging to the APU  and not to the Totems below;;1;;;;;
-S2;Hazard Observation;budget_target;totem;manual;Enter Target in QTY for the specific Totem;;1;;;;;
-S2;Hazard Observation;budget_target;equipment_group;disabled;No entry;;1;;;;;
-S2;Hazard Observation;budget_target;equipment;disabled;No entry;;1;;;;;
-S2;Hazard Observation;running_target;company;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;running_target;division;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;running_target;area;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;running_target;regional;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;running_target;plant;manual;Enter Target in QTY for the entire Plant;;1;;;;;
-S2;Hazard Observation;running_target;plant_other_group;auto;Target in QTY is automatically calculated as a Plant target minus the sum of level below;;1;;;;;
-S2;Hazard Observation;running_target;apu;auto;Target in QTY is automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;running_target;apu_other_group;manual;Enter Target in QTY for the areas belonging to the APU  and not to the Totems below;;1;;;;;
-S2;Hazard Observation;running_target;totem;manual;Enter Target in QTY for the specific Totem;;1;;;;;
-S2;Hazard Observation;running_target;equipment_group;disabled;No entry;;1;;;;;
-S2;Hazard Observation;running_target;equipment;disabled;No entry;;1;;;;;
-S2;Hazard Observation;manual_input_actual;company;auto;Automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;manual_input_actual;division;auto;Automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;manual_input_actual;area;auto;Automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;manual_input_actual;regional;auto;Automatically calculated as a sum of the level below;;1;;;;;
-S2;Hazard Observation;manual_input_actual;plant;manual;Automatically calculated as a sum of the level below + Plant Other;;1;;;;;
-S2;Hazard Observation;manual_input_actual;plant_other_group;auto;Enter in QTY for the areas belonging to the Plant and not to the levels below;;1;;;;;
-S2;Hazard Observation;manual_input_actual;apu;auto;Automatically calculated as a sum of the level below + APU Other;;1;;;;;
-S2;Hazard Observation;manual_input_actual;apu_other_group;manual;Enter in QTY for the areas belonging to the APU  and not to the Totems below;;1;;;;;
-S2;Hazard Observation;manual_input_actual;totem;manual;Enter in QTY for the specific Totem;;1;;;;;
-S2;Hazard Observation;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-S2;Hazard Observation;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-S9;TRIR;budget_target;company;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S9;TRIR;budget_target;division;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S9;TRIR;budget_target;area;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S9;TRIR;budget_target;regional;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S9;TRIR;budget_target;plant;manual;Enter target in ratio;;1;;;;;
-S9;TRIR;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-S9;TRIR;budget_target;apu;disabled;No entry;;1;;;;;
-S9;TRIR;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-S9;TRIR;budget_target;totem;disabled;No entry;;1;;;;;
-S9;TRIR;budget_target;equipment_group;disabled;No entry;;1;;;;;
-S9;TRIR;budget_target;equipment;disabled;No entry;;1;;;;;
-S9;TRIR;running_target;company;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S9;TRIR;running_target;division;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S9;TRIR;running_target;area;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S9;TRIR;running_target;regional;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S9;TRIR;running_target;plant;manual;Enter target in ratio;;1;;;;;
-S9;TRIR;running_target;plant_other_group;disabled;No entry;;1;;;;;
-S9;TRIR;running_target;apu;disabled;No entry;;1;;;;;
-S9;TRIR;running_target;apu_other_group;disabled;No entry;;1;;;;;
-S9;TRIR;running_target;totem;disabled;No entry;;1;;;;;
-S9;TRIR;running_target;equipment_group;disabled;No entry;;1;;;;;
-S9;TRIR;running_target;equipment;disabled;No entry;;1;;;;;
-S9;TRIR;manual_input_actual;company;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;division;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;area;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;regional;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;plant;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;apu;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;totem;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;equipment_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S9;TRIR;manual_input_actual;equipment;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;budget_target;company;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S5;LTIR;budget_target;division;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S5;LTIR;budget_target;area;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S5;LTIR;budget_target;regional;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S5;LTIR;budget_target;plant;manual;Enter target in ratio;;1;;;;;
-S5;LTIR;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-S5;LTIR;budget_target;apu;disabled;No entry;;1;;;;;
-S5;LTIR;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-S5;LTIR;budget_target;totem;disabled;No entry;;1;;;;;
-S5;LTIR;budget_target;equipment_group;disabled;No entry;;1;;;;;
-S5;LTIR;budget_target;equipment;disabled;No entry;;1;;;;;
-S5;LTIR;running_target;company;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S5;LTIR;running_target;division;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S5;LTIR;running_target;area;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S5;LTIR;running_target;regional;auto;Automatically calculated as a flat average for the levels below;;1;;;;;
-S5;LTIR;running_target;plant;manual;Enter target in ratio;;1;;;;;
-S5;LTIR;running_target;plant_other_group;disabled;No entry;;1;;;;;
-S5;LTIR;running_target;apu;disabled;No entry;;1;;;;;
-S5;LTIR;running_target;apu_other_group;disabled;No entry;;1;;;;;
-S5;LTIR;running_target;totem;disabled;No entry;;1;;;;;
-S5;LTIR;running_target;equipment_group;disabled;No entry;;1;;;;;
-S5;LTIR;running_target;equipment;disabled;No entry;;1;;;;;
-S5;LTIR;manual_input_actual;company;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;division;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;area;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;regional;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;plant;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;apu;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;totem;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;equipment_group;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-S5;LTIR;manual_input_actual;equipment;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-Q8;IQI;budget_target;company;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;budget_target;division;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;budget_target;area;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;budget_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;budget_target;plant;auto;Enter Target in QTY for the plant;;1;;;;;
-Q8;IQI;budget_target;plant_other_group;manual;No entry;;1;;;;;
-Q8;IQI;budget_target;apu;manual;No entry;;1;;;;;
-Q8;IQI;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-Q8;IQI;budget_target;totem;manual;No entry;;1;;;;;
-Q8;IQI;budget_target;equipment_group;disabled;No entry;;1;;;;;
-Q8;IQI;budget_target;equipment;disabled;No entry;;1;;;;;
-Q8;IQI;running_target;company;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;running_target;division;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;running_target;area;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;running_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;running_target;plant;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q8;IQI;running_target;plant_other_group;manual;Enter Target in QTY for the part of the plant that are not covered by underlying APU’s.;;1;;;;;
-Q8;IQI;running_target;apu;manual;Enter Target in QTY for specific APU;;1;;;;;
-Q8;IQI;running_target;apu_other_group;disabled;Enter Target in QTY for the part of the APU not covered by underlying Totems;;1;;;;;
-Q8;IQI;running_target;totem;manual;Enter Target in QTY for Specific Totem;;1;;;;;
-Q8;IQI;running_target;equipment_group;disabled;No entry;;1;;;;;
-Q8;IQI;running_target;equipment;disabled;No entry;;1;;;;;
-Q8;IQI;manual_input_actual;company;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;division;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;area;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q8;IQI;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-Q8;IQI;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-Q2;CQI;budget_target;company;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;budget_target;division;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;budget_target;area;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;budget_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;budget_target;plant;auto;Enter Target in QTY for the plant;;1;;;;;
-Q2;CQI;budget_target;plant_other_group;manual;No entry;;1;;;;;
-Q2;CQI;budget_target;apu;manual;No entry;;1;;;;;
-Q2;CQI;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-Q2;CQI;budget_target;totem;manual;No entry;;1;;;;;
-Q2;CQI;budget_target;equipment_group;disabled;No entry;;1;;;;;
-Q2;CQI;budget_target;equipment;disabled;No entry;;1;;;;;
-Q2;CQI;running_target;company;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;running_target;division;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;running_target;area;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;running_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;running_target;plant;auto;No Entry – Calculated as sum of all underlying values;;1;;;;;
-Q2;CQI;running_target;plant_other_group;manual;Enter Target in QTY for the part of the plant that are not covered by underlying APU’s.;;1;;;;;
-Q2;CQI;running_target;apu;manual;Enter Target in QTY for specific APU;;1;;;;;
-Q2;CQI;running_target;apu_other_group;disabled;Enter Target in QTY for the part of the APU not covered by underlying Totems;;1;;;;;
-Q2;CQI;running_target;totem;manual;Enter Target in QTY for Specific Totem;;1;;;;;
-Q2;CQI;running_target;equipment_group;disabled;No entry;;1;;;;;
-Q2;CQI;running_target;equipment;disabled;No entry;;1;;;;;
-Q2;CQI;manual_input_actual;company;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;division;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;area;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source QIP;;1;;;;;
-Q2;CQI;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-Q2;CQI;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-Q11;Scrap PPM;budget_target;company;;;;0;;;;;
-Q11;Scrap PPM;budget_target;division;;;;0;;;;;
-Q11;Scrap PPM;budget_target;area;;;;0;;;;;
-Q11;Scrap PPM;budget_target;regional;;;;0;;;;;
-Q11;Scrap PPM;budget_target;plant;;;;0;;;;;
-Q11;Scrap PPM;budget_target;plant_other_group;;;;0;;;;;
-Q11;Scrap PPM;budget_target;apu;;;;0;;;;;
-Q11;Scrap PPM;budget_target;apu_other_group;;;;0;;;;;
-Q11;Scrap PPM;budget_target;totem;;;;0;;;;;
-Q11;Scrap PPM;budget_target;equipment_group;;;;0;;;;;
-Q11;Scrap PPM;budget_target;equipment;;;;0;;;;;
-Q11;Scrap PPM;running_target;company;;;;0;;;;;
-Q11;Scrap PPM;running_target;division;;;;0;;;;;
-Q11;Scrap PPM;running_target;area;;;;0;;;;;
-Q11;Scrap PPM;running_target;regional;;;;0;;;;;
-Q11;Scrap PPM;running_target;plant;;;;0;;;;;
-Q11;Scrap PPM;running_target;plant_other_group;;;;0;;;;;
-Q11;Scrap PPM;running_target;apu;;;;0;;;;;
-Q11;Scrap PPM;running_target;apu_other_group;;;;0;;;;;
-Q11;Scrap PPM;running_target;totem;;;;0;;;;;
-Q11;Scrap PPM;running_target;equipment_group;;;;0;;;;;
-Q11;Scrap PPM;running_target;equipment;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;company;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;division;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;area;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;regional;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;plant;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;plant_other_group;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;apu;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;apu_other_group;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;totem;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;equipment_group;;;;0;;;;;
-Q11;Scrap PPM;manual_input_actual;equipment;;;;0;;;;;
-Q5;FTT;budget_target;company;auto;Calculated as flat average of all underlying values;;1;;;;;
-Q5;FTT;budget_target;division;auto;Calculated as flat average of all underlying values;;1;;;;;
-Q5;FTT;budget_target;area;auto;Calculated as flat average of all underlying values;;1;;;;;
-Q5;FTT;budget_target;regional;auto;Calculated as flat average of all underlying values;;1;;;;;
-Q5;FTT;budget_target;plant;manual;Enter Target as a % for the specific Plant;;1;;;;;
-Q5;FTT;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-Q5;FTT;budget_target;apu;disabled;No entry;;1;;;;;
-Q5;FTT;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-Q5;FTT;budget_target;totem;disabled;No entry;;1;;;;;
-Q5;FTT;budget_target;equipment_group;disabled;No entry;;1;;;;;
-Q5;FTT;budget_target;equipment;disabled;No entry;;1;;;;;
-Q5;FTT;running_target;company;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1;;;;;
-Q5;FTT;running_target;division;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1;;;;;
-Q5;FTT;running_target;area;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1;;;;;
-Q5;FTT;running_target;regional;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1;;;;;
-Q5;FTT;running_target;plant;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1;;;;;
-Q5;FTT;running_target;plant_other_group;disabled;No entry;;1;;;;;
-Q5;FTT;running_target;apu;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1;;;;;
-Q5;FTT;running_target;apu_other_group;disabled;No entry;;1;;;;;
-Q5;FTT;running_target;totem;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1;;;;;
-Q5;FTT;running_target;equipment_group;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1;;;;;
-Q5;FTT;running_target;equipment;manual;Enter Target as a % for the specific equipment;;1;;;;;
-Q5;FTT;manual_input_actual;company;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1;;;;;
-Q5;FTT;manual_input_actual;division;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1;;;;;
-Q5;FTT;manual_input_actual;area;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1;;;;;
-Q5;FTT;manual_input_actual;regional;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1;;;;;
-Q5;FTT;manual_input_actual;plant;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1;;;;;
-Q5;FTT;manual_input_actual;plant_other_group;disabled;No entry.;;1;;;;;
-Q5;FTT;manual_input_actual;apu;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1;;;;;
-Q5;FTT;manual_input_actual;apu_other_group;disabled;No entry.;;1;;;;;
-Q5;FTT;manual_input_actual;totem;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1;;;;;
-Q5;FTT;manual_input_actual;equipment_group;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1;;;;;
-Q5;FTT;manual_input_actual;equipment;manual;Enter Actual as a % or as Good Parts and Bad Parts for the specific equipment.;;1;;;;;
-Q1;NQC;budget_target;company;;;;0;;;;;
-Q1;NQC;budget_target;division;;;;0;;;;;
-Q1;NQC;budget_target;area;;;;0;;;;;
-Q1;NQC;budget_target;regional;;;;0;;;;;
-Q1;NQC;budget_target;plant;manual;Enter Target in Local Currency for the full plant.;;0;;;;;
-Q1;NQC;budget_target;plant_other_group;disabled;No entry.;;0;;;;;
-Q1;NQC;budget_target;apu;disabled;No entry.;;0;;;;;
-Q1;NQC;budget_target;apu_other_group;disabled;No entry.;;0;;;;;
-Q1;NQC;budget_target;totem;disabled;No entry.;;0;;;;;
-Q1;NQC;budget_target;equipment_group;;;;0;;;;;
-Q1;NQC;budget_target;equipment;;;;0;;;;;
-Q1;NQC;running_target;company;;;;0;;;;;
-Q1;NQC;running_target;division;;;;0;;;;;
-Q1;NQC;running_target;area;;;;0;;;;;
-Q1;NQC;running_target;regional;;;;0;;;;;
-Q1;NQC;running_target;plant;;;;0;;;;;
-Q1;NQC;running_target;plant_other_group;;;;0;;;;;
-Q1;NQC;running_target;apu;;;;0;;;;;
-Q1;NQC;running_target;apu_other_group;;;;0;;;;;
-Q1;NQC;running_target;totem;;;;0;;;;;
-Q1;NQC;running_target;equipment_group;;;;0;;;;;
-Q1;NQC;running_target;equipment;;;;0;;;;;
-Q1;NQC;manual_input_actual;company;;;;0;;;;;
-Q1;NQC;manual_input_actual;division;;;;0;;;;;
-Q1;NQC;manual_input_actual;area;;;;0;;;;;
-Q1;NQC;manual_input_actual;regional;;;;0;;;;;
-Q1;NQC;manual_input_actual;plant;manual;Enter Actual Offline Cost in Local Currency for the full plant. Scrap cost is automatically added from lower level.;;0;;;;;
-Q1;NQC;manual_input_actual;plant_other_group;disabled;No entry.;;0;;;;;
-Q1;NQC;manual_input_actual;apu;disabled;No entry.;;0;;;;;
-Q1;NQC;manual_input_actual;apu_other_group;disabled;No entry.;;0;;;;;
-Q1;NQC;manual_input_actual;totem;disabled;No entry.;;0;;;;;
-Q1;NQC;manual_input_actual;equipment_group;;;;0;;;;;
-Q1;NQC;manual_input_actual;equipment;;;;0;;;;;
-Q18;Scrap Value;budget_target;company;;;;0;;;;;
-Q18;Scrap Value;budget_target;division;;;;0;;;;;
-Q18;Scrap Value;budget_target;area;;;;0;;;;;
-Q18;Scrap Value;budget_target;regional;;;;0;;;;;
-Q18;Scrap Value;budget_target;plant;manual;Enter Target in Parts Per Million (PPM) belonging to the entire Plant. Will be shown as local currency;(calculation: PPM target * Production Output local currency / 1.000.000).;0;;;;;
-Q18;Scrap Value;budget_target;plant_other_group;manual;Enter Target in Parts Per Million (PPM) belonging to the part of the plant that isn't covered by underlying APU’s. Will be shown as local currency;(calculation: PPM target * Production Output local currency / 1.000.000) (Unmapped or mapped to Plant A other or to Plant A).;0;;;;;
-Q18;Scrap Value;budget_target;apu;manual;Enter Target in Parts Per Million (PPM) belonging to the specific APU. Will be shown as local currency;(calculation: PPM target * Production Output local currency / 1.000.000).;0;;;;;
-Q18;Scrap Value;budget_target;apu_other_group;manual;Enter Target in Parts Per Million (PPM) for the part of the APU that isn't covered by underlying Totems. Will be shown as local currency ;(calculation: PPM target * Production Output local currency / 1.000.000).;0;;;;;
-Q18;Scrap Value;budget_target;totem;manual;Enter Target in Parts Per Million (PPM) for the specific Totem. Will be shown as local currency ;(calculation: PPM target * Production Output local currency / 1.000.000).;0;;;;;
-Q18;Scrap Value;budget_target;equipment_group;;;;0;;;;;
-Q18;Scrap Value;budget_target;equipment;;;;0;;;;;
-Q18;Scrap Value;running_target;company;;;;0;;;;;
-Q18;Scrap Value;running_target;division;;;;0;;;;;
-Q18;Scrap Value;running_target;area;;;;0;;;;;
-Q18;Scrap Value;running_target;regional;;;;0;;;;;
-Q18;Scrap Value;running_target;plant;;;;0;;;;;
-Q18;Scrap Value;running_target;plant_other_group;;;;0;;;;;
-Q18;Scrap Value;running_target;apu;;;;0;;;;;
-Q18;Scrap Value;running_target;apu_other_group;;;;0;;;;;
-Q18;Scrap Value;running_target;totem;;;;0;;;;;
-Q18;Scrap Value;running_target;equipment_group;;;;0;;;;;
-Q18;Scrap Value;running_target;equipment;;;;0;;;;;
-Q18;Scrap Value;manual_input_actual;company;;;;0;;;;;
-Q18;Scrap Value;manual_input_actual;division;;;;0;;;;;
-Q18;Scrap Value;manual_input_actual;area;;;;0;;;;;
-Q18;Scrap Value;manual_input_actual;regional;;;;0;;;;;
-Q18;Scrap Value;manual_input_actual;plant;auto;Actual Scrap in Local Currency accumulated automatically from the level below ;(Sum of value).;0;;;;;
-Q18;Scrap Value;manual_input_actual;plant_other_group;manual;Enter Actual Scrap in Local Currency that belongs to the plant, but not the underlying level ;(if applicable).;0;;;;;
-Q18;Scrap Value;manual_input_actual;apu;auto;Actual Scrap in Local Currency accumulated automatically from the level below ;(Sum of value).;0;;;;;
-Q18;Scrap Value;manual_input_actual;apu_other_group;manual;Enter Actual Scrap in Local Currency that belongs to the APU, but not the underlying Totems ;(if applicable).;0;;;;;
-Q18;Scrap Value;manual_input_actual;totem;manual;Enter Actual Scrap in Local Currency for the specific Totem.;;0;;;;;
-Q18;Scrap Value;manual_input_actual;equipment_group;;;;0;;;;;
-Q18;Scrap Value;manual_input_actual;equipment;;;;0;;;;;
-D8;OTTR;budget_target;company;auto;Calculated as flat average of all underlying values;;1;;;;;
-D8;OTTR;budget_target;division;auto;Calculated as flat average of all underlying values;;1;;;;;
-D8;OTTR;budget_target;area;auto;Calculated as flat average of all underlying values;;1;;;;;
-D8;OTTR;budget_target;regional;auto;Calculated as flat average of all underlying values;;1;;;;;
-D8;OTTR;budget_target;plant;manual;Enter Target in % for the full plant.;;1;;;;;
-D8;OTTR;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-D8;OTTR;budget_target;apu;disabled;No entry;;1;;;;;
-D8;OTTR;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-D8;OTTR;budget_target;totem;disabled;No entry;;1;;;;;
-D8;OTTR;budget_target;equipment_group;disabled;No entry;;1;;;;;
-D8;OTTR;budget_target;equipment;disabled;No entry;;1;;;;;
-D8;OTTR;running_target;company;auto;Calculated as flat average of all underlying values;;1;;;;;
-D8;OTTR;running_target;division;auto;Calculated as flat average of all underlying values;;1;;;;;
-D8;OTTR;running_target;area;auto;Calculated as flat average of all underlying values;;1;;;;;
-D8;OTTR;running_target;regional;auto;Calculated as flat average of all underlying values;;1;;;;;
-D8;OTTR;running_target;plant;manual;Enter Target in % for the full plant.;;1;;;;;
-D8;OTTR;running_target;plant_other_group;manual;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;1;;;;;
-D8;OTTR;running_target;apu;manual;Enter Target in % for the specific APU.;;1;;;;;
-D8;OTTR;running_target;apu_other_group;manual;Enter Target in % for the part of the APU that isn’t covered by the underlying Totems.;;1;;;;;
-D8;OTTR;running_target;totem;manual;Enter Target in % for the specific Totem.;;1;;;;;
-D8;OTTR;running_target;equipment_group;disabled;No entry;;1;;;;;
-D8;OTTR;running_target;equipment;disabled;No entry;;1;;;;;
-D8;OTTR;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D8;OTTR;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-D8;OTTR;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;company;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;division;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;area;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;regional;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;plant;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;apu;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;totem;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;equipment_group;disabled;No entry;;1;;;;;
-D6;Output vs Plan;budget_target;equipment;disabled;No entry;;1;;;;;
-D6;Output vs Plan;running_target;company;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;division;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;area;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;regional;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;plant;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;plant_other_group;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;apu;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;apu_other_group;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;totem;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;equipment_group;auto;Target is always 100% - No entry needed;;1;;;;;
-D6;Output vs Plan;running_target;equipment;manual;Enter Target in QTY or Hours for the specific Equipment;Result shown as Output (Actual) - Plan (Running Target);1;;;;;
-D6;Output vs Plan;manual_input_actual;company;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;division;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;area;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;regional;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;plant;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;plant_other_group;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;apu;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;apu_other_group;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;totem;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;equipment_group;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1;;;;;
-D6;Output vs Plan;manual_input_actual;equipment;manual;Enter actual output in QTY or Hours for the specific Equipment;Result shown as Output (Actual) - Plan (Running Target);1;;;;;
-D11;P-Order ;budget_target;company;disabled;Enter Target in %;;1;;;;;
-D11;P-Order ;budget_target;division;disabled;Enter Target in %;;1;;;;;
-D11;P-Order ;budget_target;area;disabled;Enter Target in %;;1;;;;;
-D11;P-Order ;budget_target;regional;disabled;Enter Target in %;;1;;;;;
-D11;P-Order ;budget_target;plant;disabled;Enter Target in % for the full Plant;;1;;;;;
-D11;P-Order ;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-D11;P-Order ;budget_target;apu;disabled;No entry;;1;;;;;
-D11;P-Order ;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-D11;P-Order ;budget_target;totem;disabled;No entry;;1;;;;;
-D11;P-Order ;budget_target;equipment_group;disabled;No entry;;1;;;;;
-D11;P-Order ;budget_target;equipment;disabled;No entry;;1;;;;;
-D11;P-Order ;running_target;company;disabled;Enter Target in %;;1;;;;;
-D11;P-Order ;running_target;division;disabled;Enter Target in %;;1;;;;;
-D11;P-Order ;running_target;area;disabled;Enter Target in %;;1;;;;;
-D11;P-Order ;running_target;regional;disabled;Enter Target in %;;1;;;;;
-D11;P-Order ;running_target;plant;disabled;Enter Target in % for the full Plant;;1;;;;;
-D11;P-Order ;running_target;plant_other_group;disabled;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;1;;;;;
-D11;P-Order ;running_target;apu;manual;Enter Target in % for the specific APU.;;1;;;;;
-D11;P-Order ;running_target;apu_other_group;manual;Enter Target in % for the part of the APU that isn’t covered by the underlying Totems.;;1;;;;;
-D11;P-Order ;running_target;totem;manual;Enter Target in % for the specific Totem.;;1;;;;;
-D11;P-Order ;running_target;equipment_group;disabled;No entry;;1;;;;;
-D11;P-Order ;running_target;equipment;disabled;No entry;;1;;;;;
-D11;P-Order ;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D11;P-Order ;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-D11;P-Order ;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-D5;COTTR;budget_target;company;disabled;Enter Target in %;;1;;;;;
-D5;COTTR;budget_target;division;disabled;Enter Target in %;;1;;;;;
-D5;COTTR;budget_target;area;disabled;Enter Target in %;;1;;;;;
-D5;COTTR;budget_target;regional;disabled;Enter Target in %;;1;;;;;
-D5;COTTR;budget_target;plant;disabled;Enter Target in % for the full Plant;;1;;;;;
-D5;COTTR;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-D5;COTTR;budget_target;apu;disabled;No entry;;1;;;;;
-D5;COTTR;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-D5;COTTR;budget_target;totem;disabled;No entry;;1;;;;;
-D5;COTTR;budget_target;equipment_group;disabled;No entry;;1;;;;;
-D5;COTTR;budget_target;equipment;disabled;No entry;;1;;;;;
-D5;COTTR;running_target;company;disabled;Enter Target in %;;1;;;;;
-D5;COTTR;running_target;division;disabled;Enter Target in %;;1;;;;;
-D5;COTTR;running_target;area;disabled;Enter Target in %;;1;;;;;
-D5;COTTR;running_target;regional;disabled;Enter Target in %;;1;;;;;
-D5;COTTR;running_target;plant;disabled;Enter Target in % for the full Plant;;1;;;;;
-D5;COTTR;running_target;plant_other_group;disabled;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;1;;;;;
-D5;COTTR;running_target;apu;manual;Enter Target in % for the specific APU.;;1;;;;;
-D5;COTTR;running_target;apu_other_group;manual;Enter Target in % for the part of the APU that isn’t covered by the underlying Totems.;;1;;;;;
-D5;COTTR;running_target;totem;manual;Enter Target in % for the specific Totem.;;1;;;;;
-D5;COTTR;running_target;equipment_group;disabled;No entry;;1;;;;;
-D5;COTTR;running_target;equipment;disabled;No entry;;1;;;;;
-D5;COTTR;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1;;;;;
-D5;COTTR;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-D5;COTTR;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-D2;1st Confirmed;budget_target;company;disabled;Enter Target in %;;0;;;;;
-D2;1st Confirmed;budget_target;division;disabled;Enter Target in %;;0;;;;;
-D2;1st Confirmed;budget_target;area;disabled;Enter Target in %;;0;;;;;
-D2;1st Confirmed;budget_target;regional;disabled;Enter Target in %;;0;;;;;
-D2;1st Confirmed;budget_target;plant;disabled;Enter Target in % for the full Plant;;0;;;;;
-D2;1st Confirmed;budget_target;plant_other_group;disabled;No entry;;0;;;;;
-D2;1st Confirmed;budget_target;apu;disabled;No entry;;0;;;;;
-D2;1st Confirmed;budget_target;apu_other_group;disabled;No entry;;0;;;;;
-D2;1st Confirmed;budget_target;totem;disabled;No entry;;0;;;;;
-D2;1st Confirmed;budget_target;equipment_group;disabled;No entry;;0;;;;;
-D2;1st Confirmed;budget_target;equipment;disabled;No entry;;0;;;;;
-D2;1st Confirmed;running_target;company;disabled;Enter Target in %;;0;;;;;
-D2;1st Confirmed;running_target;division;disabled;Enter Target in %;;0;;;;;
-D2;1st Confirmed;running_target;area;disabled;Enter Target in %;;0;;;;;
-D2;1st Confirmed;running_target;regional;disabled;Enter Target in %;;0;;;;;
-D2;1st Confirmed;running_target;plant;disabled;Enter Target in % for the full Plant;;0;;;;;
-D2;1st Confirmed;running_target;plant_other_group;disabled;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;0;;;;;
-D2;1st Confirmed;running_target;apu;manual;Enter Target in % for the specific APU.;;0;;;;;
-D2;1st Confirmed;running_target;apu_other_group;manual;Enter Target in % for the part of the APU that isn’t covered by the underlying Totems.;;0;;;;;
-D2;1st Confirmed;running_target;totem;manual;Enter Target in % for the specific Totem.;;0;;;;;
-D2;1st Confirmed;running_target;equipment_group;disabled;No entry;;0;;;;;
-D2;1st Confirmed;running_target;equipment;disabled;No entry;;0;;;;;
-D2;1st Confirmed;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;0;;;;;
-D2;1st Confirmed;manual_input_actual;equipment_group;disabled;No entry;;0;;;;;
-D2;1st Confirmed;manual_input_actual;equipment;disabled;No entry;;0;;;;;
-I1;DoS 3M;budget_target;company;;;;0;;;;;
-I1;DoS 3M;budget_target;division;;;;0;;;;;
-I1;DoS 3M;budget_target;area;;;;0;;;;;
-I1;DoS 3M;budget_target;regional;;;;0;;;;;
-I1;DoS 3M;budget_target;plant;;;;0;;;;;
-I1;DoS 3M;budget_target;plant_other_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;budget_target;apu;disabled;No entry;;0;;;;;
-I1;DoS 3M;budget_target;apu_other_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;budget_target;totem;disabled;No entry;;0;;;;;
-I1;DoS 3M;budget_target;equipment_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;budget_target;equipment;disabled;No entry;;0;;;;;
-I1;DoS 3M;running_target;company;;;;0;;;;;
-I1;DoS 3M;running_target;division;;;;0;;;;;
-I1;DoS 3M;running_target;area;;;;0;;;;;
-I1;DoS 3M;running_target;regional;;;;0;;;;;
-I1;DoS 3M;running_target;plant;;;;0;;;;;
-I1;DoS 3M;running_target;plant_other_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;running_target;apu;disabled;No entry;;0;;;;;
-I1;DoS 3M;running_target;apu_other_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;running_target;totem;disabled;No entry;;0;;;;;
-I1;DoS 3M;running_target;equipment_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;running_target;equipment;disabled;No entry;;0;;;;;
-I1;DoS 3M;manual_input_actual;company;;;;0;;;;;
-I1;DoS 3M;manual_input_actual;division;;;;0;;;;;
-I1;DoS 3M;manual_input_actual;area;;;;0;;;;;
-I1;DoS 3M;manual_input_actual;regional;;;;0;;;;;
-I1;DoS 3M;manual_input_actual;plant;;;;0;;;;;
-I1;DoS 3M;manual_input_actual;plant_other_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;manual_input_actual;apu;disabled;No entry;;0;;;;;
-I1;DoS 3M;manual_input_actual;apu_other_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;manual_input_actual;totem;disabled;No entry;;0;;;;;
-I1;DoS 3M;manual_input_actual;equipment_group;disabled;No entry;;0;;;;;
-I1;DoS 3M;manual_input_actual;equipment;disabled;No entry;;0;;;;;
-I3;VMI;budget_target;company;;;;0;;;;;
-I3;VMI;budget_target;division;;;;0;;;;;
-I3;VMI;budget_target;area;;;;0;;;;;
-I3;VMI;budget_target;regional;;;;0;;;;;
-I3;VMI;budget_target;plant;;;;0;;;;;
-I3;VMI;budget_target;plant_other_group;disabled;No entry;;0;;;;;
-I3;VMI;budget_target;apu;disabled;No entry;;0;;;;;
-I3;VMI;budget_target;apu_other_group;disabled;No entry;;0;;;;;
-I3;VMI;budget_target;totem;disabled;No entry;;0;;;;;
-I3;VMI;budget_target;equipment_group;disabled;No entry;;0;;;;;
-I3;VMI;budget_target;equipment;disabled;No entry;;0;;;;;
-I3;VMI;running_target;company;;;;0;;;;;
-I3;VMI;running_target;division;;;;0;;;;;
-I3;VMI;running_target;area;;;;0;;;;;
-I3;VMI;running_target;regional;;;;0;;;;;
-I3;VMI;running_target;plant;;;;0;;;;;
-I3;VMI;running_target;plant_other_group;disabled;No entry;;0;;;;;
-I3;VMI;running_target;apu;disabled;No entry;;0;;;;;
-I3;VMI;running_target;apu_other_group;disabled;No entry;;0;;;;;
-I3;VMI;running_target;totem;disabled;No entry;;0;;;;;
-I3;VMI;running_target;equipment_group;disabled;No entry;;0;;;;;
-I3;VMI;running_target;equipment;disabled;No entry;;0;;;;;
-I3;VMI;manual_input_actual;company;;;;0;;;;;
-I3;VMI;manual_input_actual;division;;;;0;;;;;
-I3;VMI;manual_input_actual;area;;;;0;;;;;
-I3;VMI;manual_input_actual;regional;;;;0;;;;;
-I3;VMI;manual_input_actual;plant;;;;0;;;;;
-I3;VMI;manual_input_actual;plant_other_group;disabled;No entry;;0;;;;;
-I3;VMI;manual_input_actual;apu;disabled;No entry;;0;;;;;
-I3;VMI;manual_input_actual;apu_other_group;disabled;No entry;;0;;;;;
-I3;VMI;manual_input_actual;totem;disabled;No entry;;0;;;;;
-I3;VMI;manual_input_actual;equipment_group;disabled;No entry;;0;;;;;
-I3;VMI;manual_input_actual;equipment;disabled;No entry;;0;;;;;
-C8;OPR;budget_target;company;auto;Automatically calculated, weighted based on sum of Productive time previous year, from levels below;;0;;;;;
-C8;OPR;budget_target;division;auto;Automatically calculated, weighted based on sum of Productive time previous year, from levels below;;0;;;;;
-C8;OPR;budget_target;area;auto;Automatically calculated, weighted based on sum of Productive time previous year, from levels below;;0;;;;;
-C8;OPR;budget_target;regional;auto;Automatically calculated, weighted based on sum of Productive time previous year, from levels below;;0;;;;;
-C8;OPR;budget_target;plant;manual;Target entered as %;On bottleneck equipment;0;;;;;
-C8;OPR;budget_target;plant_other_group;disabled;Not Relevant;;0;;;;;
-C8;OPR;budget_target;apu;disabled;Not Relevant;;0;;;;;
-C8;OPR;budget_target;apu_other_group;disabled;Not Relevant;;0;;;;;
-C8;OPR;budget_target;totem;disabled;Not Relevant;;0;;;;;
-C8;OPR;budget_target;equipment_group;disabled;Not Relevant;;0;;;;;
-C8;OPR;budget_target;equipment;disabled;No Targets;;0;;;;;
-C8;OPR;running_target;company;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0;;;;;
-C8;OPR;running_target;division;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0;;;;;
-C8;OPR;running_target;area;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0;;;;;
-C8;OPR;running_target;regional;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0;;;;;
-C8;OPR;running_target;plant;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0;;;;;
-C8;OPR;running_target;plant_other_group;disabled;No entry;;0;;;;;
-C8;OPR;running_target;apu;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0;;;;;
-C8;OPR;running_target;apu_other_group;disabled;No entry.;;0;;;;;
-C8;OPR;running_target;totem;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0;;;;;
-C8;OPR;running_target;equipment_group;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0;;;;;
-C8;OPR;running_target;equipment;manual;Enter Target as a % for the specific equipment;;0;;;;;
-C8;OPR;manual_input_actual;company;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0;;;;;
-C8;OPR;manual_input_actual;division;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0;;;;;
-C8;OPR;manual_input_actual;area;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0;;;;;
-C8;OPR;manual_input_actual;regional;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0;;;;;
-C8;OPR;manual_input_actual;plant;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0;;;;;
-C8;OPR;manual_input_actual;plant_other_group;disabled;No entry.;;0;;;;;
-C8;OPR;manual_input_actual;apu;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0;;;;;
-C8;OPR;manual_input_actual;apu_other_group;disabled;No entry.;;0;;;;;
-C8;OPR;manual_input_actual;totem;auto;Automatically calculated based on Planned Productions Time and Productive time, from level below.;;0;;;;;
-C8;OPR;manual_input_actual;equipment_group;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0;;;;;
-C8;OPR;manual_input_actual;equipment;manual;If not from Automatic systems like Factbird, enter Actual as Productive Time and Planned Production Time for the specific equipment.;;0;;;;;
-C6;Industrial Prod.;budget_target;company;manual;Enter Target in Ratio;;1;;;;;
-C6;Industrial Prod.;budget_target;division;manual;Enter Target in Ratio;;1;;;;;
-C6;Industrial Prod.;budget_target;area;manual;Enter Target in Ratio;;1;;;;;
-C6;Industrial Prod.;budget_target;regional;manual;Enter Target in Ratio;;1;;;;;
-C6;Industrial Prod.;budget_target;plant;manual;Enter Target in Ratio for the full plant.;;1;;;;;
-C6;Industrial Prod.;budget_target;plant_other_group;manual;Enter Target in ratio for the part of the plant that isn’t covered by the underlying APU’s.;;1;;;;;
-C6;Industrial Prod.;budget_target;apu;manual;Enter Target in Ratio for the specific APU.;;1;;;;;
-C6;Industrial Prod.;budget_target;apu_other_group;manual;Enter Target in ratio for the part of the APU that isn’t covered by the underlying Totems.;;1;;;;;
-C6;Industrial Prod.;budget_target;totem;manual;Enter Target in Ratio for the specific Totem.;;1;;;;;
-C6;Industrial Prod.;budget_target;equipment_group;disabled;No entry;;1;;;;;
-C6;Industrial Prod.;budget_target;equipment;disabled;No entry;;1;;;;;
-C6;Industrial Prod.;running_target;company;manual;Enter Target in Ratio;;1;;;;;
-C6;Industrial Prod.;running_target;division;manual;Enter Target in Ratio;;1;;;;;
-C6;Industrial Prod.;running_target;area;manual;Enter Target in Ratio;;1;;;;;
-C6;Industrial Prod.;running_target;regional;manual;Enter Target in Ratio;;1;;;;;
-C6;Industrial Prod.;running_target;plant;manual;Enter Target in Ratio for the full plant.;;1;;;;;
-C6;Industrial Prod.;running_target;plant_other_group;manual;Enter Target in ratio for the part of the plant that isn’t covered by the underlying APU’s.;;1;;;;;
-C6;Industrial Prod.;running_target;apu;manual;Enter Target in Ratio for the specific APU.;;1;;;;;
-C6;Industrial Prod.;running_target;apu_other_group;manual;Enter Target in ratio for the part of the APU that isn’t covered by the underlying Totems.;;1;;;;;
-C6;Industrial Prod.;running_target;totem;manual;Enter Target in Ratio for the specific Totem.;;1;;;;;
-C6;Industrial Prod.;running_target;equipment_group;disabled;No entry;;1;;;;;
-C6;Industrial Prod.;running_target;equipment;disabled;No entry;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;company;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;division;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;area;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;regional;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;plant;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;plant_other_group;manual;Enter Actual Direct Hours and/or Activity Hours that belongs to the plant but isn’t covered by the underlying APU’s.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;apu;disabled;No Entry.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;apu_other_group;manual;Enter Actual Direct Hours and/or Activity Hours that belongs to the APU, but not the underlying Totems.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;totem;manual;Enter Actual Direct Hours and/or Activity Hours for the specific Totem.;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-C6;Industrial Prod.;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-C13;Activity Hours;budget_target;company;;;;0;;;;;
-C13;Activity Hours;budget_target;division;;;;0;;;;;
-C13;Activity Hours;budget_target;area;;;;0;;;;;
-C13;Activity Hours;budget_target;regional;;;;0;;;;;
-C13;Activity Hours;budget_target;plant;;;;0;;;;;
-C13;Activity Hours;budget_target;plant_other_group;;;;0;;;;;
-C13;Activity Hours;budget_target;apu;;;;0;;;;;
-C13;Activity Hours;budget_target;apu_other_group;;;;0;;;;;
-C13;Activity Hours;budget_target;totem;;;;0;;;;;
-C13;Activity Hours;budget_target;equipment_group;;;;0;;;;;
-C13;Activity Hours;budget_target;equipment;;;;0;;;;;
-C13;Activity Hours;running_target;company;;;;0;;;;;
-C13;Activity Hours;running_target;division;;;;0;;;;;
-C13;Activity Hours;running_target;area;;;;0;;;;;
-C13;Activity Hours;running_target;regional;;;;0;;;;;
-C13;Activity Hours;running_target;plant;;;;0;;;;;
-C13;Activity Hours;running_target;plant_other_group;;;;0;;;;;
-C13;Activity Hours;running_target;apu;;;;0;;;;;
-C13;Activity Hours;running_target;apu_other_group;;;;0;;;;;
-C13;Activity Hours;running_target;totem;;;;0;;;;;
-C13;Activity Hours;running_target;equipment_group;;;;0;;;;;
-C13;Activity Hours;running_target;equipment;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;company;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;division;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;area;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;regional;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;plant;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;plant_other_group;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;apu;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;apu_other_group;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;totem;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;equipment_group;;;;0;;;;;
-C13;Activity Hours;manual_input_actual;equipment;;;;0;;;;;
-C12;PM14 Execution;budget_target;company;;;;0;;;;;
-C12;PM14 Execution;budget_target;division;;;;0;;;;;
-C12;PM14 Execution;budget_target;area;;;;0;;;;;
-C12;PM14 Execution;budget_target;regional;;;;0;;;;;
-C12;PM14 Execution;budget_target;plant;;;;0;;;;;
-C12;PM14 Execution;budget_target;plant_other_group;;;;0;;;;;
-C12;PM14 Execution;budget_target;apu;;;;0;;;;;
-C12;PM14 Execution;budget_target;apu_other_group;;;;0;;;;;
-C12;PM14 Execution;budget_target;totem;;;;0;;;;;
-C12;PM14 Execution;budget_target;equipment_group;;;;0;;;;;
-C12;PM14 Execution;budget_target;equipment;;;;0;;;;;
-C12;PM14 Execution;running_target;company;;;;0;;;;;
-C12;PM14 Execution;running_target;division;;;;0;;;;;
-C12;PM14 Execution;running_target;area;;;;0;;;;;
-C12;PM14 Execution;running_target;regional;;;;0;;;;;
-C12;PM14 Execution;running_target;plant;;;;0;;;;;
-C12;PM14 Execution;running_target;plant_other_group;;;;0;;;;;
-C12;PM14 Execution;running_target;apu;;;;0;;;;;
-C12;PM14 Execution;running_target;apu_other_group;;;;0;;;;;
-C12;PM14 Execution;running_target;totem;;;;0;;;;;
-C12;PM14 Execution;running_target;equipment_group;;;;0;;;;;
-C12;PM14 Execution;running_target;equipment;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;company;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;division;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;area;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;regional;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;plant;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;plant_other_group;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;apu;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;apu_other_group;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;totem;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;equipment_group;;;;0;;;;;
-C12;PM14 Execution;manual_input_actual;equipment;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;company;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;division;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;area;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;regional;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;plant;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;plant_other_group;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;apu;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;apu_other_group;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;totem;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;equipment_group;;;;0;;;;;
-C4;Conv. Cost Prod.;budget_target;equipment;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;company;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;division;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;area;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;regional;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;plant;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;plant_other_group;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;apu;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;apu_other_group;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;totem;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;equipment_group;;;;0;;;;;
-C4;Conv. Cost Prod.;running_target;equipment;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;company;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;division;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;area;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;regional;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;plant;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;plant_other_group;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;apu;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;apu_other_group;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;totem;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;equipment_group;;;;0;;;;;
-C4;Conv. Cost Prod.;manual_input_actual;equipment;;;;0;;;;;
-P2;Employee Availability;budget_target;company;;;;0;;;;;
-P2;Employee Availability;budget_target;division;;;;0;;;;;
-P2;Employee Availability;budget_target;area;;;;0;;;;;
-P2;Employee Availability;budget_target;regional;;;;0;;;;;
-P2;Employee Availability;budget_target;plant;manual;Enter Target in % for the full plant.;;0;;;;;
-P2;Employee Availability;budget_target;plant_other_group;manual;Enter Target in % for the part of the plant that isn’t covered by the underlying APU’s.;;0;;;;;
-P2;Employee Availability;budget_target;apu;manual;Enter Target in % for the specific APU.;;0;;;;;
-P2;Employee Availability;budget_target;apu_other_group;disabled;No entry.;;0;;;;;
-P2;Employee Availability;budget_target;totem;disabled;No entry.;;0;;;;;
-P2;Employee Availability;budget_target;equipment_group;;;;0;;;;;
-P2;Employee Availability;budget_target;equipment;;;;0;;;;;
-P2;Employee Availability;running_target;company;;;;0;;;;;
-P2;Employee Availability;running_target;division;;;;0;;;;;
-P2;Employee Availability;running_target;area;;;;0;;;;;
-P2;Employee Availability;running_target;regional;;;;0;;;;;
-P2;Employee Availability;running_target;plant;;;;0;;;;;
-P2;Employee Availability;running_target;plant_other_group;;;;0;;;;;
-P2;Employee Availability;running_target;apu;;;;0;;;;;
-P2;Employee Availability;running_target;apu_other_group;;;;0;;;;;
-P2;Employee Availability;running_target;totem;;;;0;;;;;
-P2;Employee Availability;running_target;equipment_group;;;;0;;;;;
-P2;Employee Availability;running_target;equipment;;;;0;;;;;
-P2;Employee Availability;manual_input_actual;company;;;;0;;;;;
-P2;Employee Availability;manual_input_actual;division;;;;0;;;;;
-P2;Employee Availability;manual_input_actual;area;;;;0;;;;;
-P2;Employee Availability;manual_input_actual;regional;;;;0;;;;;
-P2;Employee Availability;manual_input_actual;plant;manual;Enter Actual for Absent Hours & Scheduled Working Hours for the entire plant, also including all underlying levels.;;0;;;;;
-P2;Employee Availability;manual_input_actual;plant_other_group;auto;Automatically calculates the difference between Plant Total and sum of all underlying APU’s - No entry.;;0;;;;;
-P2;Employee Availability;manual_input_actual;apu;manual;Enter Actual in % for the specific APU.;;0;;;;;
-P2;Employee Availability;manual_input_actual;apu_other_group;disabled;No entry.;;0;;;;;
-P2;Employee Availability;manual_input_actual;totem;disabled;No entry.;;0;;;;;
-P2;Employee Availability;manual_input_actual;equipment_group;;;;0;;;;;
-P2;Employee Availability;manual_input_actual;equipment;;;;0;;;;;
-P3;IP;budget_target;company;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;budget_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;budget_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;budget_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;budget_target;plant;auto;Enter Target in QTY;;1;;;;;
-P3;IP;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-P3;IP;budget_target;apu;disabled;No entry;;1;;;;;
-P3;IP;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-P3;IP;budget_target;totem;disabled;No entry;;1;;;;;
-P3;IP;budget_target;equipment_group;disabled;No entry;;1;;;;;
-P3;IP;budget_target;equipment;disabled;No entry;;1;;;;;
-P3;IP;running_target;company;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;running_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;running_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;running_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;running_target;plant;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;running_target;plant_other_group;manual;Enter Target in QTY for the FTE/headcount belonging to the Plant but not to the APUs below.;;1;;;;;
-P3;IP;running_target;apu;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P3;IP;running_target;apu_other_group;manual;Enter Target in QTY for the FTE/headcount belonging to the APU  and not to the Totems below.;;1;;;;;
-P3;IP;running_target;totem;manual;Enter Target in QTY for the specific Totem.;;1;;;;;
-P3;IP;running_target;equipment_group;disabled;No entry;;1;;;;;
-P3;IP;running_target;equipment;disabled;No entry;;1;;;;;
-P3;IP;manual_input_actual;company;disabled;No entry;;1;;;;;
-P3;IP;manual_input_actual;division;disabled;No entry;;1;;;;;
-P3;IP;manual_input_actual;area;disabled;No entry;;1;;;;;
-P3;IP;manual_input_actual;regional;disabled;No entry;;1;;;;;
-P3;IP;manual_input_actual;plant;auto;Actual IPs accumulated automatically from the level below.;;1;;;;;
-P3;IP;manual_input_actual;plant_other_group;manual;Enter implemented IPs that belongs to the plant, but not the underlying level (e.g., made by Plant Manager);;1;;;;;
-P3;IP;manual_input_actual;apu;auto;Actual IPs accumulated automatically from the level below.;;1;;;;;
-P3;IP;manual_input_actual;apu_other_group;manual;Enter IPs that belongs to the APU, but not the underlying Totems (e.g., made by the APU Manager);;1;;;;;
-P3;IP;manual_input_actual;totem;manual;Enter Actual number of implemented IPs for the specific Totem;;1;;;;;
-P3;IP;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-P3;IP;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-P5;Kaizen Workshops;budget_target;company;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P5;Kaizen Workshops;budget_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P5;Kaizen Workshops;budget_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P5;Kaizen Workshops;budget_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P5;Kaizen Workshops;budget_target;plant;manual;Enter Target in QTY for the specific Plant;;1;;;;;
-P5;Kaizen Workshops;budget_target;plant_other_group;disabled;No entry.;;1;;;;;
-P5;Kaizen Workshops;budget_target;apu;disabled;No entry.;;1;;;;;
-P5;Kaizen Workshops;budget_target;apu_other_group;disabled;No entry.;;1;;;;;
-P5;Kaizen Workshops;budget_target;totem;disabled;No entry.;;1;;;;;
-P5;Kaizen Workshops;budget_target;equipment_group;disabled;No entry;;1;;;;;
-P5;Kaizen Workshops;budget_target;equipment;disabled;No entry;;1;;;;;
-P5;Kaizen Workshops;running_target;company;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P5;Kaizen Workshops;running_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P5;Kaizen Workshops;running_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P5;Kaizen Workshops;running_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1;;;;;
-P5;Kaizen Workshops;running_target;plant;manual;Enter Target in QTY for the specific Plant;Target shown as Plant + Plant Other;1;;;;;
-P5;Kaizen Workshops;running_target;plant_other_group;manual;Enter Target in QTY for the part of the Plant that is not covered by the underlying APU’s.;;1;;;;;
-P5;Kaizen Workshops;running_target;apu;manual;Enter Target in QTY for the specific APU;;1;;;;;
-P5;Kaizen Workshops;running_target;apu_other_group;disabled;No entry.;;1;;;;;
-P5;Kaizen Workshops;running_target;totem;disabled;No entry.;;1;;;;;
-P5;Kaizen Workshops;running_target;equipment_group;disabled;No entry;;1;;;;;
-P5;Kaizen Workshops;running_target;equipment;disabled;No entry;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;company;auto; Actual automatically calculated as sum of below level;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;division;auto; Actual automatically calculated as sum of below level;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;area;auto; Actual automatically calculated as sum of below level;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;regional;auto; Actual automatically calculated as sum of below level;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;plant;manual; If no APUs enter actual for the plant in QTY else Actual will be automatically calculated as sum of below level;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;plant_other_group;manual;Enter Actual in QTY for the areas that belong to the plant but not to an APU;(if applicable).;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;apu;manual;Enter Actual in QTY for the specific APU.;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;apu_other_group;disabled;No entry.;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;totem;disabled;No entry.;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-P5;Kaizen Workshops;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-P4;IP Ratio;budget_target;company;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1;;;;;
-P4;IP Ratio;budget_target;division;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1;;;;;
-P4;IP Ratio;budget_target;area;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1;;;;;
-P4;IP Ratio;budget_target;regional;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1;;;;;
-P4;IP Ratio;budget_target;plant;manual;Enter Target in Ratio for the full plant considering all FTE/headcounts in the plant and all IPs in the plant.;;1;;;;;
-P4;IP Ratio;budget_target;plant_other_group;auto;Target in Ratio automatically taken from Plant Ratio.;;1;;;;;
-P4;IP Ratio;budget_target;apu;disabled;No entry;;1;;;;;
-P4;IP Ratio;budget_target;apu_other_group;disabled;No entry;(in this case APU 2);1;;;;;
-P4;IP Ratio;budget_target;totem;disabled;No entry;;1;;;;;
-P4;IP Ratio;budget_target;equipment_group;disabled;No entry;;1;;;;;
-P4;IP Ratio;budget_target;equipment;disabled;No entry;;1;;;;;
-P4;IP Ratio;running_target;company;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1;;;;;
-P4;IP Ratio;running_target;division;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1;;;;;
-P4;IP Ratio;running_target;area;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1;;;;;
-P4;IP Ratio;running_target;regional;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1;;;;;
-P4;IP Ratio;running_target;plant;manual;Enter Target in Ratio for the full plant considering all FTE/headcounts in the plant and all IPs in the plant.;;1;;;;;
-P4;IP Ratio;running_target;plant_other_group;auto;Target in Ratio automatically taken from Plant Ratio.;;1;;;;;
-P4;IP Ratio;running_target;apu;disabled;No entry;;1;;;;;
-P4;IP Ratio;running_target;apu_other_group;disabled;No entry;;1;;;;;
-P4;IP Ratio;running_target;totem;disabled;No entry;;1;;;;;
-P4;IP Ratio;running_target;equipment_group;disabled;No entry;;1;;;;;
-P4;IP Ratio;running_target;equipment;disabled;No entry;;1;;;;;
-P4;IP Ratio;manual_input_actual;company;auto;FTEs automatically calculated as sum of below level;;1;;;;;
-P4;IP Ratio;manual_input_actual;division;auto;FTEs automatically calculated as sum of below level;;1;;;;;
-P4;IP Ratio;manual_input_actual;area;auto;FTEs automatically calculated as sum of below level;;1;;;;;
-P4;IP Ratio;manual_input_actual;regional;auto;FTEs automatically calculated as sum of below level;;1;;;;;
-P4;IP Ratio;manual_input_actual;plant;manual;Enter FTEs in number for the full Plant;;1;;;;;
-P4;IP Ratio;manual_input_actual;plant_other_group;disabled;No entry;;1;;;;;
-P4;IP Ratio;manual_input_actual;apu;disabled;No entry;;1;;;;;
-P4;IP Ratio;manual_input_actual;apu_other_group;disabled;No entry;;1;;;;;
-P4;IP Ratio;manual_input_actual;totem;disabled;No entry;;1;;;;;
-P4;IP Ratio;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-P4;IP Ratio;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-P7;Voluntary turnover;budget_target;company;;;;0;;;;;
-P7;Voluntary turnover;budget_target;division;;;;0;;;;;
-P7;Voluntary turnover;budget_target;area;;;;0;;;;;
-P7;Voluntary turnover;budget_target;regional;;;;0;;;;;
-P7;Voluntary turnover;budget_target;plant;;;;0;;;;;
-P7;Voluntary turnover;budget_target;plant_other_group;;;;0;;;;;
-P7;Voluntary turnover;budget_target;apu;;;;0;;;;;
-P7;Voluntary turnover;budget_target;apu_other_group;;;;0;;;;;
-P7;Voluntary turnover;budget_target;totem;;;;0;;;;;
-P7;Voluntary turnover;budget_target;equipment_group;;;;0;;;;;
-P7;Voluntary turnover;budget_target;equipment;;;;0;;;;;
-P7;Voluntary turnover;running_target;company;;;;0;;;;;
-P7;Voluntary turnover;running_target;division;;;;0;;;;;
-P7;Voluntary turnover;running_target;area;;;;0;;;;;
-P7;Voluntary turnover;running_target;regional;;;;0;;;;;
-P7;Voluntary turnover;running_target;plant;;;;0;;;;;
-P7;Voluntary turnover;running_target;plant_other_group;;;;0;;;;;
-P7;Voluntary turnover;running_target;apu;;;;0;;;;;
-P7;Voluntary turnover;running_target;apu_other_group;;;;0;;;;;
-P7;Voluntary turnover;running_target;totem;;;;0;;;;;
-P7;Voluntary turnover;running_target;equipment_group;;;;0;;;;;
-P7;Voluntary turnover;running_target;equipment;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;company;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;division;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;area;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;regional;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;plant;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;plant_other_group;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;apu;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;apu_other_group;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;totem;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;equipment_group;;;;0;;;;;
-P7;Voluntary turnover;manual_input_actual;equipment;;;;0;;;;;
-E5;Energy Cons. 1+2;budget_target;company;manual;Enter target in MWh ;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;division;manual;Enter target in MWh ;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;area;manual;Enter target in MWh ;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;regional;manual;Enter target in MWh ;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;plant;manual;Enter target in MWh for the full plant;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;apu;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;totem;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;equipment_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;budget_target;equipment;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;running_target;company;manual;Enter target in MWh ;;1;;;;;
-E5;Energy Cons. 1+2;running_target;division;manual;Enter target in MWh ;;1;;;;;
-E5;Energy Cons. 1+2;running_target;area;manual;Enter target in MWh ;;1;;;;;
-E5;Energy Cons. 1+2;running_target;regional;manual;Enter target in MWh ;;1;;;;;
-E5;Energy Cons. 1+2;running_target;plant;manual;Enter target in MWh for the full plant;;1;;;;;
-E5;Energy Cons. 1+2;running_target;plant_other_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;running_target;apu;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;running_target;apu_other_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;running_target;totem;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;running_target;equipment_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;running_target;equipment;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;company;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;division;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;area;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;regional;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;plant;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;plant_other_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;apu;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;apu_other_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;totem;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-E5;Energy Cons. 1+2;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;budget_target;company;manual;Enter target in m3;;1;;;;;
-E9;Water Withdrawal;budget_target;division;manual;Enter target in m3;;1;;;;;
-E9;Water Withdrawal;budget_target;area;manual;Enter target in m3;;1;;;;;
-E9;Water Withdrawal;budget_target;regional;manual;Enter target in m3;;1;;;;;
-E9;Water Withdrawal;budget_target;plant;manual;Enter target in m3 for the full plant;;1;;;;;
-E9;Water Withdrawal;budget_target;plant_other_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;budget_target;apu;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;budget_target;apu_other_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;budget_target;totem;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;budget_target;equipment_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;budget_target;equipment;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;running_target;company;manual;Enter target in m3;;1;;;;;
-E9;Water Withdrawal;running_target;division;manual;Enter target in m3;;1;;;;;
-E9;Water Withdrawal;running_target;area;manual;Enter target in m3;;1;;;;;
-E9;Water Withdrawal;running_target;regional;manual;Enter target in m3;;1;;;;;
-E9;Water Withdrawal;running_target;plant;manual;Enter target in m3 for the full plant;;1;;;;;
-E9;Water Withdrawal;running_target;plant_other_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;running_target;apu;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;running_target;apu_other_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;running_target;totem;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;running_target;equipment_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;running_target;equipment;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;company;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;division;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;area;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;regional;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;plant;disabled;Only coming automatically from group standard system source Sphera;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;plant_other_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;apu;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;apu_other_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;totem;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;equipment_group;disabled;No entry;;1;;;;;
-E9;Water Withdrawal;manual_input_actual;equipment;disabled;No entry;;1;;;;;
-S6;MTI;budget_target;company;;;;0;;;;;
-S6;MTI;budget_target;division;;;;0;;;;;
-S6;MTI;budget_target;area;;;;0;;;;;
-S6;MTI;budget_target;regional;;;;0;;;;;
-S6;MTI;budget_target;plant;;;;0;;;;;
-S6;MTI;budget_target;plant_other_group;;;;0;;;;;
-S6;MTI;budget_target;apu;;;;0;;;;;
-S6;MTI;budget_target;apu_other_group;;;;0;;;;;
-S6;MTI;budget_target;totem;;;;0;;;;;
-S6;MTI;budget_target;equipment_group;;;;0;;;;;
-S6;MTI;budget_target;equipment;;;;0;;;;;
-S6;MTI;running_target;company;;;;0;;;;;
-S6;MTI;running_target;division;;;;0;;;;;
-S6;MTI;running_target;area;;;;0;;;;;
-S6;MTI;running_target;regional;;;;0;;;;;
-S6;MTI;running_target;plant;;;;0;;;;;
-S6;MTI;running_target;plant_other_group;;;;0;;;;;
-S6;MTI;running_target;apu;;;;0;;;;;
-S6;MTI;running_target;apu_other_group;;;;0;;;;;
-S6;MTI;running_target;totem;;;;0;;;;;
-S6;MTI;running_target;equipment_group;;;;0;;;;;
-S6;MTI;running_target;equipment;;;;0;;;;;
-S6;MTI;manual_input_actual;company;;;;0;;;;;
-S6;MTI;manual_input_actual;division;;;;0;;;;;
-S6;MTI;manual_input_actual;area;;;;0;;;;;
-S6;MTI;manual_input_actual;regional;;;;0;;;;;
-S6;MTI;manual_input_actual;plant;;;;0;;;;;
-S6;MTI;manual_input_actual;plant_other_group;;;;0;;;;;
-S6;MTI;manual_input_actual;apu;;;;0;;;;;
-S6;MTI;manual_input_actual;apu_other_group;;;;0;;;;;
-S6;MTI;manual_input_actual;totem;;;;0;;;;;
-S6;MTI;manual_input_actual;equipment_group;;;;0;;;;;
-S6;MTI;manual_input_actual;equipment;;;;0;;;;;
-S7;NM;budget_target;company;;;;0;;;;;
-S7;NM;budget_target;division;;;;0;;;;;
-S7;NM;budget_target;area;;;;0;;;;;
-S7;NM;budget_target;regional;;;;0;;;;;
-S7;NM;budget_target;plant;;;;0;;;;;
-S7;NM;budget_target;plant_other_group;;;;0;;;;;
-S7;NM;budget_target;apu;;;;0;;;;;
-S7;NM;budget_target;apu_other_group;;;;0;;;;;
-S7;NM;budget_target;totem;;;;0;;;;;
-S7;NM;budget_target;equipment_group;;;;0;;;;;
-S7;NM;budget_target;equipment;;;;0;;;;;
-S7;NM;running_target;company;;;;0;;;;;
-S7;NM;running_target;division;;;;0;;;;;
-S7;NM;running_target;area;;;;0;;;;;
-S7;NM;running_target;regional;;;;0;;;;;
-S7;NM;running_target;plant;;;;0;;;;;
-S7;NM;running_target;plant_other_group;;;;0;;;;;
-S7;NM;running_target;apu;;;;0;;;;;
-S7;NM;running_target;apu_other_group;;;;0;;;;;
-S7;NM;running_target;totem;;;;0;;;;;
-S7;NM;running_target;equipment_group;;;;0;;;;;
-S7;NM;running_target;equipment;;;;0;;;;;
-S7;NM;manual_input_actual;company;;;;0;;;;;
-S7;NM;manual_input_actual;division;;;;0;;;;;
-S7;NM;manual_input_actual;area;;;;0;;;;;
-S7;NM;manual_input_actual;regional;;;;0;;;;;
-S7;NM;manual_input_actual;plant;;;;0;;;;;
-S7;NM;manual_input_actual;plant_other_group;;;;0;;;;;
-S7;NM;manual_input_actual;apu;;;;0;;;;;
-S7;NM;manual_input_actual;apu_other_group;;;;0;;;;;
-S7;NM;manual_input_actual;totem;;;;0;;;;;
-S7;NM;manual_input_actual;equipment_group;;;;0;;;;;
-S7;NM;manual_input_actual;equipment;;;;0;;;;;
-Q4;Q Exemptions;budget_target;company;;;;0;;;;;
-Q4;Q Exemptions;budget_target;division;;;;0;;;;;
-Q4;Q Exemptions;budget_target;area;;;;0;;;;;
-Q4;Q Exemptions;budget_target;regional;;;;0;;;;;
-Q4;Q Exemptions;budget_target;plant;;;;0;;;;;
-Q4;Q Exemptions;budget_target;plant_other_group;;;;0;;;;;
-Q4;Q Exemptions;budget_target;apu;;;;0;;;;;
-Q4;Q Exemptions;budget_target;apu_other_group;;;;0;;;;;
-Q4;Q Exemptions;budget_target;totem;;;;0;;;;;
-Q4;Q Exemptions;budget_target;equipment_group;;;;0;;;;;
-Q4;Q Exemptions;budget_target;equipment;;;;0;;;;;
-Q4;Q Exemptions;running_target;company;;;;0;;;;;
-Q4;Q Exemptions;running_target;division;;;;0;;;;;
-Q4;Q Exemptions;running_target;area;;;;0;;;;;
-Q4;Q Exemptions;running_target;regional;;;;0;;;;;
-Q4;Q Exemptions;running_target;plant;;;;0;;;;;
-Q4;Q Exemptions;running_target;plant_other_group;;;;0;;;;;
-Q4;Q Exemptions;running_target;apu;;;;0;;;;;
-Q4;Q Exemptions;running_target;apu_other_group;;;;0;;;;;
-Q4;Q Exemptions;running_target;totem;;;;0;;;;;
-Q4;Q Exemptions;running_target;equipment_group;;;;0;;;;;
-Q4;Q Exemptions;running_target;equipment;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;company;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;division;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;area;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;regional;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;plant;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;plant_other_group;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;apu;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;apu_other_group;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;totem;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;equipment_group;;;;0;;;;;
-Q4;Q Exemptions;manual_input_actual;equipment;;;;0;;;;;
-Q16;Q Capability Score;budget_target;company;;;;0;;;;;
-Q16;Q Capability Score;budget_target;division;;;;0;;;;;
-Q16;Q Capability Score;budget_target;area;;;;0;;;;;
-Q16;Q Capability Score;budget_target;regional;;;;0;;;;;
-Q16;Q Capability Score;budget_target;plant;;;;0;;;;;
-Q16;Q Capability Score;budget_target;plant_other_group;;;;0;;;;;
-Q16;Q Capability Score;budget_target;apu;;;;0;;;;;
-Q16;Q Capability Score;budget_target;apu_other_group;;;;0;;;;;
-Q16;Q Capability Score;budget_target;totem;;;;0;;;;;
-Q16;Q Capability Score;budget_target;equipment_group;;;;0;;;;;
-Q16;Q Capability Score;budget_target;equipment;;;;0;;;;;
-Q16;Q Capability Score;running_target;company;;;;0;;;;;
-Q16;Q Capability Score;running_target;division;;;;0;;;;;
-Q16;Q Capability Score;running_target;area;;;;0;;;;;
-Q16;Q Capability Score;running_target;regional;;;;0;;;;;
-Q16;Q Capability Score;running_target;plant;;;;0;;;;;
-Q16;Q Capability Score;running_target;plant_other_group;;;;0;;;;;
-Q16;Q Capability Score;running_target;apu;;;;0;;;;;
-Q16;Q Capability Score;running_target;apu_other_group;;;;0;;;;;
-Q16;Q Capability Score;running_target;totem;;;;0;;;;;
-Q16;Q Capability Score;running_target;equipment_group;;;;0;;;;;
-Q16;Q Capability Score;running_target;equipment;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;company;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;division;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;area;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;regional;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;plant;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;plant_other_group;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;apu;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;apu_other_group;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;totem;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;equipment_group;;;;0;;;;;
-Q16;Q Capability Score;manual_input_actual;equipment;;;;0;;;;;
-Q9;IQI PPM;budget_target;company;;;;0;;;;;
-Q9;IQI PPM;budget_target;division;;;;0;;;;;
-Q9;IQI PPM;budget_target;area;;;;0;;;;;
-Q9;IQI PPM;budget_target;regional;;;;0;;;;;
-Q9;IQI PPM;budget_target;plant;;;;0;;;;;
-Q9;IQI PPM;budget_target;plant_other_group;;;;0;;;;;
-Q9;IQI PPM;budget_target;apu;;;;0;;;;;
-Q9;IQI PPM;budget_target;apu_other_group;;;;0;;;;;
-Q9;IQI PPM;budget_target;totem;;;;0;;;;;
-Q9;IQI PPM;budget_target;equipment_group;;;;0;;;;;
-Q9;IQI PPM;budget_target;equipment;;;;0;;;;;
-Q9;IQI PPM;running_target;company;;;;0;;;;;
-Q9;IQI PPM;running_target;division;;;;0;;;;;
-Q9;IQI PPM;running_target;area;;;;0;;;;;
-Q9;IQI PPM;running_target;regional;;;;0;;;;;
-Q9;IQI PPM;running_target;plant;;;;0;;;;;
-Q9;IQI PPM;running_target;plant_other_group;;;;0;;;;;
-Q9;IQI PPM;running_target;apu;;;;0;;;;;
-Q9;IQI PPM;running_target;apu_other_group;;;;0;;;;;
-Q9;IQI PPM;running_target;totem;;;;0;;;;;
-Q9;IQI PPM;running_target;equipment_group;;;;0;;;;;
-Q9;IQI PPM;running_target;equipment;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;company;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;division;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;area;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;regional;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;plant;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;plant_other_group;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;apu;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;apu_other_group;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;totem;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;equipment_group;;;;0;;;;;
-Q9;IQI PPM;manual_input_actual;equipment;;;;0;;;;;
-Q13;Warranty Cost;budget_target;company;;;;0;;;;;
-Q13;Warranty Cost;budget_target;division;;;;0;;;;;
-Q13;Warranty Cost;budget_target;area;;;;0;;;;;
-Q13;Warranty Cost;budget_target;regional;;;;0;;;;;
-Q13;Warranty Cost;budget_target;plant;;;;0;;;;;
-Q13;Warranty Cost;budget_target;plant_other_group;;;;0;;;;;
-Q13;Warranty Cost;budget_target;apu;;;;0;;;;;
-Q13;Warranty Cost;budget_target;apu_other_group;;;;0;;;;;
-Q13;Warranty Cost;budget_target;totem;;;;0;;;;;
-Q13;Warranty Cost;budget_target;equipment_group;;;;0;;;;;
-Q13;Warranty Cost;budget_target;equipment;;;;0;;;;;
-Q13;Warranty Cost;running_target;company;;;;0;;;;;
-Q13;Warranty Cost;running_target;division;;;;0;;;;;
-Q13;Warranty Cost;running_target;area;;;;0;;;;;
-Q13;Warranty Cost;running_target;regional;;;;0;;;;;
-Q13;Warranty Cost;running_target;plant;;;;0;;;;;
-Q13;Warranty Cost;running_target;plant_other_group;;;;0;;;;;
-Q13;Warranty Cost;running_target;apu;;;;0;;;;;
-Q13;Warranty Cost;running_target;apu_other_group;;;;0;;;;;
-Q13;Warranty Cost;running_target;totem;;;;0;;;;;
-Q13;Warranty Cost;running_target;equipment_group;;;;0;;;;;
-Q13;Warranty Cost;running_target;equipment;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;company;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;division;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;area;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;regional;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;plant;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;plant_other_group;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;apu;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;apu_other_group;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;totem;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;equipment_group;;;;0;;;;;
-Q13;Warranty Cost;manual_input_actual;equipment;;;;0;;;;;
-D10;PO@TLT;budget_target;company;;;;0;;;;;
-D10;PO@TLT;budget_target;division;;;;0;;;;;
-D10;PO@TLT;budget_target;area;;;;0;;;;;
-D10;PO@TLT;budget_target;regional;;;;0;;;;;
-D10;PO@TLT;budget_target;plant;manual;Enter Target in % for the full plant.;;0;;;;;
-D10;PO@TLT;budget_target;plant_other_group;manual;Enter Target in % for the parts of the plant that isn't covered by the underlying APU’s.;;0;;;;;
-D10;PO@TLT;budget_target;apu;manual;Enter Target in % for the specific APU.;;0;;;;;
-D10;PO@TLT;budget_target;apu_other_group;disabled;No entry.;;0;;;;;
-D10;PO@TLT;budget_target;totem;disabled;No entry.;;0;;;;;
-D10;PO@TLT;budget_target;equipment_group;;;;0;;;;;
-D10;PO@TLT;budget_target;equipment;;;;0;;;;;
-D10;PO@TLT;running_target;company;;;;0;;;;;
-D10;PO@TLT;running_target;division;;;;0;;;;;
-D10;PO@TLT;running_target;area;;;;0;;;;;
-D10;PO@TLT;running_target;regional;;;;0;;;;;
-D10;PO@TLT;running_target;plant;;;;0;;;;;
-D10;PO@TLT;running_target;plant_other_group;;;;0;;;;;
-D10;PO@TLT;running_target;apu;;;;0;;;;;
-D10;PO@TLT;running_target;apu_other_group;;;;0;;;;;
-D10;PO@TLT;running_target;totem;;;;0;;;;;
-D10;PO@TLT;running_target;equipment_group;;;;0;;;;;
-D10;PO@TLT;running_target;equipment;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;company;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;division;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;area;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;regional;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;plant;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;plant_other_group;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;apu;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;apu_other_group;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;totem;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;equipment_group;;;;0;;;;;
-D10;PO@TLT;manual_input_actual;equipment;;;;0;;;;;
-D17;SOTTR;budget_target;company;;;;0;;;;;
-D17;SOTTR;budget_target;division;;;;0;;;;;
-D17;SOTTR;budget_target;area;;;;0;;;;;
-D17;SOTTR;budget_target;regional;;;;0;;;;;
-D17;SOTTR;budget_target;plant;;;;0;;;;;
-D17;SOTTR;budget_target;plant_other_group;;;;0;;;;;
-D17;SOTTR;budget_target;apu;;;;0;;;;;
-D17;SOTTR;budget_target;apu_other_group;;;;0;;;;;
-D17;SOTTR;budget_target;totem;;;;0;;;;;
-D17;SOTTR;budget_target;equipment_group;;;;0;;;;;
-D17;SOTTR;budget_target;equipment;;;;0;;;;;
-D17;SOTTR;running_target;company;;;;0;;;;;
-D17;SOTTR;running_target;division;;;;0;;;;;
-D17;SOTTR;running_target;area;;;;0;;;;;
-D17;SOTTR;running_target;regional;;;;0;;;;;
-D17;SOTTR;running_target;plant;;;;0;;;;;
-D17;SOTTR;running_target;plant_other_group;;;;0;;;;;
-D17;SOTTR;running_target;apu;;;;0;;;;;
-D17;SOTTR;running_target;apu_other_group;;;;0;;;;;
-D17;SOTTR;running_target;totem;;;;0;;;;;
-D17;SOTTR;running_target;equipment_group;;;;0;;;;;
-D17;SOTTR;running_target;equipment;;;;0;;;;;
-D17;SOTTR;manual_input_actual;company;;;;0;;;;;
-D17;SOTTR;manual_input_actual;division;;;;0;;;;;
-D17;SOTTR;manual_input_actual;area;;;;0;;;;;
-D17;SOTTR;manual_input_actual;regional;;;;0;;;;;
-D17;SOTTR;manual_input_actual;plant;;;;0;;;;;
-D17;SOTTR;manual_input_actual;plant_other_group;;;;0;;;;;
-D17;SOTTR;manual_input_actual;apu;;;;0;;;;;
-D17;SOTTR;manual_input_actual;apu_other_group;;;;0;;;;;
-D17;SOTTR;manual_input_actual;totem;;;;0;;;;;
-D17;SOTTR;manual_input_actual;equipment_group;;;;0;;;;;
-D17;SOTTR;manual_input_actual;equipment;;;;0;;;;;
-I5;Inventory Value ;budget_target;company;;;;0;;;;;
-I5;Inventory Value ;budget_target;division;;;;0;;;;;
-I5;Inventory Value ;budget_target;area;;;;0;;;;;
-I5;Inventory Value ;budget_target;regional;;;;0;;;;;
-I5;Inventory Value ;budget_target;plant;;;;0;;;;;
-I5;Inventory Value ;budget_target;plant_other_group;;;;0;;;;;
-I5;Inventory Value ;budget_target;apu;;;;0;;;;;
-I5;Inventory Value ;budget_target;apu_other_group;;;;0;;;;;
-I5;Inventory Value ;budget_target;totem;;;;0;;;;;
-I5;Inventory Value ;budget_target;equipment_group;;;;0;;;;;
-I5;Inventory Value ;budget_target;equipment;;;;0;;;;;
-I5;Inventory Value ;running_target;company;;;;0;;;;;
-I5;Inventory Value ;running_target;division;;;;0;;;;;
-I5;Inventory Value ;running_target;area;;;;0;;;;;
-I5;Inventory Value ;running_target;regional;;;;0;;;;;
-I5;Inventory Value ;running_target;plant;;;;0;;;;;
-I5;Inventory Value ;running_target;plant_other_group;;;;0;;;;;
-I5;Inventory Value ;running_target;apu;;;;0;;;;;
-I5;Inventory Value ;running_target;apu_other_group;;;;0;;;;;
-I5;Inventory Value ;running_target;totem;;;;0;;;;;
-I5;Inventory Value ;running_target;equipment_group;;;;0;;;;;
-I5;Inventory Value ;running_target;equipment;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;company;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;division;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;area;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;regional;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;plant;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;plant_other_group;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;apu;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;apu_other_group;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;totem;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;equipment_group;;;;0;;;;;
-I5;Inventory Value ;manual_input_actual;equipment;;;;0;;;;;
+﻿kpi_id;kpi_short_name;view_id;node_type;input_type;main_text;sub_text;Priority
+S4;LTI;budget_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+S4;LTI;budget_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+S4;LTI;budget_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+S4;LTI;budget_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+S4;LTI;budget_target;plant;manual;Sphera;;1
+S4;LTI;budget_target;plant_other_group;disabled;No entry;;1
+S4;LTI;budget_target;apu;disabled;No entry;;1
+S4;LTI;budget_target;apu_other_group;disabled;No entry;;1
+S4;LTI;budget_target;totem;disabled;No entry;;1
+S4;LTI;budget_target;equipment_group;disabled;No entry;;1
+S4;LTI;budget_target;equipment;disabled;No entry;;1
+S4;LTI;running_target;company;auto;Target is automatically calculated as sum of all QTY from level below;;1
+S4;LTI;running_target;division;auto;Target is automatically calculated as sum of all QTY from level below;;1
+S4;LTI;running_target;area;auto;Target is automatically calculated as sum of all QTY from level below;;1
+S4;LTI;running_target;regional;auto;Target is automatically calculated as sum of all QTY from level below;;1
+S4;LTI;running_target;plant;manual;Enter Target in QTY for the entire Plant;;1
+S4;LTI;running_target;plant_other_group;auto;Target in QTY is automatically calculated as a Plant target minus the sum of level below;;1
+S4;LTI;running_target;apu;manual;Enter Target for full year in January, in QTY for the full specific APU considering all headcounts in that specific APU;;1
+S4;LTI;running_target;apu_other_group;manual;Enter Target for full year in January, in QTY for the Headcount belonging to the APU and not to the Totems below;;1
+S4;LTI;running_target;totem;auto;Target is always 0;;1
+S4;LTI;running_target;equipment_group;disabled;No entry;;1
+S4;LTI;running_target;equipment;disabled;No entry;;1
+S4;LTI;manual_input_actual_input_actual;company;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;division;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;area;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;equipment_group;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;equipment;disabled;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;budget_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+S2;Hazard Observation;budget_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+S2;Hazard Observation;budget_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+S2;Hazard Observation;budget_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+S2;Hazard Observation;budget_target;plant;auto;Target is automatically coming from Group standard source Sphera;;1
+S2;Hazard Observation;budget_target;plant_other_group;disabled;No entry;;1
+S2;Hazard Observation;budget_target;apu;disabled;No entry;;1
+S2;Hazard Observation;budget_target;apu_other_group;disabled;No entry;;1
+S2;Hazard Observation;budget_target;totem;disabled;No entry;;1
+S2;Hazard Observation;budget_target;equipment_group;disabled;No entry;;1
+S2;Hazard Observation;budget_target;equipment;disabled;No entry;;1
+S2;Hazard Observation;running_target;company;auto;Target in QTY is automatically calculated as a sum of the level below;;1
+S2;Hazard Observation;running_target;division;auto;Target in QTY is automatically calculated as a sum of the level below;;1
+S2;Hazard Observation;running_target;area;auto;Target in QTY is automatically calculated as a sum of the level below;;1
+S2;Hazard Observation;running_target;regional;auto;Target in QTY is automatically calculated as a sum of the level below;;1
+S2;Hazard Observation;running_target;plant;manual;Enter Target in QTY for the entire Plant;;1
+S2;Hazard Observation;running_target;plant_other_group;auto;Target in QTY is automatically calculated as a Plant target minus the sum of level below;;1
+S2;Hazard Observation;running_target;apu;auto;Target in QTY is automatically calculated as a sum of the level below;;1
+S2;Hazard Observation;running_target;apu_other_group;manual;Enter Target in QTY for the areas belonging to the APU and not to the Totems below;;1
+S2;Hazard Observation;running_target;totem;manual;Enter Target in QTY for the specific Totem;;1
+S2;Hazard Observation;running_target;equipment_group;disabled;No entry;;1
+S2;Hazard Observation;running_target;equipment;disabled;No entry;;1
+S2;Hazard Observation;manual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;plant;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;apu;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;totem;auto;Only coming automatically from group standard system source Sphera;;1
+S2;Hazard Observation;manual_input_actual;equipment_group;disabled;No entry;;1
+S2;Hazard Observation;manual_input_actual;equipment;disabled;No entry;;1
+S9;TRIR;budget_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;budget_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;budget_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;budget_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;budget_target;plant;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;budget_target;plant_other_group;disabled;No entry;;1
+S9;TRIR;budget_target;apu;disabled;No entry;;1
+S9;TRIR;budget_target;apu_other_group;disabled;No entry;;1
+S9;TRIR;budget_target;totem;disabled;No entry;;1
+S9;TRIR;budget_target;equipment_group;disabled;No entry;;1
+S9;TRIR;budget_target;equipment;disabled;No entry;;1
+S9;TRIR;running_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;running_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;running_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;running_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+S9;TRIR;running_target;plant;manual;Target is manually entered as ratio for the full plant;;1
+S9;TRIR;running_target;plant_other_group;disabled;No entry;;1
+S9;TRIR;running_target;apu;disabled;No entry;;1
+S9;TRIR;running_target;apu_other_group;disabled;No entry;;1
+S9;TRIR;running_target;totem;disabled;No entry;;1
+S9;TRIR;running_target;equipment_group;disabled;No entry;;1
+S9;TRIR;running_target;equipment;disabled;No entry;;1
+S9;TRIR;manual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;1
+S9;TRIR;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;1
+S9;TRIR;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;1
+S9;TRIR;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;1
+S9;TRIR;manual_input_actual;plant;auto;Only coming automatically from group standard system source Sphera;;1
+S9;TRIR;manual_input_actual;plant_other_group;disabled;No entry;;1
+S9;TRIR;manual_input_actual;apu;disabled;No entry;;1
+S9;TRIR;manual_input_actual;apu_other_group;disabled;No entry;;1
+S9;TRIR;manual_input_actual;totem;disabled;No entry;;1
+S9;TRIR;manual_input_actual;equipment_group;disabled;No entry;;1
+S9;TRIR;manual_input_actual;equipment;disabled;No entry;;1
+S5;LTIR;budget_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;budget_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;budget_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;budget_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;budget_target;plant;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;budget_target;plant_other_group;disabled;No entry;;1
+S5;LTIR;budget_target;apu;disabled;No entry;;1
+S5;LTIR;budget_target;apu_other_group;disabled;No entry;;1
+S5;LTIR;budget_target;totem;disabled;No entry;;1
+S5;LTIR;budget_target;equipment_group;disabled;No entry;;1
+S5;LTIR;budget_target;equipment;disabled;No entry;;1
+S5;LTIR;running_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;running_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;running_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;running_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+S5;LTIR;running_target;plant;manual;Target is manually entered as ratio for the full plant;;1
+S5;LTIR;running_target;plant_other_group;disabled;No entry;;1
+S5;LTIR;running_target;apu;disabled;No entry;;1
+S5;LTIR;running_target;apu_other_group;disabled;No entry;;1
+S5;LTIR;running_target;totem;disabled;No entry;;1
+S5;LTIR;running_target;equipment_group;disabled;No entry;;1
+S5;LTIR;running_target;equipment;disabled;No entry;;1
+S5;LTIR;manual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;1
+S5;LTIR;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;1
+S5;LTIR;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;1
+S5;LTIR;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;1
+S5;LTIR;manual_input_actual;plant;auto;Only coming automatically from group standard system source Sphera;;1
+S5;LTIR;manual_input_actual;plant_other_group;disabled;No entry;;1
+S5;LTIR;manual_input_actual;apu;disabled;No entry;;1
+S5;LTIR;manual_input_actual;apu_other_group;disabled;No entry;;1
+S5;LTIR;manual_input_actual;totem;disabled;No entry;;1
+S5;LTIR;manual_input_actual;equipment_group;disabled;No entry;;1
+S5;LTIR;manual_input_actual;equipment;disabled;No entry;;1
+Q8;IQI;budget_target;company;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;budget_target;division;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;budget_target;area;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;budget_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;budget_target;plant;auto;Enter Target in QTY for the plant;;1
+Q8;IQI;budget_target;plant_other_group;manual;No entry;;1
+Q8;IQI;budget_target;apu;manual;No entry;;1
+Q8;IQI;budget_target;apu_other_group;disabled;No entry;;1
+Q8;IQI;budget_target;totem;manual;No entry;;1
+Q8;IQI;budget_target;equipment_group;disabled;No entry;;1
+Q8;IQI;budget_target;equipment;disabled;No entry;;1
+Q8;IQI;running_target;company;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;running_target;division;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;running_target;area;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;running_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;running_target;plant;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;running_target;plant_other_group;manual;Enter Target in QTY for the part of the plant that are not covered by underlying APU’s.;;1
+Q8;IQI;running_target;apu;manual;Enter Target in QTY for specific APU;;1
+Q8;IQI;running_target;apu_other_group;disabled;Enter Target in QTY for the part of the APU not covered by underlying Totems;;1
+Q8;IQI;running_target;totem;manual;Enter Target in QTY for Specific Totem;;1
+Q8;IQI;running_target;equipment_group;disabled;No entry;;1
+Q8;IQI;running_target;equipment;disabled;No entry;;1
+Q8;IQI;manual_input_actual;company;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;division;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;area;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;equipment_group;disabled;No entry;;1
+Q8;IQI;manual_input_actual;equipment;disabled;No entry;;1
+Q2;CQI;budget_target;company;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;budget_target;division;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;budget_target;area;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;budget_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;budget_target;plant;auto;Enter Target in QTY for the plant;;1
+Q2;CQI;budget_target;plant_other_group;manual;No entry;;1
+Q2;CQI;budget_target;apu;manual;No entry;;1
+Q2;CQI;budget_target;apu_other_group;disabled;No entry;;1
+Q2;CQI;budget_target;totem;manual;No entry;;1
+Q2;CQI;budget_target;equipment_group;disabled;No entry;;1
+Q2;CQI;budget_target;equipment;disabled;No entry;;1
+Q2;CQI;running_target;company;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;running_target;division;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;running_target;area;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;running_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;running_target;plant;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;running_target;plant_other_group;manual;Enter Target in QTY for the part of the plant that are not covered by underlying APU’s.;;1
+Q2;CQI;running_target;apu;manual;Enter Target in QTY for specific APU;;1
+Q2;CQI;running_target;apu_other_group;disabled;Enter Target in QTY for the part of the APU not covered by underlying Totems;;1
+Q2;CQI;running_target;totem;manual;Enter Target in QTY for Specific Totem;;1
+Q2;CQI;running_target;equipment_group;disabled;No entry;;1
+Q2;CQI;running_target;equipment;disabled;No entry;;1
+Q2;CQI;manual_input_actual;company;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;division;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;area;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;equipment_group;disabled;No entry;;1
+Q2;CQI;manual_input_actual;equipment;disabled;No entry;;1
+Q11;Scrap PPM;budget_target;company;;;;0
+Q11;Scrap PPM;budget_target;division;;;;0
+Q11;Scrap PPM;budget_target;area;;;;0
+Q11;Scrap PPM;budget_target;regional;;;;0
+Q11;Scrap PPM;budget_target;plant;;;;0
+Q11;Scrap PPM;budget_target;plant_other_group;;;;0
+Q11;Scrap PPM;budget_target;apu;;;;0
+Q11;Scrap PPM;budget_target;apu_other_group;;;;0
+Q11;Scrap PPM;budget_target;totem;;;;0
+Q11;Scrap PPM;budget_target;equipment_group;;;;0
+Q11;Scrap PPM;budget_target;equipment;;;;0
+Q11;Scrap PPM;running_target;company;;;;0
+Q11;Scrap PPM;running_target;division;;;;0
+Q11;Scrap PPM;running_target;area;;;;0
+Q11;Scrap PPM;running_target;regional;;;;0
+Q11;Scrap PPM;running_target;plant;;;;0
+Q11;Scrap PPM;running_target;plant_other_group;;;;0
+Q11;Scrap PPM;running_target;apu;;;;0
+Q11;Scrap PPM;running_target;apu_other_group;;;;0
+Q11;Scrap PPM;running_target;totem;;;;0
+Q11;Scrap PPM;running_target;equipment_group;;;;0
+Q11;Scrap PPM;running_target;equipment;;;;0
+Q11;Scrap PPM;manual_input_actual;company;;;;0
+Q11;Scrap PPM;manual_input_actual;division;;;;0
+Q11;Scrap PPM;manual_input_actual;area;;;;0
+Q11;Scrap PPM;manual_input_actual;regional;;;;0
+Q11;Scrap PPM;manual_input_actual;plant;;;;0
+Q11;Scrap PPM;manual_input_actual;plant_other_group;;;;0
+Q11;Scrap PPM;manual_input_actual;apu;;;;0
+Q11;Scrap PPM;manual_input_actual;apu_other_group;;;;0
+Q11;Scrap PPM;manual_input_actual;totem;;;;0
+Q11;Scrap PPM;manual_input_actual;equipment_group;;;;0
+Q11;Scrap PPM;manual_input_actual;equipment;;;;0
+Q5;FTT;budget_target;company;auto;Calculated as flat average of all underlying values;;1
+Q5;FTT;budget_target;division;auto;Calculated as flat average of all underlying values;;1
+Q5;FTT;budget_target;area;auto;Calculated as flat average of all underlying values;;1
+Q5;FTT;budget_target;regional;auto;Calculated as flat average of all underlying values;;1
+Q5;FTT;budget_target;plant;manual;Enter Target as a % for the specific Plant;;1
+Q5;FTT;budget_target;plant_other_group;disabled;No entry;;1
+Q5;FTT;budget_target;apu;disabled;No entry;;1
+Q5;FTT;budget_target;apu_other_group;disabled;No entry;;1
+Q5;FTT;budget_target;totem;disabled;No entry;;1
+Q5;FTT;budget_target;equipment_group;disabled;No entry;;1
+Q5;FTT;budget_target;equipment;disabled;No entry;;1
+Q5;FTT;running_target;company;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1
+Q5;FTT;running_target;division;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1
+Q5;FTT;running_target;area;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1
+Q5;FTT;running_target;regional;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1
+Q5;FTT;running_target;plant;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1
+Q5;FTT;running_target;plant_other_group;disabled;No entry;;1
+Q5;FTT;running_target;apu;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1
+Q5;FTT;running_target;apu_other_group;disabled;No entry;;1
+Q5;FTT;running_target;totem;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1
+Q5;FTT;running_target;equipment_group;auto;Target is calculated as a flat average from equipment with actual data from the given period;;1
+Q5;FTT;running_target;equipment;manual;Enter Target as a % for the specific equipment;;1
+Q5;FTT;manual_input_actual;company;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1
+Q5;FTT;manual_input_actual;division;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1
+Q5;FTT;manual_input_actual;area;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1
+Q5;FTT;manual_input_actual;regional;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1
+Q5;FTT;manual_input_actual;plant;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1
+Q5;FTT;manual_input_actual;plant_other_group;disabled;No entry;;1
+Q5;FTT;manual_input_actual;apu;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1
+Q5;FTT;manual_input_actual;apu_other_group;disabled;No entry;;1
+Q5;FTT;manual_input_actual;totem;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1
+Q5;FTT;manual_input_actual;equipment_group;auto;Automatically calculated as an average from the %-actual from the full day total, per equipment below.;;1
+Q5;FTT;manual_input_actual;equipment;manual;Enter Actual as a % or as Good Parts and Bad Parts for the specific equipment.;;1
+Q1;NQC;budget_target;company;;;;0
+Q1;NQC;budget_target;division;;;;0
+Q1;NQC;budget_target;area;;;;0
+Q1;NQC;budget_target;regional;;;;0
+Q1;NQC;budget_target;plant;manual;Enter Target in Local Currency for the full plant.;;0
+Q1;NQC;budget_target;plant_other_group;disabled;No entry;;0
+Q1;NQC;budget_target;apu;disabled;No entry;;0
+Q1;NQC;budget_target;apu_other_group;disabled;No entry;;0
+Q1;NQC;budget_target;totem;disabled;No entry;;0
+Q1;NQC;budget_target;equipment_group;;;;0
+Q1;NQC;budget_target;equipment;;;;0
+Q1;NQC;running_target;company;;;;0
+Q1;NQC;running_target;division;;;;0
+Q1;NQC;running_target;area;;;;0
+Q1;NQC;running_target;regional;;;;0
+Q1;NQC;running_target;plant;;;;0
+Q1;NQC;running_target;plant_other_group;;;;0
+Q1;NQC;running_target;apu;;;;0
+Q1;NQC;running_target;apu_other_group;;;;0
+Q1;NQC;running_target;totem;;;;0
+Q1;NQC;running_target;equipment_group;;;;0
+Q1;NQC;running_target;equipment;;;;0
+Q1;NQC;manual_input_actual;company;;;;0
+Q1;NQC;manual_input_actual;division;;;;0
+Q1;NQC;manual_input_actual;area;;;;0
+Q1;NQC;manual_input_actual;regional;;;;0
+Q1;NQC;manual_input_actual;plant;manual;Enter Actual Offline Cost in Local Currency for the full plant. Scrap cost is automatically added from lower level.;;0
+Q1;NQC;manual_input_actual;plant_other_group;disabled;No entry;;0
+Q1;NQC;manual_input_actual;apu;disabled;No entry;;0
+Q1;NQC;manual_input_actual;apu_other_group;disabled;No entry;;0
+Q1;NQC;manual_input_actual;totem;disabled;No entry;;0
+Q1;NQC;manual_input_actual;equipment_group;;;;0
+Q1;NQC;manual_input_actual;equipment;;;;0
+Q18;Scrap Value;budget_target;company;;;;0
+Q18;Scrap Value;budget_target;division;;;;0
+Q18;Scrap Value;budget_target;area;;;;0
+Q18;Scrap Value;budget_target;regional;;;;0
+Q18;Scrap Value;budget_target;plant;manual;Enter Target in Parts Per Million (PPM) belonging to the entire Plant. Will be shown as local currency;(calculation: PPM target * Production Output local currency / 1.000.000).;0
+Q18;Scrap Value;budget_target;plant_other_group;manual;Enter Target in Parts Per Million (PPM) belonging to the part of the plant that isn't covered by underlying APU’s. Will be shown as local currency;(calculation: PPM target * Production Output local currency / 1.000.000) (Unmapped or mapped to Plant A other or to Plant A).;0
+Q18;Scrap Value;budget_target;apu;manual;Enter Target in Parts Per Million (PPM) belonging to the specific APU. Will be shown as local currency;(calculation: PPM target * Production Output local currency / 1.000.000).;0
+Q18;Scrap Value;budget_target;apu_other_group;manual;Enter Target in Parts Per Million (PPM) for the part of the APU that isn't covered by underlying Totems. Will be shown as local currency;(calculation: PPM target * Production Output local currency / 1.000.000).;0
+Q18;Scrap Value;budget_target;totem;manual;Enter Target in Parts Per Million (PPM) for the specific Totem. Will be shown as local currency;(calculation: PPM target * Production Output local currency / 1.000.000).;0
+Q18;Scrap Value;budget_target;equipment_group;;;;0
+Q18;Scrap Value;budget_target;equipment;;;;0
+Q18;Scrap Value;running_target;company;;;;0
+Q18;Scrap Value;running_target;division;;;;0
+Q18;Scrap Value;running_target;area;;;;0
+Q18;Scrap Value;running_target;regional;;;;0
+Q18;Scrap Value;running_target;plant;;;;0
+Q18;Scrap Value;running_target;plant_other_group;;;;0
+Q18;Scrap Value;running_target;apu;;;;0
+Q18;Scrap Value;running_target;apu_other_group;;;;0
+Q18;Scrap Value;running_target;totem;;;;0
+Q18;Scrap Value;running_target;equipment_group;;;;0
+Q18;Scrap Value;running_target;equipment;;;;0
+Q18;Scrap Value;manual_input_actual;company;;;;0
+Q18;Scrap Value;manual_input_actual;division;;;;0
+Q18;Scrap Value;manual_input_actual;area;;;;0
+Q18;Scrap Value;manual_input_actual;regional;;;;0
+Q18;Scrap Value;manual_input_actual;plant;auto;Actual Scrap in Local Currency accumulated automatically from the level below;(Sum of value).;0
+Q18;Scrap Value;manual_input_actual;plant_other_group;manual;Enter Actual Scrap in Local Currency that belongs to the plant, but not the underlying level;(if applicable).;0
+Q18;Scrap Value;manual_input_actual;apu;auto;Actual Scrap in Local Currency accumulated automatically from the level below;(Sum of value).;0
+Q18;Scrap Value;manual_input_actual;apu_other_group;manual;Enter Actual Scrap in Local Currency that belongs to the APU, but not the underlying Totems;(if applicable).;0
+Q18;Scrap Value;manual_input_actual;totem;manual;Enter Actual Scrap in Local Currency for the specific Totem.;;0
+Q18;Scrap Value;manual_input_actual;equipment_group;;;;0
+Q18;Scrap Value;manual_input_actual;equipment;;;;0
+D8;OTTR;budget_target;company;auto;Calculated as flat average of all underlying values;;1
+D8;OTTR;budget_target;division;auto;Calculated as flat average of all underlying values;;1
+D8;OTTR;budget_target;area;auto;Calculated as flat average of all underlying values;;1
+D8;OTTR;budget_target;regional;auto;Calculated as flat average of all underlying values;;1
+D8;OTTR;budget_target;plant;manual;Enter Target in % for the full Plant;;1
+D8;OTTR;budget_target;plant_other_group;disabled;No entry;;1
+D8;OTTR;budget_target;apu;disabled;No entry;;1
+D8;OTTR;budget_target;apu_other_group;disabled;No entry;;1
+D8;OTTR;budget_target;totem;disabled;No entry;;1
+D8;OTTR;budget_target;equipment_group;disabled;No entry;;1
+D8;OTTR;budget_target;equipment;disabled;No entry;;1
+D8;OTTR;running_target;company;auto;Calculated as flat average of all underlying values;;1
+D8;OTTR;running_target;division;auto;Calculated as flat average of all underlying values;;1
+D8;OTTR;running_target;area;auto;Calculated as flat average of all underlying values;;1
+D8;OTTR;running_target;regional;auto;Calculated as flat average of all underlying values;;1
+D8;OTTR;running_target;plant;manual;Enter Target in % for the full Plant;;1
+D8;OTTR;running_target;plant_other_group;manual;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;1
+D8;OTTR;running_target;apu;manual;Enter Target in % for the specific APU.;;1
+D8;OTTR;running_target;apu_other_group;manual;Enter Target in % for the part of the APU that isn’t covered by the underlying Totems.;;1
+D8;OTTR;running_target;totem;manual;Enter Target in % for the specific Totem.;;1
+D8;OTTR;running_target;equipment_group;disabled;No entry;;1
+D8;OTTR;running_target;equipment;disabled;No entry;;1
+D8;OTTR;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;equipment_group;disabled;No entry;;1
+D8;OTTR;manual_input_actual;equipment;disabled;No entry;;1
+D6;Output vs Plan;budget_target;company;disabled;No entry;;1
+D6;Output vs Plan;budget_target;division;disabled;No entry;;1
+D6;Output vs Plan;budget_target;area;disabled;No entry;;1
+D6;Output vs Plan;budget_target;regional;disabled;No entry;;1
+D6;Output vs Plan;budget_target;plant;disabled;No entry;;1
+D6;Output vs Plan;budget_target;plant_other_group;disabled;No entry;;1
+D6;Output vs Plan;budget_target;apu;disabled;No entry;;1
+D6;Output vs Plan;budget_target;apu_other_group;disabled;No entry;;1
+D6;Output vs Plan;budget_target;totem;disabled;No entry;;1
+D6;Output vs Plan;budget_target;equipment_group;disabled;No entry;;1
+D6;Output vs Plan;budget_target;equipment;disabled;No entry;;1
+D6;Output vs Plan;running_target;company;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;division;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;area;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;regional;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;plant;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;plant_other_group;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;apu;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;apu_other_group;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;totem;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;equipment_group;auto;Target is always 100% - No entry needed;;1
+D6;Output vs Plan;running_target;equipment;manual;Enter Target in QTY or Hours for the specific Equipment;Result shown as Output (Actual) - Plan (Running Target);1
+D6;Output vs Plan;manual_input_actual;company;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;division;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;area;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;regional;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;plant;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;plant_other_group;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;apu;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;apu_other_group;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;totem;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;equipment_group;auto;Automatically calculated as a sum of the level below;Result shown as % flat average of all results from equipment from selected scope, per day.;1
+D6;Output vs Plan;manual_input_actual;equipment;manual;Enter actual output in QTY or Hours for the specific Equipment;Result shown as Output (Actual) - Plan (Running Target);1
+D11;P-Order;budget_target;company;disabled;Enter Target in %;;1
+D11;P-Order;budget_target;division;disabled;Enter Target in %;;1
+D11;P-Order;budget_target;area;disabled;Enter Target in %;;1
+D11;P-Order;budget_target;regional;disabled;Enter Target in %;;1
+D11;P-Order;budget_target;plant;disabled;Enter Target in % for the full Plant;;1
+D11;P-Order;budget_target;plant_other_group;disabled;No entry;;1
+D11;P-Order;budget_target;apu;disabled;No entry;;1
+D11;P-Order;budget_target;apu_other_group;disabled;No entry;;1
+D11;P-Order;budget_target;totem;disabled;No entry;;1
+D11;P-Order;budget_target;equipment_group;disabled;No entry;;1
+D11;P-Order;budget_target;equipment;disabled;No entry;;1
+D11;P-Order;running_target;company;disabled;Enter Target in %;;1
+D11;P-Order;running_target;division;disabled;Enter Target in %;;1
+D11;P-Order;running_target;area;disabled;Enter Target in %;;1
+D11;P-Order;running_target;regional;disabled;Enter Target in %;;1
+D11;P-Order;running_target;plant;disabled;Enter Target in % for the full Plant;;1
+D11;P-Order;running_target;plant_other_group;disabled;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;1
+D11;P-Order;running_target;apu;manual;Enter Target in % for the specific APU.;;1
+D11;P-Order;running_target;apu_other_group;manual;Enter Target in % for the part of the APU that isn’t covered by the underlying Totems.;;1
+D11;P-Order;running_target;totem;manual;Enter Target in % for the specific Totem.;;1
+D11;P-Order;running_target;equipment_group;disabled;No entry;;1
+D11;P-Order;running_target;equipment;disabled;No entry;;1
+D11;P-Order;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;equipment_group;disabled;No entry;;1
+D11;P-Order;manual_input_actual;equipment;disabled;No entry;;1
+D5;COTTR;budget_target;company;disabled;Enter Target in %;;1
+D5;COTTR;budget_target;division;disabled;Enter Target in %;;1
+D5;COTTR;budget_target;area;disabled;Enter Target in %;;1
+D5;COTTR;budget_target;regional;disabled;Enter Target in %;;1
+D5;COTTR;budget_target;plant;disabled;Enter Target in % for the full Plant;;1
+D5;COTTR;budget_target;plant_other_group;disabled;No entry;;1
+D5;COTTR;budget_target;apu;disabled;No entry;;1
+D5;COTTR;budget_target;apu_other_group;disabled;No entry;;1
+D5;COTTR;budget_target;totem;disabled;No entry;;1
+D5;COTTR;budget_target;equipment_group;disabled;No entry;;1
+D5;COTTR;budget_target;equipment;disabled;No entry;;1
+D5;COTTR;running_target;company;disabled;Enter Target in %;;1
+D5;COTTR;running_target;division;disabled;Enter Target in %;;1
+D5;COTTR;running_target;area;disabled;Enter Target in %;;1
+D5;COTTR;running_target;regional;disabled;Enter Target in %;;1
+D5;COTTR;running_target;plant;disabled;Enter Target in % for the full Plant;;1
+D5;COTTR;running_target;plant_other_group;disabled;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;1
+D5;COTTR;running_target;apu;manual;Enter Target in % for the specific APU.;;1
+D5;COTTR;running_target;apu_other_group;manual;Enter Target in % for the part of the APU that isn’t covered by the underlying Totems.;;1
+D5;COTTR;running_target;totem;manual;Enter Target in % for the specific Totem.;;1
+D5;COTTR;running_target;equipment_group;disabled;No entry;;1
+D5;COTTR;running_target;equipment;disabled;No entry;;1
+D5;COTTR;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;equipment_group;disabled;No entry;;1
+D5;COTTR;manual_input_actual;equipment;disabled;No entry;;1
+D2;1st Confirmed;budget_target;company;disabled;Enter Target in %;;0
+D2;1st Confirmed;budget_target;division;disabled;Enter Target in %;;0
+D2;1st Confirmed;budget_target;area;disabled;Enter Target in %;;0
+D2;1st Confirmed;budget_target;regional;disabled;Enter Target in %;;0
+D2;1st Confirmed;budget_target;plant;disabled;Enter Target in % for the full Plant;;0
+D2;1st Confirmed;budget_target;plant_other_group;disabled;No entry;;0
+D2;1st Confirmed;budget_target;apu;disabled;No entry;;0
+D2;1st Confirmed;budget_target;apu_other_group;disabled;No entry;;0
+D2;1st Confirmed;budget_target;totem;disabled;No entry;;0
+D2;1st Confirmed;budget_target;equipment_group;disabled;No entry;;0
+D2;1st Confirmed;budget_target;equipment;disabled;No entry;;0
+D2;1st Confirmed;running_target;company;disabled;Enter Target in %;;0
+D2;1st Confirmed;running_target;division;disabled;Enter Target in %;;0
+D2;1st Confirmed;running_target;area;disabled;Enter Target in %;;0
+D2;1st Confirmed;running_target;regional;disabled;Enter Target in %;;0
+D2;1st Confirmed;running_target;plant;disabled;Enter Target in % for the full Plant;;0
+D2;1st Confirmed;running_target;plant_other_group;disabled;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;0
+D2;1st Confirmed;running_target;apu;manual;Enter Target in % for the specific APU.;;0
+D2;1st Confirmed;running_target;apu_other_group;manual;Enter Target in % for the part of the APU that isn’t covered by the underlying Totems.;;0
+D2;1st Confirmed;running_target;totem;manual;Enter Target in % for the specific Totem.;;0
+D2;1st Confirmed;running_target;equipment_group;disabled;No entry;;0
+D2;1st Confirmed;running_target;equipment;disabled;No entry;;0
+D2;1st Confirmed;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;equipment_group;disabled;No entry;;0
+D2;1st Confirmed;manual_input_actual;equipment;disabled;No entry;;0
+I1;DoS 3M;budget_target;company;;;;0
+I1;DoS 3M;budget_target;division;;;;0
+I1;DoS 3M;budget_target;area;;;;0
+I1;DoS 3M;budget_target;regional;;;;0
+I1;DoS 3M;budget_target;plant;;;;0
+I1;DoS 3M;budget_target;plant_other_group;disabled;No entry;;0
+I1;DoS 3M;budget_target;apu;disabled;No entry;;0
+I1;DoS 3M;budget_target;apu_other_group;disabled;No entry;;0
+I1;DoS 3M;budget_target;totem;disabled;No entry;;0
+I1;DoS 3M;budget_target;equipment_group;disabled;No entry;;0
+I1;DoS 3M;budget_target;equipment;disabled;No entry;;0
+I1;DoS 3M;running_target;company;;;;0
+I1;DoS 3M;running_target;division;;;;0
+I1;DoS 3M;running_target;area;;;;0
+I1;DoS 3M;running_target;regional;;;;0
+I1;DoS 3M;running_target;plant;;;;0
+I1;DoS 3M;running_target;plant_other_group;disabled;No entry;;0
+I1;DoS 3M;running_target;apu;disabled;No entry;;0
+I1;DoS 3M;running_target;apu_other_group;disabled;No entry;;0
+I1;DoS 3M;running_target;totem;disabled;No entry;;0
+I1;DoS 3M;running_target;equipment_group;disabled;No entry;;0
+I1;DoS 3M;running_target;equipment;disabled;No entry;;0
+I1;DoS 3M;manual_input_actual;company;;;;0
+I1;DoS 3M;manual_input_actual;division;;;;0
+I1;DoS 3M;manual_input_actual;area;;;;0
+I1;DoS 3M;manual_input_actual;regional;;;;0
+I1;DoS 3M;manual_input_actual;plant;;;;0
+I1;DoS 3M;manual_input_actual;plant_other_group;disabled;No entry;;0
+I1;DoS 3M;manual_input_actual;apu;disabled;No entry;;0
+I1;DoS 3M;manual_input_actual;apu_other_group;disabled;No entry;;0
+I1;DoS 3M;manual_input_actual;totem;disabled;No entry;;0
+I1;DoS 3M;manual_input_actual;equipment_group;disabled;No entry;;0
+I1;DoS 3M;manual_input_actual;equipment;disabled;No entry;;0
+I3;VMI;budget_target;company;;;;0
+I3;VMI;budget_target;division;;;;0
+I3;VMI;budget_target;area;;;;0
+I3;VMI;budget_target;regional;;;;0
+I3;VMI;budget_target;plant;;;;0
+I3;VMI;budget_target;plant_other_group;disabled;No entry;;0
+I3;VMI;budget_target;apu;disabled;No entry;;0
+I3;VMI;budget_target;apu_other_group;disabled;No entry;;0
+I3;VMI;budget_target;totem;disabled;No entry;;0
+I3;VMI;budget_target;equipment_group;disabled;No entry;;0
+I3;VMI;budget_target;equipment;disabled;No entry;;0
+I3;VMI;running_target;company;;;;0
+I3;VMI;running_target;division;;;;0
+I3;VMI;running_target;area;;;;0
+I3;VMI;running_target;regional;;;;0
+I3;VMI;running_target;plant;;;;0
+I3;VMI;running_target;plant_other_group;disabled;No entry;;0
+I3;VMI;running_target;apu;disabled;No entry;;0
+I3;VMI;running_target;apu_other_group;disabled;No entry;;0
+I3;VMI;running_target;totem;disabled;No entry;;0
+I3;VMI;running_target;equipment_group;disabled;No entry;;0
+I3;VMI;running_target;equipment;disabled;No entry;;0
+I3;VMI;manual_input_actual;company;;;;0
+I3;VMI;manual_input_actual;division;;;;0
+I3;VMI;manual_input_actual;area;;;;0
+I3;VMI;manual_input_actual;regional;;;;0
+I3;VMI;manual_input_actual;plant;;;;0
+I3;VMI;manual_input_actual;plant_other_group;disabled;No entry;;0
+I3;VMI;manual_input_actual;apu;disabled;No entry;;0
+I3;VMI;manual_input_actual;apu_other_group;disabled;No entry;;0
+I3;VMI;manual_input_actual;totem;disabled;No entry;;0
+I3;VMI;manual_input_actual;equipment_group;disabled;No entry;;0
+I3;VMI;manual_input_actual;equipment;disabled;No entry;;0
+C8;OPR;budget_target;company;auto;Automatically calculated, weighted based on sum of Productive time previous year, from levels below;;0
+C8;OPR;budget_target;division;auto;Automatically calculated, weighted based on sum of Productive time previous year, from levels below;;0
+C8;OPR;budget_target;area;auto;Automatically calculated, weighted based on sum of Productive time previous year, from levels below;;0
+C8;OPR;budget_target;regional;auto;Automatically calculated, weighted based on sum of Productive time previous year, from levels below;;0
+C8;OPR;budget_target;plant;manual;Target entered as %;On bottleneck equipment;0
+C8;OPR;budget_target;plant_other_group;disabled;Not Relevant;;0
+C8;OPR;budget_target;apu;disabled;Not Relevant;;0
+C8;OPR;budget_target;apu_other_group;disabled;Not Relevant;;0
+C8;OPR;budget_target;totem;disabled;Not Relevant;;0
+C8;OPR;budget_target;equipment_group;disabled;Not Relevant;;0
+C8;OPR;budget_target;equipment;disabled;No Targets;;0
+C8;OPR;running_target;company;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0
+C8;OPR;running_target;division;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0
+C8;OPR;running_target;area;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0
+C8;OPR;running_target;regional;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0
+C8;OPR;running_target;plant;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0
+C8;OPR;running_target;plant_other_group;disabled;No entry;;0
+C8;OPR;running_target;apu;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0
+C8;OPR;running_target;apu_other_group;disabled;No entry;;0
+C8;OPR;running_target;totem;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0
+C8;OPR;running_target;equipment_group;auto;Automatically calculated, weighted based on Planned Productions Time from all equipments in selected scope;;0
+C8;OPR;running_target;equipment;manual;Enter Target as a % for the specific equipment;;0
+C8;OPR;manual_input_actual;company;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0
+C8;OPR;manual_input_actual;division;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0
+C8;OPR;manual_input_actual;area;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0
+C8;OPR;manual_input_actual;regional;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0
+C8;OPR;manual_input_actual;plant;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0
+C8;OPR;manual_input_actual;plant_other_group;disabled;No entry;;0
+C8;OPR;manual_input_actual;apu;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0
+C8;OPR;manual_input_actual;apu_other_group;disabled;No entry;;0
+C8;OPR;manual_input_actual;totem;auto;Automatically calculated based on Planned Productions Time and Productive time, from level below.;;0
+C8;OPR;manual_input_actual;equipment_group;auto;Automatically calculated based sum of Planned Production Time and sum of Productive time from level below;;0
+C8;OPR;manual_input_actual;equipment;manual;If not from Automatic systems like Factbird, enter Actual as Productive Time and Planned Production Time for the specific equipment.;;0
+C6;Industrial Prod.;budget_target;company;manual;Enter Target in Ratio;;1
+C6;Industrial Prod.;budget_target;division;manual;Enter Target in Ratio;;1
+C6;Industrial Prod.;budget_target;area;manual;Enter Target in Ratio;;1
+C6;Industrial Prod.;budget_target;regional;manual;Enter Target in Ratio;;1
+C6;Industrial Prod.;budget_target;plant;manual;Enter Target in Ratio for the full plant.;;1
+C6;Industrial Prod.;budget_target;plant_other_group;manual;Enter Target in ratio for the part of the plant that isn’t covered by the underlying APU’s.;;1
+C6;Industrial Prod.;budget_target;apu;manual;Enter Target in Ratio for the specific APU.;;1
+C6;Industrial Prod.;budget_target;apu_other_group;manual;Enter Target in ratio for the part of the APU that isn’t covered by the underlying Totems.;;1
+C6;Industrial Prod.;budget_target;totem;manual;Enter Target in Ratio for the specific Totem.;;1
+C6;Industrial Prod.;budget_target;equipment_group;disabled;No entry;;1
+C6;Industrial Prod.;budget_target;equipment;disabled;No entry;;1
+C6;Industrial Prod.;running_target;company;manual;Enter Target in Ratio;;1
+C6;Industrial Prod.;running_target;division;manual;Enter Target in Ratio;;1
+C6;Industrial Prod.;running_target;area;manual;Enter Target in Ratio;;1
+C6;Industrial Prod.;running_target;regional;manual;Enter Target in Ratio;;1
+C6;Industrial Prod.;running_target;plant;manual;Enter Target in Ratio for the full plant.;;1
+C6;Industrial Prod.;running_target;plant_other_group;manual;Enter Target in ratio for the part of the plant that isn’t covered by the underlying APU’s.;;1
+C6;Industrial Prod.;running_target;apu;manual;Enter Target in Ratio for the specific APU.;;1
+C6;Industrial Prod.;running_target;apu_other_group;manual;Enter Target in ratio for the part of the APU that isn’t covered by the underlying Totems.;;1
+C6;Industrial Prod.;running_target;totem;manual;Enter Target in Ratio for the specific Totem.;;1
+C6;Industrial Prod.;running_target;equipment_group;disabled;No entry;;1
+C6;Industrial Prod.;running_target;equipment;disabled;No entry;;1
+C6;Industrial Prod.;manual_input_actual;company;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1
+C6;Industrial Prod.;manual_input_actual;division;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1
+C6;Industrial Prod.;manual_input_actual;area;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1
+C6;Industrial Prod.;manual_input_actual;regional;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1
+C6;Industrial Prod.;manual_input_actual;plant;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1
+C6;Industrial Prod.;manual_input_actual;plant_other_group;manual;Enter Actual Direct Hours and/or Activity Hours that belongs to the plant but isn’t covered by the underlying APU’s.;;1
+C6;Industrial Prod.;manual_input_actual;apu;disabled;No entry;;1
+C6;Industrial Prod.;manual_input_actual;apu_other_group;manual;Enter Actual Direct Hours and/or Activity Hours that belongs to the APU, but not the underlying Totems.;;1
+C6;Industrial Prod.;manual_input_actual;totem;manual;Enter Actual Direct Hours and/or Activity Hours for the specific Totem.;;1
+C6;Industrial Prod.;manual_input_actual;equipment_group;disabled;No entry;;1
+C6;Industrial Prod.;manual_input_actual;equipment;disabled;No entry;;1
+C13;Activity Hours;budget_target;company;;;;0
+C13;Activity Hours;budget_target;division;;;;0
+C13;Activity Hours;budget_target;area;;;;0
+C13;Activity Hours;budget_target;regional;;;;0
+C13;Activity Hours;budget_target;plant;;;;0
+C13;Activity Hours;budget_target;plant_other_group;;;;0
+C13;Activity Hours;budget_target;apu;;;;0
+C13;Activity Hours;budget_target;apu_other_group;;;;0
+C13;Activity Hours;budget_target;totem;;;;0
+C13;Activity Hours;budget_target;equipment_group;;;;0
+C13;Activity Hours;budget_target;equipment;;;;0
+C13;Activity Hours;running_target;company;;;;0
+C13;Activity Hours;running_target;division;;;;0
+C13;Activity Hours;running_target;area;;;;0
+C13;Activity Hours;running_target;regional;;;;0
+C13;Activity Hours;running_target;plant;;;;0
+C13;Activity Hours;running_target;plant_other_group;;;;0
+C13;Activity Hours;running_target;apu;;;;0
+C13;Activity Hours;running_target;apu_other_group;;;;0
+C13;Activity Hours;running_target;totem;;;;0
+C13;Activity Hours;running_target;equipment_group;;;;0
+C13;Activity Hours;running_target;equipment;;;;0
+C13;Activity Hours;manual_input_actual;company;;;;0
+C13;Activity Hours;manual_input_actual;division;;;;0
+C13;Activity Hours;manual_input_actual;area;;;;0
+C13;Activity Hours;manual_input_actual;regional;;;;0
+C13;Activity Hours;manual_input_actual;plant;;;;0
+C13;Activity Hours;manual_input_actual;plant_other_group;;;;0
+C13;Activity Hours;manual_input_actual;apu;;;;0
+C13;Activity Hours;manual_input_actual;apu_other_group;;;;0
+C13;Activity Hours;manual_input_actual;totem;;;;0
+C13;Activity Hours;manual_input_actual;equipment_group;;;;0
+C13;Activity Hours;manual_input_actual;equipment;;;;0
+C12;PM14 Execution;budget_target;company;;;;0
+C12;PM14 Execution;budget_target;division;;;;0
+C12;PM14 Execution;budget_target;area;;;;0
+C12;PM14 Execution;budget_target;regional;;;;0
+C12;PM14 Execution;budget_target;plant;;;;0
+C12;PM14 Execution;budget_target;plant_other_group;;;;0
+C12;PM14 Execution;budget_target;apu;;;;0
+C12;PM14 Execution;budget_target;apu_other_group;;;;0
+C12;PM14 Execution;budget_target;totem;;;;0
+C12;PM14 Execution;budget_target;equipment_group;;;;0
+C12;PM14 Execution;budget_target;equipment;;;;0
+C12;PM14 Execution;running_target;company;;;;0
+C12;PM14 Execution;running_target;division;;;;0
+C12;PM14 Execution;running_target;area;;;;0
+C12;PM14 Execution;running_target;regional;;;;0
+C12;PM14 Execution;running_target;plant;;;;0
+C12;PM14 Execution;running_target;plant_other_group;;;;0
+C12;PM14 Execution;running_target;apu;;;;0
+C12;PM14 Execution;running_target;apu_other_group;;;;0
+C12;PM14 Execution;running_target;totem;;;;0
+C12;PM14 Execution;running_target;equipment_group;;;;0
+C12;PM14 Execution;running_target;equipment;;;;0
+C12;PM14 Execution;manual_input_actual;company;;;;0
+C12;PM14 Execution;manual_input_actual;division;;;;0
+C12;PM14 Execution;manual_input_actual;area;;;;0
+C12;PM14 Execution;manual_input_actual;regional;;;;0
+C12;PM14 Execution;manual_input_actual;plant;;;;0
+C12;PM14 Execution;manual_input_actual;plant_other_group;;;;0
+C12;PM14 Execution;manual_input_actual;apu;;;;0
+C12;PM14 Execution;manual_input_actual;apu_other_group;;;;0
+C12;PM14 Execution;manual_input_actual;totem;;;;0
+C12;PM14 Execution;manual_input_actual;equipment_group;;;;0
+C12;PM14 Execution;manual_input_actual;equipment;;;;0
+C4;Conv. Cost Prod.;budget_target;company;;;;0
+C4;Conv. Cost Prod.;budget_target;division;;;;0
+C4;Conv. Cost Prod.;budget_target;area;;;;0
+C4;Conv. Cost Prod.;budget_target;regional;;;;0
+C4;Conv. Cost Prod.;budget_target;plant;;;;0
+C4;Conv. Cost Prod.;budget_target;plant_other_group;;;;0
+C4;Conv. Cost Prod.;budget_target;apu;;;;0
+C4;Conv. Cost Prod.;budget_target;apu_other_group;;;;0
+C4;Conv. Cost Prod.;budget_target;totem;;;;0
+C4;Conv. Cost Prod.;budget_target;equipment_group;;;;0
+C4;Conv. Cost Prod.;budget_target;equipment;;;;0
+C4;Conv. Cost Prod.;running_target;company;;;;0
+C4;Conv. Cost Prod.;running_target;division;;;;0
+C4;Conv. Cost Prod.;running_target;area;;;;0
+C4;Conv. Cost Prod.;running_target;regional;;;;0
+C4;Conv. Cost Prod.;running_target;plant;;;;0
+C4;Conv. Cost Prod.;running_target;plant_other_group;;;;0
+C4;Conv. Cost Prod.;running_target;apu;;;;0
+C4;Conv. Cost Prod.;running_target;apu_other_group;;;;0
+C4;Conv. Cost Prod.;running_target;totem;;;;0
+C4;Conv. Cost Prod.;running_target;equipment_group;;;;0
+C4;Conv. Cost Prod.;running_target;equipment;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;company;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;division;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;area;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;regional;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;plant;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;plant_other_group;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;apu;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;apu_other_group;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;totem;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;equipment_group;;;;0
+C4;Conv. Cost Prod.;manual_input_actual;equipment;;;;0
+P2;Employee Availability;budget_target;company;;;;0
+P2;Employee Availability;budget_target;division;;;;0
+P2;Employee Availability;budget_target;area;;;;0
+P2;Employee Availability;budget_target;regional;;;;0
+P2;Employee Availability;budget_target;plant;manual;Enter Target in % for the full Plant;;0
+P2;Employee Availability;budget_target;plant_other_group;manual;Enter Target in % for the part of the plant that isn't covered by the underlying APU’s.;;0
+P2;Employee Availability;budget_target;apu;manual;Enter Target in % for the specific APU.;;0
+P2;Employee Availability;budget_target;apu_other_group;disabled;No entry;;0
+P2;Employee Availability;budget_target;totem;disabled;No entry;;0
+P2;Employee Availability;budget_target;equipment_group;;;;0
+P2;Employee Availability;budget_target;equipment;;;;0
+P2;Employee Availability;running_target;company;;;;0
+P2;Employee Availability;running_target;division;;;;0
+P2;Employee Availability;running_target;area;;;;0
+P2;Employee Availability;running_target;regional;;;;0
+P2;Employee Availability;running_target;plant;;;;0
+P2;Employee Availability;running_target;plant_other_group;;;;0
+P2;Employee Availability;running_target;apu;;;;0
+P2;Employee Availability;running_target;apu_other_group;;;;0
+P2;Employee Availability;running_target;totem;;;;0
+P2;Employee Availability;running_target;equipment_group;;;;0
+P2;Employee Availability;running_target;equipment;;;;0
+P2;Employee Availability;manual_input_actual;company;;;;0
+P2;Employee Availability;manual_input_actual;division;;;;0
+P2;Employee Availability;manual_input_actual;area;;;;0
+P2;Employee Availability;manual_input_actual;regional;;;;0
+P2;Employee Availability;manual_input_actual;plant;manual;Enter Actual for Absent Hours & Scheduled Working Hours for the entire plant, also including all underlying levels.;;0
+P2;Employee Availability;manual_input_actual;plant_other_group;auto;Automatically calculates the difference between Plant Total and sum of all underlying APU’s - No entry.;;0
+P2;Employee Availability;manual_input_actual;apu;manual;Enter Actual in % for the specific APU.;;0
+P2;Employee Availability;manual_input_actual;apu_other_group;disabled;No entry;;0
+P2;Employee Availability;manual_input_actual;totem;disabled;No entry;;0
+P2;Employee Availability;manual_input_actual;equipment_group;;;;0
+P2;Employee Availability;manual_input_actual;equipment;;;;0
+P3;IP;budget_target;company;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;budget_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;budget_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;budget_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;budget_target;plant;auto;Enter Target in QTY;;1
+P3;IP;budget_target;plant_other_group;disabled;No entry;;1
+P3;IP;budget_target;apu;disabled;No entry;;1
+P3;IP;budget_target;apu_other_group;disabled;No entry;;1
+P3;IP;budget_target;totem;disabled;No entry;;1
+P3;IP;budget_target;equipment_group;disabled;No entry;;1
+P3;IP;budget_target;equipment;disabled;No entry;;1
+P3;IP;running_target;company;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;running_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;running_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;running_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;running_target;plant;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;running_target;plant_other_group;manual;Enter Target in QTY for the FTE/headcount belonging to the Plant but not to the APUs below.;;1
+P3;IP;running_target;apu;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P3;IP;running_target;apu_other_group;manual;Enter Target in QTY for the FTE/headcount belonging to the APU and not to the Totems below.;;1
+P3;IP;running_target;totem;manual;Enter Target in QTY for the specific Totem;;1
+P3;IP;running_target;equipment_group;disabled;No entry;;1
+P3;IP;running_target;equipment;disabled;No entry;;1
+P3;IP;manual_input_actual;company;disabled;No entry;;1
+P3;IP;manual_input_actual;division;disabled;No entry;;1
+P3;IP;manual_input_actual;area;disabled;No entry;;1
+P3;IP;manual_input_actual;regional;disabled;No entry;;1
+P3;IP;manual_input_actual;plant;auto;Actual IPs accumulated automatically from the level below.;;1
+P3;IP;manual_input_actual;plant_other_group;manual;Enter implemented IPs that belongs to the plant, but not the underlying level (e.g., made by Plant Manager);;1
+P3;IP;manual_input_actual;apu;auto;Actual IPs accumulated automatically from the level below.;;1
+P3;IP;manual_input_actual;apu_other_group;manual;Enter IPs that belongs to the APU, but not the underlying Totems (e.g., made by the APU Manager);;1
+P3;IP;manual_input_actual;totem;manual;Enter Actual number of implemented IPs for the specific Totem;;1
+P3;IP;manual_input_actual;equipment_group;disabled;No entry;;1
+P3;IP;manual_input_actual;equipment;disabled;No entry;;1
+P5;Kaizen Workshops;budget_target;company;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P5;Kaizen Workshops;budget_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P5;Kaizen Workshops;budget_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P5;Kaizen Workshops;budget_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P5;Kaizen Workshops;budget_target;plant;manual;Enter Target in QTY for the specific Plant;;1
+P5;Kaizen Workshops;budget_target;plant_other_group;disabled;No entry;;1
+P5;Kaizen Workshops;budget_target;apu;disabled;No entry;;1
+P5;Kaizen Workshops;budget_target;apu_other_group;disabled;No entry;;1
+P5;Kaizen Workshops;budget_target;totem;disabled;No entry;;1
+P5;Kaizen Workshops;budget_target;equipment_group;disabled;No entry;;1
+P5;Kaizen Workshops;budget_target;equipment;disabled;No entry;;1
+P5;Kaizen Workshops;running_target;company;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P5;Kaizen Workshops;running_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P5;Kaizen Workshops;running_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P5;Kaizen Workshops;running_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1
+P5;Kaizen Workshops;running_target;plant;manual;Enter Target in QTY for the specific Plant;Target shown as Plant + Plant Other;1
+P5;Kaizen Workshops;running_target;plant_other_group;manual;Enter Target in QTY for the part of the Plant that is not covered by the underlying APU’s.;;1
+P5;Kaizen Workshops;running_target;apu;manual;Enter Target in QTY for the specific APU;;1
+P5;Kaizen Workshops;running_target;apu_other_group;disabled;No entry;;1
+P5;Kaizen Workshops;running_target;totem;disabled;No entry;;1
+P5;Kaizen Workshops;running_target;equipment_group;disabled;No entry;;1
+P5;Kaizen Workshops;running_target;equipment;disabled;No entry;;1
+P5;Kaizen Workshops;manual_input_actual;company;auto;Actual automatically calculated as sum of below level;;1
+P5;Kaizen Workshops;manual_input_actual;division;auto;Actual automatically calculated as sum of below level;;1
+P5;Kaizen Workshops;manual_input_actual;area;auto;Actual automatically calculated as sum of below level;;1
+P5;Kaizen Workshops;manual_input_actual;regional;auto;Actual automatically calculated as sum of below level;;1
+P5;Kaizen Workshops;manual_input_actual;plant;manual;If no APUs enter actual for the plant in QTY else Actual will be automatically calculated as sum of below level;;1
+P5;Kaizen Workshops;manual_input_actual;plant_other_group;manual;Enter Actual in QTY for the areas that belong to the plant but not to an APU;(if applicable).;1
+P5;Kaizen Workshops;manual_input_actual;apu;manual;Enter Actual in QTY for the specific APU.;;1
+P5;Kaizen Workshops;manual_input_actual;apu_other_group;disabled;No entry;;1
+P5;Kaizen Workshops;manual_input_actual;totem;disabled;No entry;;1
+P5;Kaizen Workshops;manual_input_actual;equipment_group;disabled;No entry;;1
+P5;Kaizen Workshops;manual_input_actual;equipment;disabled;No entry;;1
+P4;IP Ratio;budget_target;company;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1
+P4;IP Ratio;budget_target;division;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1
+P4;IP Ratio;budget_target;area;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1
+P4;IP Ratio;budget_target;regional;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1
+P4;IP Ratio;budget_target;plant;manual;Enter Target in Ratio for the full plant considering all FTE/headcounts in the plant and all IPs in the plant.;;1
+P4;IP Ratio;budget_target;plant_other_group;auto;Target in Ratio automatically taken from Plant Ratio.;;1
+P4;IP Ratio;budget_target;apu;disabled;No entry;;1
+P4;IP Ratio;budget_target;apu_other_group;disabled;No entry;(in this case APU 2);1
+P4;IP Ratio;budget_target;totem;disabled;No entry;;1
+P4;IP Ratio;budget_target;equipment_group;disabled;No entry;;1
+P4;IP Ratio;budget_target;equipment;disabled;No entry;;1
+P4;IP Ratio;running_target;company;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1
+P4;IP Ratio;running_target;division;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1
+P4;IP Ratio;running_target;area;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1
+P4;IP Ratio;running_target;regional;auto;Target in Ratio automatically calculated as a weighted average using the headcount and target of below level.;;1
+P4;IP Ratio;running_target;plant;manual;Enter Target in Ratio for the full plant considering all FTE/headcounts in the plant and all IPs in the plant.;;1
+P4;IP Ratio;running_target;plant_other_group;auto;Target in Ratio automatically taken from Plant Ratio.;;1
+P4;IP Ratio;running_target;apu;disabled;No entry;;1
+P4;IP Ratio;running_target;apu_other_group;disabled;No entry;;1
+P4;IP Ratio;running_target;totem;disabled;No entry;;1
+P4;IP Ratio;running_target;equipment_group;disabled;No entry;;1
+P4;IP Ratio;running_target;equipment;disabled;No entry;;1
+P4;IP Ratio;manual_input_actual;company;auto;FTEs automatically calculated as sum of below level;;1
+P4;IP Ratio;manual_input_actual;division;auto;FTEs automatically calculated as sum of below level;;1
+P4;IP Ratio;manual_input_actual;area;auto;FTEs automatically calculated as sum of below level;;1
+P4;IP Ratio;manual_input_actual;regional;auto;FTEs automatically calculated as sum of below level;;1
+P4;IP Ratio;manual_input_actual;plant;manual;Enter FTEs in number for the full Plant;;1
+P4;IP Ratio;manual_input_actual;plant_other_group;disabled;No entry;;1
+P4;IP Ratio;manual_input_actual;apu;disabled;No entry;;1
+P4;IP Ratio;manual_input_actual;apu_other_group;disabled;No entry;;1
+P4;IP Ratio;manual_input_actual;totem;disabled;No entry;;1
+P4;IP Ratio;manual_input_actual;equipment_group;disabled;No entry;;1
+P4;IP Ratio;manual_input_actual;equipment;disabled;No entry;;1
+P7;Voluntary turnover;budget_target;company;;;;0
+P7;Voluntary turnover;budget_target;division;;;;0
+P7;Voluntary turnover;budget_target;area;;;;0
+P7;Voluntary turnover;budget_target;regional;;;;0
+P7;Voluntary turnover;budget_target;plant;;;;0
+P7;Voluntary turnover;budget_target;plant_other_group;;;;0
+P7;Voluntary turnover;budget_target;apu;;;;0
+P7;Voluntary turnover;budget_target;apu_other_group;;;;0
+P7;Voluntary turnover;budget_target;totem;;;;0
+P7;Voluntary turnover;budget_target;equipment_group;;;;0
+P7;Voluntary turnover;budget_target;equipment;;;;0
+P7;Voluntary turnover;running_target;company;;;;0
+P7;Voluntary turnover;running_target;division;;;;0
+P7;Voluntary turnover;running_target;area;;;;0
+P7;Voluntary turnover;running_target;regional;;;;0
+P7;Voluntary turnover;running_target;plant;;;;0
+P7;Voluntary turnover;running_target;plant_other_group;;;;0
+P7;Voluntary turnover;running_target;apu;;;;0
+P7;Voluntary turnover;running_target;apu_other_group;;;;0
+P7;Voluntary turnover;running_target;totem;;;;0
+P7;Voluntary turnover;running_target;equipment_group;;;;0
+P7;Voluntary turnover;running_target;equipment;;;;0
+P7;Voluntary turnover;manual_input_actual;company;;;;0
+P7;Voluntary turnover;manual_input_actual;division;;;;0
+P7;Voluntary turnover;manual_input_actual;area;;;;0
+P7;Voluntary turnover;manual_input_actual;regional;;;;0
+P7;Voluntary turnover;manual_input_actual;plant;;;;0
+P7;Voluntary turnover;manual_input_actual;plant_other_group;;;;0
+P7;Voluntary turnover;manual_input_actual;apu;;;;0
+P7;Voluntary turnover;manual_input_actual;apu_other_group;;;;0
+P7;Voluntary turnover;manual_input_actual;totem;;;;0
+P7;Voluntary turnover;manual_input_actual;equipment_group;;;;0
+P7;Voluntary turnover;manual_input_actual;equipment;;;;0
+E5;Energy Cons. 1+2;budget_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;budget_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;budget_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;budget_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;budget_target;plant;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;budget_target;plant_other_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;budget_target;apu;disabled;No entry;;1
+E5;Energy Cons. 1+2;budget_target;apu_other_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;budget_target;totem;disabled;No entry;;1
+E5;Energy Cons. 1+2;budget_target;equipment_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;budget_target;equipment;disabled;No entry;;1
+E5;Energy Cons. 1+2;running_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;running_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;running_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;running_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+E5;Energy Cons. 1+2;running_target;plant;manual;Target is manually entered as MWh for the full plant;;1
+E5;Energy Cons. 1+2;running_target;plant_other_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;running_target;apu;disabled;No entry;;1
+E5;Energy Cons. 1+2;running_target;apu_other_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;running_target;totem;disabled;No entry;;1
+E5;Energy Cons. 1+2;running_target;equipment_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;running_target;equipment;disabled;No entry;;1
+E5;Energy Cons. 1+2;manual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;1
+E5;Energy Cons. 1+2;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;1
+E5;Energy Cons. 1+2;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;1
+E5;Energy Cons. 1+2;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;1
+E5;Energy Cons. 1+2;manual_input_actual;plant;auto;Only coming automatically from group standard system source Sphera;;1
+E5;Energy Cons. 1+2;manual_input_actual;plant_other_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;manual_input_actual;apu;disabled;No entry;;1
+E5;Energy Cons. 1+2;manual_input_actual;apu_other_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;manual_input_actual;totem;disabled;No entry;;1
+E5;Energy Cons. 1+2;manual_input_actual;equipment_group;disabled;No entry;;1
+E5;Energy Cons. 1+2;manual_input_actual;equipment;disabled;No entry;;1
+E9;Water Withdrawal;budget_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;budget_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;budget_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;budget_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;budget_target;plant;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;budget_target;plant_other_group;disabled;No entry;;1
+E9;Water Withdrawal;budget_target;apu;disabled;No entry;;1
+E9;Water Withdrawal;budget_target;apu_other_group;disabled;No entry;;1
+E9;Water Withdrawal;budget_target;totem;disabled;No entry;;1
+E9;Water Withdrawal;budget_target;equipment_group;disabled;No entry;;1
+E9;Water Withdrawal;budget_target;equipment;disabled;No entry;;1
+E9;Water Withdrawal;running_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;running_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;running_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;running_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
+E9;Water Withdrawal;running_target;plant;manual;Target is manually entered as m3 for the full plant;;1
+E9;Water Withdrawal;running_target;plant_other_group;disabled;No entry;;1
+E9;Water Withdrawal;running_target;apu;disabled;No entry;;1
+E9;Water Withdrawal;running_target;apu_other_group;disabled;No entry;;1
+E9;Water Withdrawal;running_target;totem;disabled;No entry;;1
+E9;Water Withdrawal;running_target;equipment_group;disabled;No entry;;1
+E9;Water Withdrawal;running_target;equipment;disabled;No entry;;1
+E9;Water Withdrawal;manual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;1
+E9;Water Withdrawal;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;1
+E9;Water Withdrawal;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;1
+E9;Water Withdrawal;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;1
+E9;Water Withdrawal;manual_input_actual;plant;auto;Only coming automatically from group standard system source Sphera;;1
+E9;Water Withdrawal;manual_input_actual;plant_other_group;disabled;No entry;;1
+E9;Water Withdrawal;manual_input_actual;apu;disabled;No entry;;1
+E9;Water Withdrawal;manual_input_actual;apu_other_group;disabled;No entry;;1
+E9;Water Withdrawal;manual_input_actual;totem;disabled;No entry;;1
+E9;Water Withdrawal;manual_input_actual;equipment_group;disabled;No entry;;1
+E9;Water Withdrawal;manual_input_actual;equipment;disabled;No entry;;1
+S6;MTI;budget_target;company;disabled;No entry;;0
+S6;MTI;budget_target;division;disabled;No entry;;0
+S6;MTI;budget_target;area;disabled;No entry;;0
+S6;MTI;budget_target;regional;disabled;No entry;;0
+S6;MTI;budget_target;plant;disabled;No entry;;0
+S6;MTI;budget_target;plant_other_group;disabled;No entry;;0
+S6;MTI;budget_target;apu;disabled;No entry;;0
+S6;MTI;budget_target;apu_other_group;disabled;No entry;;0
+S6;MTI;budget_target;totem;disabled;No entry;;0
+S6;MTI;budget_target;equipment_group;disabled;No entry;;0
+S6;MTI;budget_target;equipment;disabled;No entry;;0
+S6;MTI;running_target;company;disabled;No entry;;0
+S6;MTI;running_target;division;disabled;No entry;;0
+S6;MTI;running_target;area;disabled;No entry;;0
+S6;MTI;running_target;regional;disabled;No entry;;0
+S6;MTI;running_target;plant;disabled;No entry;;0
+S6;MTI;running_target;plant_other_group;disabled;No entry;;0
+S6;MTI;running_target;apu;disabled;No entry;;0
+S6;MTI;running_target;apu_other_group;disabled;No entry;;0
+S6;MTI;running_target;totem;disabled;No entry;;0
+S6;MTI;running_target;equipment_group;disabled;No entry;;0
+S6;MTI;running_target;equipment;disabled;No entry;;0
+S6;MTI;manual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;plant;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;apu;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;totem;auto;Only coming automatically from group standard system source Sphera;;0
+S6;MTI;manual_input_actual;equipment_group;disabled;No entry;;0
+S6;MTI;manual_input_actual;equipment;disabled;No entry;;0
+S7;NM;budget_target;company;disabled;No entry;;0
+S7;NM;budget_target;division;disabled;No entry;;0
+S7;NM;budget_target;area;disabled;No entry;;0
+S7;NM;budget_target;regional;disabled;No entry;;0
+S7;NM;budget_target;plant;disabled;No entry;;0
+S7;NM;budget_target;plant_other_group;disabled;No entry;;0
+S7;NM;budget_target;apu;disabled;No entry;;0
+S7;NM;budget_target;apu_other_group;disabled;No entry;;0
+S7;NM;budget_target;totem;disabled;No entry;;0
+S7;NM;budget_target;equipment_group;disabled;No entry;;0
+S7;NM;budget_target;equipment;disabled;No entry;;0
+S7;NM;running_target;company;disabled;No entry;;0
+S7;NM;running_target;division;disabled;No entry;;0
+S7;NM;running_target;area;disabled;No entry;;0
+S7;NM;running_target;regional;disabled;No entry;;0
+S7;NM;running_target;plant;disabled;No entry;;0
+S7;NM;running_target;plant_other_group;disabled;No entry;;0
+S7;NM;running_target;apu;disabled;No entry;;0
+S7;NM;running_target;apu_other_group;disabled;No entry;;0
+S7;NM;running_target;totem;disabled;No entry;;0
+S7;NM;running_target;equipment_group;disabled;No entry;;0
+S7;NM;running_target;equipment;disabled;No entry;;0
+S7;NM;manual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;plant;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;apu;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;totem;auto;Only coming automatically from group standard system source Sphera;;0
+S7;NM;manual_input_actual;equipment_group;disabled;No entry;;0
+S7;NM;manual_input_actual;equipment;disabled;No entry;;0
+Q4;Q Exemptions;budget_target;company;;;;0
+Q4;Q Exemptions;budget_target;division;;;;0
+Q4;Q Exemptions;budget_target;area;;;;0
+Q4;Q Exemptions;budget_target;regional;;;;0
+Q4;Q Exemptions;budget_target;plant;;;;0
+Q4;Q Exemptions;budget_target;plant_other_group;;;;0
+Q4;Q Exemptions;budget_target;apu;;;;0
+Q4;Q Exemptions;budget_target;apu_other_group;;;;0
+Q4;Q Exemptions;budget_target;totem;;;;0
+Q4;Q Exemptions;budget_target;equipment_group;;;;0
+Q4;Q Exemptions;budget_target;equipment;;;;0
+Q4;Q Exemptions;running_target;company;;;;0
+Q4;Q Exemptions;running_target;division;;;;0
+Q4;Q Exemptions;running_target;area;;;;0
+Q4;Q Exemptions;running_target;regional;;;;0
+Q4;Q Exemptions;running_target;plant;;;;0
+Q4;Q Exemptions;running_target;plant_other_group;;;;0
+Q4;Q Exemptions;running_target;apu;;;;0
+Q4;Q Exemptions;running_target;apu_other_group;;;;0
+Q4;Q Exemptions;running_target;totem;;;;0
+Q4;Q Exemptions;running_target;equipment_group;;;;0
+Q4;Q Exemptions;running_target;equipment;;;;0
+Q4;Q Exemptions;manual_input_actual;company;;;;0
+Q4;Q Exemptions;manual_input_actual;division;;;;0
+Q4;Q Exemptions;manual_input_actual;area;;;;0
+Q4;Q Exemptions;manual_input_actual;regional;;;;0
+Q4;Q Exemptions;manual_input_actual;plant;;;;0
+Q4;Q Exemptions;manual_input_actual;plant_other_group;;;;0
+Q4;Q Exemptions;manual_input_actual;apu;;;;0
+Q4;Q Exemptions;manual_input_actual;apu_other_group;;;;0
+Q4;Q Exemptions;manual_input_actual;totem;;;;0
+Q4;Q Exemptions;manual_input_actual;equipment_group;;;;0
+Q4;Q Exemptions;manual_input_actual;equipment;;;;0
+Q16;Q Capability Score;budget_target;company;;;;0
+Q16;Q Capability Score;budget_target;division;;;;0
+Q16;Q Capability Score;budget_target;area;;;;0
+Q16;Q Capability Score;budget_target;regional;;;;0
+Q16;Q Capability Score;budget_target;plant;;;;0
+Q16;Q Capability Score;budget_target;plant_other_group;;;;0
+Q16;Q Capability Score;budget_target;apu;;;;0
+Q16;Q Capability Score;budget_target;apu_other_group;;;;0
+Q16;Q Capability Score;budget_target;totem;;;;0
+Q16;Q Capability Score;budget_target;equipment_group;;;;0
+Q16;Q Capability Score;budget_target;equipment;;;;0
+Q16;Q Capability Score;running_target;company;;;;0
+Q16;Q Capability Score;running_target;division;;;;0
+Q16;Q Capability Score;running_target;area;;;;0
+Q16;Q Capability Score;running_target;regional;;;;0
+Q16;Q Capability Score;running_target;plant;;;;0
+Q16;Q Capability Score;running_target;plant_other_group;;;;0
+Q16;Q Capability Score;running_target;apu;;;;0
+Q16;Q Capability Score;running_target;apu_other_group;;;;0
+Q16;Q Capability Score;running_target;totem;;;;0
+Q16;Q Capability Score;running_target;equipment_group;;;;0
+Q16;Q Capability Score;running_target;equipment;;;;0
+Q16;Q Capability Score;manual_input_actual;company;;;;0
+Q16;Q Capability Score;manual_input_actual;division;;;;0
+Q16;Q Capability Score;manual_input_actual;area;;;;0
+Q16;Q Capability Score;manual_input_actual;regional;;;;0
+Q16;Q Capability Score;manual_input_actual;plant;;;;0
+Q16;Q Capability Score;manual_input_actual;plant_other_group;;;;0
+Q16;Q Capability Score;manual_input_actual;apu;;;;0
+Q16;Q Capability Score;manual_input_actual;apu_other_group;;;;0
+Q16;Q Capability Score;manual_input_actual;totem;;;;0
+Q16;Q Capability Score;manual_input_actual;equipment_group;;;;0
+Q16;Q Capability Score;manual_input_actual;equipment;;;;0
+Q9;IQI PPM;budget_target;company;;;;0
+Q9;IQI PPM;budget_target;division;;;;0
+Q9;IQI PPM;budget_target;area;;;;0
+Q9;IQI PPM;budget_target;regional;;;;0
+Q9;IQI PPM;budget_target;plant;;;;0
+Q9;IQI PPM;budget_target;plant_other_group;;;;0
+Q9;IQI PPM;budget_target;apu;;;;0
+Q9;IQI PPM;budget_target;apu_other_group;;;;0
+Q9;IQI PPM;budget_target;totem;;;;0
+Q9;IQI PPM;budget_target;equipment_group;;;;0
+Q9;IQI PPM;budget_target;equipment;;;;0
+Q9;IQI PPM;running_target;company;;;;0
+Q9;IQI PPM;running_target;division;;;;0
+Q9;IQI PPM;running_target;area;;;;0
+Q9;IQI PPM;running_target;regional;;;;0
+Q9;IQI PPM;running_target;plant;;;;0
+Q9;IQI PPM;running_target;plant_other_group;;;;0
+Q9;IQI PPM;running_target;apu;;;;0
+Q9;IQI PPM;running_target;apu_other_group;;;;0
+Q9;IQI PPM;running_target;totem;;;;0
+Q9;IQI PPM;running_target;equipment_group;;;;0
+Q9;IQI PPM;running_target;equipment;;;;0
+Q9;IQI PPM;manual_input_actual;company;;;;0
+Q9;IQI PPM;manual_input_actual;division;;;;0
+Q9;IQI PPM;manual_input_actual;area;;;;0
+Q9;IQI PPM;manual_input_actual;regional;;;;0
+Q9;IQI PPM;manual_input_actual;plant;;;;0
+Q9;IQI PPM;manual_input_actual;plant_other_group;;;;0
+Q9;IQI PPM;manual_input_actual;apu;;;;0
+Q9;IQI PPM;manual_input_actual;apu_other_group;;;;0
+Q9;IQI PPM;manual_input_actual;totem;;;;0
+Q9;IQI PPM;manual_input_actual;equipment_group;;;;0
+Q9;IQI PPM;manual_input_actual;equipment;;;;0
+Q13;Warranty Cost;budget_target;company;;;;0
+Q13;Warranty Cost;budget_target;division;;;;0
+Q13;Warranty Cost;budget_target;area;;;;0
+Q13;Warranty Cost;budget_target;regional;;;;0
+Q13;Warranty Cost;budget_target;plant;;;;0
+Q13;Warranty Cost;budget_target;plant_other_group;;;;0
+Q13;Warranty Cost;budget_target;apu;;;;0
+Q13;Warranty Cost;budget_target;apu_other_group;;;;0
+Q13;Warranty Cost;budget_target;totem;;;;0
+Q13;Warranty Cost;budget_target;equipment_group;;;;0
+Q13;Warranty Cost;budget_target;equipment;;;;0
+Q13;Warranty Cost;running_target;company;;;;0
+Q13;Warranty Cost;running_target;division;;;;0
+Q13;Warranty Cost;running_target;area;;;;0
+Q13;Warranty Cost;running_target;regional;;;;0
+Q13;Warranty Cost;running_target;plant;;;;0
+Q13;Warranty Cost;running_target;plant_other_group;;;;0
+Q13;Warranty Cost;running_target;apu;;;;0
+Q13;Warranty Cost;running_target;apu_other_group;;;;0
+Q13;Warranty Cost;running_target;totem;;;;0
+Q13;Warranty Cost;running_target;equipment_group;;;;0
+Q13;Warranty Cost;running_target;equipment;;;;0
+Q13;Warranty Cost;manual_input_actual;company;;;;0
+Q13;Warranty Cost;manual_input_actual;division;;;;0
+Q13;Warranty Cost;manual_input_actual;area;;;;0
+Q13;Warranty Cost;manual_input_actual;regional;;;;0
+Q13;Warranty Cost;manual_input_actual;plant;;;;0
+Q13;Warranty Cost;manual_input_actual;plant_other_group;;;;0
+Q13;Warranty Cost;manual_input_actual;apu;;;;0
+Q13;Warranty Cost;manual_input_actual;apu_other_group;;;;0
+Q13;Warranty Cost;manual_input_actual;totem;;;;0
+Q13;Warranty Cost;manual_input_actual;equipment_group;;;;0
+Q13;Warranty Cost;manual_input_actual;equipment;;;;0
+D10;PO@TLT;budget_target;company;;;;0
+D10;PO@TLT;budget_target;division;;;;0
+D10;PO@TLT;budget_target;area;;;;0
+D10;PO@TLT;budget_target;regional;;;;0
+D10;PO@TLT;budget_target;plant;manual;Enter Target in % for the full Plant;;0
+D10;PO@TLT;budget_target;plant_other_group;manual;Enter Target in % for the parts of the plant that isn't covered by the underlying APU’s.;;0
+D10;PO@TLT;budget_target;apu;manual;Enter Target in % for the specific APU.;;0
+D10;PO@TLT;budget_target;apu_other_group;disabled;No entry;;0
+D10;PO@TLT;budget_target;totem;disabled;No entry;;0
+D10;PO@TLT;budget_target;equipment_group;;;;0
+D10;PO@TLT;budget_target;equipment;;;;0
+D10;PO@TLT;running_target;company;;;;0
+D10;PO@TLT;running_target;division;;;;0
+D10;PO@TLT;running_target;area;;;;0
+D10;PO@TLT;running_target;regional;;;;0
+D10;PO@TLT;running_target;plant;;;;0
+D10;PO@TLT;running_target;plant_other_group;;;;0
+D10;PO@TLT;running_target;apu;;;;0
+D10;PO@TLT;running_target;apu_other_group;;;;0
+D10;PO@TLT;running_target;totem;;;;0
+D10;PO@TLT;running_target;equipment_group;;;;0
+D10;PO@TLT;running_target;equipment;;;;0
+D10;PO@TLT;manual_input_actual;company;;;;0
+D10;PO@TLT;manual_input_actual;division;;;;0
+D10;PO@TLT;manual_input_actual;area;;;;0
+D10;PO@TLT;manual_input_actual;regional;;;;0
+D10;PO@TLT;manual_input_actual;plant;;;;0
+D10;PO@TLT;manual_input_actual;plant_other_group;;;;0
+D10;PO@TLT;manual_input_actual;apu;;;;0
+D10;PO@TLT;manual_input_actual;apu_other_group;;;;0
+D10;PO@TLT;manual_input_actual;totem;;;;0
+D10;PO@TLT;manual_input_actual;equipment_group;;;;0
+D10;PO@TLT;manual_input_actual;equipment;;;;0
+D17;SOTTR;budget_target;company;;;;0
+D17;SOTTR;budget_target;division;;;;0
+D17;SOTTR;budget_target;area;;;;0
+D17;SOTTR;budget_target;regional;;;;0
+D17;SOTTR;budget_target;plant;;;;0
+D17;SOTTR;budget_target;plant_other_group;;;;0
+D17;SOTTR;budget_target;apu;;;;0
+D17;SOTTR;budget_target;apu_other_group;;;;0
+D17;SOTTR;budget_target;totem;;;;0
+D17;SOTTR;budget_target;equipment_group;;;;0
+D17;SOTTR;budget_target;equipment;;;;0
+D17;SOTTR;running_target;company;;;;0
+D17;SOTTR;running_target;division;;;;0
+D17;SOTTR;running_target;area;;;;0
+D17;SOTTR;running_target;regional;;;;0
+D17;SOTTR;running_target;plant;;;;0
+D17;SOTTR;running_target;plant_other_group;;;;0
+D17;SOTTR;running_target;apu;;;;0
+D17;SOTTR;running_target;apu_other_group;;;;0
+D17;SOTTR;running_target;totem;;;;0
+D17;SOTTR;running_target;equipment_group;;;;0
+D17;SOTTR;running_target;equipment;;;;0
+D17;SOTTR;manual_input_actual;company;;;;0
+D17;SOTTR;manual_input_actual;division;;;;0
+D17;SOTTR;manual_input_actual;area;;;;0
+D17;SOTTR;manual_input_actual;regional;;;;0
+D17;SOTTR;manual_input_actual;plant;;;;0
+D17;SOTTR;manual_input_actual;plant_other_group;;;;0
+D17;SOTTR;manual_input_actual;apu;;;;0
+D17;SOTTR;manual_input_actual;apu_other_group;;;;0
+D17;SOTTR;manual_input_actual;totem;;;;0
+D17;SOTTR;manual_input_actual;equipment_group;;;;0
+D17;SOTTR;manual_input_actual;equipment;;;;0
+I5;Inventory Value;budget_target;company;;;;0
+I5;Inventory Value;budget_target;division;;;;0
+I5;Inventory Value;budget_target;area;;;;0
+I5;Inventory Value;budget_target;regional;;;;0
+I5;Inventory Value;budget_target;plant;;;;0
+I5;Inventory Value;budget_target;plant_other_group;;;;0
+I5;Inventory Value;budget_target;apu;;;;0
+I5;Inventory Value;budget_target;apu_other_group;;;;0
+I5;Inventory Value;budget_target;totem;;;;0
+I5;Inventory Value;budget_target;equipment_group;;;;0
+I5;Inventory Value;budget_target;equipment;;;;0
+I5;Inventory Value;running_target;company;;;;0
+I5;Inventory Value;running_target;division;;;;0
+I5;Inventory Value;running_target;area;;;;0
+I5;Inventory Value;running_target;regional;;;;0
+I5;Inventory Value;running_target;plant;;;;0
+I5;Inventory Value;running_target;plant_other_group;;;;0
+I5;Inventory Value;running_target;apu;;;;0
+I5;Inventory Value;running_target;apu_other_group;;;;0
+I5;Inventory Value;running_target;totem;;;;0
+I5;Inventory Value;running_target;equipment_group;;;;0
+I5;Inventory Value;running_target;equipment;;;;0
+I5;Inventory Value;manual_input_actual;company;;;;0
+I5;Inventory Value;manual_input_actual;division;;;;0
+I5;Inventory Value;manual_input_actual;area;;;;0
+I5;Inventory Value;manual_input_actual;regional;;;;0
+I5;Inventory Value;manual_input_actual;plant;;;;0
+I5;Inventory Value;manual_input_actual;plant_other_group;;;;0
+I5;Inventory Value;manual_input_actual;apu;;;;0
+I5;Inventory Value;manual_input_actual;apu_other_group;;;;0
+I5;Inventory Value;manual_input_actual;totem;;;;0
+I5;Inventory Value;manual_input_actual;equipment_group;;;;0
+I5;Inventory Value;manual_input_actual;equipment;;;;0
