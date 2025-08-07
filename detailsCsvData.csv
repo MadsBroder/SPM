@@ -14,21 +14,15 @@ S5;LTIR;Lost Time Injuries Ratio;manual_input_actual;LTIR - Manual Data Input;Un
 Q8;IQI;Internal Quality Incidents;budget_target;IQI - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Company to Sub Area;;Data issues should not happen;1
 Q8;IQI;Internal Quality Incidents;running_target;IQI - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Company to Sub Area;;Data issues should not happen;1
 Q8;IQI;Internal Quality Incidents;manual_input_actual;IQI - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);Company to Sub Area;;This should be none - cause no manual input;1
-Q2;CQI;Customer Quality Incidents;budget_target;CQI - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Company to Sub Area;but these will be replaced by a new SAP Datasphere solution most likely in 2025;"Values with 0 or blank are 0 (incidents)
-Missing dates = 0 incidents
-Dates in the future will not appear
-Negative values will not appear";1
-Q2;CQI;Customer Quality Incidents;running_target;CQI - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Company to Sub Area;;"Values with 0 or blank are 0 (incidents)
-Missing dates = 0 incidents
-Dates in the future will not appear
-Negative values will not appear";1
+Q2;CQI;Customer Quality Incidents;budget_target;CQI - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Company to Sub Area;but these will be replaced by a new SAP Datasphere solution most likely in 2025;Values with 0 or blank are 0 (incidents), Missing dates = 0 incidents, Dates in the future will not appear, Negative values will not appear;1
+Q2;CQI;Customer Quality Incidents;running_target;CQI - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Company to Sub Area;;Values with 0 or blank are 0 (incidents), Missing dates = 0 incidents, Dates in the future will not appear, Negative values will not appear;1
 Q2;CQI;Customer Quality Incidents;manual_input_actual;CQI - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);Company to Sub Area;;This should be none - cause no manual input;1
 Q11;Scrap PPM;Scrap PPM;budget_target;Scrap PPM - Budget Targets;Under Review;Under Review;PPM;Month to Date (MTD);Plant to Totem;;;0
 Q11;Scrap PPM;Scrap PPM;running_target;Scrap PPM - Running Targets;Under Review;Under Review;PPM;Month to Date (MTD);Plant to Totem;;;0
 Q11;Scrap PPM;Scrap PPM;manual_input_actual;Scrap PPM - Manual Data Input;Under Review;Under Review;PPM;Month to Date (MTD);Plant to Totem;;;0
 Q5;FTT;First Time Through;budget_target;FTT - Budget Targets;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;;1
 Q5;FTT;First Time Through;running_target;FTT - Running Targets;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;Value of '0', null, blank: -> Null;1
-Q5;FTT;First Time Through;manual_input_actual;FTT - Manual Data Input;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;Yes for KPI. Yes for input to Pareto.;1
+Q5;FTT;First Time Through;manual_input_actual;FTT - Manual Data Input;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;;1
 Q1;NQC;Non Quality Cost ;budget_target;NQC - Budget Targets;Under Review;Under Review;MDKK;Last working day /date;Company to APU;;;0
 Q1;NQC;Non Quality Cost ;running_target;NQC - Running Targets;Under Review;Under Review;MDKK;Last working day /date;Company to APU;;;0
 Q1;NQC;Non Quality Cost ;manual_input_actual;NQC - Manual Data Input;Under Review;Under Review;MDKK;Last working day /date;Company to APU;;;0
@@ -38,12 +32,7 @@ Q18;Scrap Value;Scrap Value;manual_input_actual;Scrap Value - Manual Data Input;
 D8;OTTR;On Time To Request ;budget_target;OTTR - Budget Targets;Under Review;Under Review;Percentage;Last working day /date;Plant to Totem;;;1
 D8;OTTR;On Time To Request ;running_target;OTTR - Running Targets;Under Review;Under Review;Percentage;Last working day /date;Plant to Totem;;Data issues are NA - assuming non negative;1
 D8;OTTR;On Time To Request ;manual_input_actual;OTTR - Manual Data Input;Under Review;Under Review;Percentage;Last working day /date;Plant to Totem;;This should be none - cause no manual input;1
-D6;Output vs Plan;Output vs Plan;budget_target;Output vs Plan - Budget Targets;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;"Values with 0 - Include
-Values that are null - Blank
-Values that are blank - Blank
-Missing dates - Blank
-Dates in the future - Blank
-Negative values - Include";1
+D6;Output vs Plan;Output vs Plan;budget_target;Output vs Plan - Budget Targets;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;Values with 0 - Include, Values that are null - Blank, Values that are blank - Blank, Missing dates - Blank, Dates in the future - Blank, Negative values - Include;1
 D6;Output vs Plan;Output vs Plan;running_target;Output vs Plan - Running Targets;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;;1
 D6;Output vs Plan;Output vs Plan;manual_input_actual;Output vs Plan - Manual Data Input;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;Yes. Equipment.;1
 D11;P-Order ;P-Order Delivery;budget_target;P-Order  - Budget Targets;Under Review;Under Review;Percentage;Last working day /date;APU to Totem;;;1
@@ -74,34 +63,19 @@ C12;PM14 Execution;Preventive Maintenance Execution;budget_target;PM14 Execution
 C12;PM14 Execution;Preventive Maintenance Execution;running_target;PM14 Execution - Running Targets;Under Review;Under Review;Percentage;Month to Date (MTD);Company to Plant;;Data issues are NA - assuming non negative;0
 C12;PM14 Execution;Preventive Maintenance Execution;manual_input_actual;PM14 Execution - Manual Data Input;Under Review;Under Review;Percentage;Month to Date (MTD);Company to Plant;;This should be none - cause no manual input;0
 C4;Conv. Cost Prod.;Conversion Cost Productivity;budget_target;Conv. Cost Prod. - Budget Targets;Under Review;Under Review;Percentage;Month to Date (MTD);Divisional to Plant;;;0
-C4;Conv. Cost Prod.;Conversion Cost Productivity;running_target;Conv. Cost Prod. - Running Targets;Under Review;Under Review;Percentage;Month to Date (MTD);Divisional to Plant;;"Values with 0: it stay 0
-Values that are null: it is 0
-Values that are blank: it is 0
-Missing dates: N/A
-Dates in the future: N/A
-Negative values: shows as it is (negative)";0
+C4;Conv. Cost Prod.;Conversion Cost Productivity;running_target;Conv. Cost Prod. - Running Targets;Under Review;Under Review;Percentage;Month to Date (MTD);Divisional to Plant;;Values with 0: it stay 0, Values that are null: it is 0, Values that are blank: it is 0, Missing dates: N/A, Dates in the future: N/A, Negative values: shows as it is (negative);0
 C4;Conv. Cost Prod.;Conversion Cost Productivity;manual_input_actual;Conv. Cost Prod. - Manual Data Input;Under Review;Under Review;Percentage;Month to Date (MTD);Divisional to Plant;;This should be none - cause no manual input;0
 P2;Employee Availability;Employee Availability (Blue Collar);budget_target;Employee Availability - Budget Targets;Under Review;Under Review;Percentage;Month to Date (MTD);Company to Plant;Comming from Sphera - external;;0
 P2;Employee Availability;Employee Availability (Blue Collar);running_target;Employee Availability - Running Targets;Under Review;Under Review;Percentage;Month to Date (MTD);Company to Plant;Comming from Sphera - external;Keep the values with 0;0
 P2;Employee Availability;Employee Availability (Blue Collar);manual_input_actual;Employee Availability - Manual Data Input;Under Review;Under Review;Percentage;Month to Date (MTD);Company to Plant;Comming from Sphera - external;This should be none - cause no manual input;0
 P3;IP;Implemented Improvement Proposals ;budget_target;IP - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;1
-P3;IP;Implemented Improvement Proposals ;running_target;IP - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;"Values with 0 =0
-Values that are null =0
-Values that are blank =0
-Missing dates (cannot occur)
-Dates in the future (cannot occur)
-Negative values (cannot occur)";1
+P3;IP;Implemented Improvement Proposals ;running_target;IP - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;Values with 0 =0, Values that are null =0, Values that are blank =0, Missing dates (cannot occur), Dates in the future (cannot occur), Negative values (cannot occur);1
 P3;IP;Implemented Improvement Proposals ;manual_input_actual;IP - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;Yes Headcount count on Plant, APU.;1
 P5;Kaizen Workshops;Kaizen Workshops Completed;budget_target;Kaizen Workshops - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to APU;;;1
 P5;Kaizen Workshops;Kaizen Workshops Completed;running_target;Kaizen Workshops - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to APU;;Data values are prefiltered;1
 P5;Kaizen Workshops;Kaizen Workshops Completed;manual_input_actual;Kaizen Workshops - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);Plant to APU;;No. Only input for targets.;1
 P4;IP Ratio;Implemented Improvement Proposals  Ratio;budget_target;IP Ratio - Budget Targets;Under Review;Under Review;Ratio;Month to Date (MTD);Plant to APU;;;1
-P4;IP Ratio;Implemented Improvement Proposals  Ratio;running_target;IP Ratio - Running Targets;Under Review;Under Review;Ratio;Month to Date (MTD);Plant to APU;;"Values with 0 =0
-Values that are null =0
-Values that are blank =0
-Missing dates (cannot occur)
-Dates in the future (cannot occur)
-Negative values (cannot occur)";1
+P4;IP Ratio;Implemented Improvement Proposals  Ratio;running_target;IP Ratio - Running Targets;Under Review;Under Review;Ratio;Month to Date (MTD);Plant to APU;;Values with 0 =0, Values that are null =0, Values that are blank =0, Missing dates (cannot occur), Dates in the future (cannot occur), Negative values (cannot occur);1
 P4;IP Ratio;Implemented Improvement Proposals  Ratio;manual_input_actual;IP Ratio - Manual Data Input;Under Review;Under Review;Ratio;Month to Date (MTD);Plant to APU;;Yes Headcount count on Plant, APU.;1
 P7;Voluntary turnover;Voluntary turnover;budget_target;Voluntary turnover - Budget Targets;Under Review;Under Review;Percentage;Month to Date (MTD);Plant to Plant;;;0
 P7;Voluntary turnover;Voluntary turnover;running_target;Voluntary turnover - Running Targets;Under Review;Under Review;Percentage;Month to Date (MTD);Plant to Plant;;;0
@@ -112,18 +86,18 @@ E5;Energy Cons. 1+2;Energy Consumption Scope 1+2;manual_input_actual;Energy Cons
 E9;Water Withdrawal;Water Withdrawal;budget_target;Water Withdrawal - Budget Targets;Under Review;Under Review;m3;Month to Date (MTD);Company to Plant;Comming from Sphera - external;;1
 E9;Water Withdrawal;Water Withdrawal;running_target;Water Withdrawal - Running Targets;Under Review;Under Review;m3;Month to Date (MTD);Company to Plant;Comming from Sphera - external;blank = 0;1
 E9;Water Withdrawal;Water Withdrawal;manual_input_actual;Water Withdrawal - Manual Data Input;Under Review;Under Review;m3;Month to Date (MTD);Company to Plant;Comming from Sphera - external;This should be none - cause no manual input;1
-S6;MTI;Medical Treament Injuries;budget_target;MTI - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-S6;MTI;Medical Treament Injuries;running_target;MTI - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-S6;MTI;Medical Treament Injuries;manual_input_actual;MTI - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-S7;NM;Near Miss;budget_target;NM - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-S7;NM;Near Miss;running_target;NM - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-S7;NM;Near Miss;manual_input_actual;NM - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-Q4;Q Exemptions;Quality Exemptions;budget_target;Q Exemptions - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-Q4;Q Exemptions;Quality Exemptions;running_target;Q Exemptions - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-Q4;Q Exemptions;Quality Exemptions;manual_input_actual;Q Exemptions - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);N/A;;;0
-Q16;Q Capability Score;Quality Capability Score;budget_target;Q Capability Score - Budget Targets;Under Review;Under Review;%;Last Recorded;N/A;;;0
-Q16;Q Capability Score;Quality Capability Score;running_target;Q Capability Score - Running Targets;Under Review;Under Review;%;Last Recorded;N/A;;;0
-Q16;Q Capability Score;Quality Capability Score;manual_input_actual;Q Capability Score - Manual Data Input;Under Review;Under Review;%;Last Recorded;N/A;;;0
+S6;MTI;Medical Treament Injuries;budget_target;MTI - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+S6;MTI;Medical Treament Injuries;running_target;MTI - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+S6;MTI;Medical Treament Injuries;manual_input_actual;MTI - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+S7;NM;Near Miss;budget_target;NM - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+S7;NM;Near Miss;running_target;NM - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+S7;NM;Near Miss;manual_input_actual;NM - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+Q4;Q Exemptions;Quality Exemptions;budget_target;Q Exemptions - Budget Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+Q4;Q Exemptions;Quality Exemptions;running_target;Q Exemptions - Running Targets;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+Q4;Q Exemptions;Quality Exemptions;manual_input_actual;Q Exemptions - Manual Data Input;Under Review;Under Review;Number;Month to Date (MTD);Plant to Totem;;;0
+Q16;Q Capability Score;Quality Capability Score;budget_target;Q Capability Score - Budget Targets;Under Review;Under Review;%;Last Recorded;Plant to Totem;;;0
+Q16;Q Capability Score;Quality Capability Score;running_target;Q Capability Score - Running Targets;Under Review;Under Review;%;Last Recorded;Plant to Totem;;;0
+Q16;Q Capability Score;Quality Capability Score;manual_input_actual;Q Capability Score - Manual Data Input;Under Review;Under Review;%;Last Recorded;Plant to Totem;;;0
 Q9;IQI PPM;Internal Quality Incidents PPM;budget_target;IQI PPM - Budget Targets;Under Review;Under Review;PPM;Month to Date (MTD);N/A;;;0
 Q9;IQI PPM;Internal Quality Incidents PPM;running_target;IQI PPM - Running Targets;Under Review;Under Review;PPM;Month to Date (MTD);N/A;;;0
 Q9;IQI PPM;Internal Quality Incidents PPM;manual_input_actual;IQI PPM - Manual Data Input;Under Review;Under Review;PPM;Month to Date (MTD);N/A;;;0
@@ -139,5 +113,3 @@ D17;SOTTR;Supplier On Time To Request;manual_input_actual;SOTTR - Manual Data In
 I5;Inventory Value ;Inventory Value ;budget_target;Inventory Value  - Budget Targets;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
 I5;Inventory Value ;Inventory Value ;running_target;Inventory Value  - Running Targets;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
 I5;Inventory Value ;Inventory Value ;manual_input_actual;Inventory Value  - Manual Data Input;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
-
-
