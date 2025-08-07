@@ -28,8 +28,7 @@ Q11;Scrap PPM;Scrap PPM;running_target;Scrap PPM - Running Targets;Under Review;
 Q11;Scrap PPM;Scrap PPM;manual_input_actual;Scrap PPM - Manual Data Input;Under Review;Under Review;PPM;Month to Date (MTD);Plant to Totem;;;0
 Q5;FTT;First Time Through;budget_target;FTT - Budget Targets;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;;1
 Q5;FTT;First Time Through;running_target;FTT - Running Targets;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;Value of '0', null, blank: -> Null;1
-Q5;FTT;First Time Through;manual_input_actual;FTT - Manual Data Input;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;"Yes for KPI.
-Yes for input to Pareto.";1
+Q5;FTT;First Time Through;manual_input_actual;FTT - Manual Data Input;Under Review;Under Review;Percentage;Last working day /date;APU to Equipment;;Yes for KPI. Yes for input to Pareto.;1
 Q1;NQC;Non Quality Cost ;budget_target;NQC - Budget Targets;Under Review;Under Review;MDKK;Last working day /date;Company to APU;;;0
 Q1;NQC;Non Quality Cost ;running_target;NQC - Running Targets;Under Review;Under Review;MDKK;Last working day /date;Company to APU;;;0
 Q1;NQC;Non Quality Cost ;manual_input_actual;NQC - Manual Data Input;Under Review;Under Review;MDKK;Last working day /date;Company to APU;;;0
@@ -140,4 +139,5 @@ D17;SOTTR;Supplier On Time To Request;manual_input_actual;SOTTR - Manual Data In
 I5;Inventory Value ;Inventory Value ;budget_target;Inventory Value  - Budget Targets;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
 I5;Inventory Value ;Inventory Value ;running_target;Inventory Value  - Running Targets;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
 I5;Inventory Value ;Inventory Value ;manual_input_actual;Inventory Value  - Manual Data Input;Under Review;Under Review;Local Currency;Last Recorded;N/A;;;0
+
 
