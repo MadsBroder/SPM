@@ -3,7 +3,7 @@ S4;LTI;budget_target;company;auto;Target is automatically coming from Group stan
 S4;LTI;budget_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
 S4;LTI;budget_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
 S4;LTI;budget_target;regional;auto;Target is automatically coming from Group standard source Sphera;;1
-S4;LTI;budget_target;plant;manual;Sphera;;1
+S4;LTI;budget_target;plant;auto;Target is automatically coming from Group standard source Sphera;;1
 S4;LTI;budget_target;plant_other_group;disabled;No entry;;1
 S4;LTI;budget_target;apu;disabled;No entry;;1
 S4;LTI;budget_target;apu_other_group;disabled;No entry;;1
@@ -21,17 +21,17 @@ S4;LTI;running_target;apu_other_group;manual;Enter Target for full year in Janua
 S4;LTI;running_target;totem;auto;Target is always 0;;1
 S4;LTI;running_target;equipment_group;disabled;No entry;;1
 S4;LTI;running_target;equipment;disabled;No entry;;1
-S4;LTI;manual_input_actual_input_actual;company;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;division;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;area;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;equipment_group;disabled;Only coming automatically from group standard system source Sphera;;1
-S4;LTI;manual_input_actual;equipment;disabled;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;plant;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;apu;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;totem;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;equipment_group;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;equipment;auto;Only coming automatically from group standard system source Sphera;;1
 S2;Hazard Observation;budget_target;company;auto;Target is automatically coming from Group standard source Sphera;;1
 S2;Hazard Observation;budget_target;division;auto;Target is automatically coming from Group standard source Sphera;;1
 S2;Hazard Observation;budget_target;area;auto;Target is automatically coming from Group standard source Sphera;;1
@@ -131,10 +131,10 @@ S5;LTIR;manual_input_actual;apu_other_group;disabled;No entry;;1
 S5;LTIR;manual_input_actual;totem;disabled;No entry;;1
 S5;LTIR;manual_input_actual;equipment_group;disabled;No entry;;1
 S5;LTIR;manual_input_actual;equipment;disabled;No entry;;1
-Q8;IQI;budget_target;company;auto;No Entry – Calculated as sum of all underlying values;;1
-Q8;IQI;budget_target;division;auto;No Entry – Calculated as sum of all underlying values;;1
-Q8;IQI;budget_target;area;auto;No Entry – Calculated as sum of all underlying values;;1
-Q8;IQI;budget_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;budget_target;company;auto;Automatically calculated as sum of all underlying values;;1
+Q8;IQI;budget_target;division;auto;Automatically calculated as sum of all underlying values;;1
+Q8;IQI;budget_target;area;auto;Automatically calculated as sum of all underlying values;;1
+Q8;IQI;budget_target;regional;auto;Automatically calculated as sum of all underlying values;;1
 Q8;IQI;budget_target;plant;auto;Enter Target in QTY for the plant;;1
 Q8;IQI;budget_target;plant_other_group;manual;No entry;;1
 Q8;IQI;budget_target;apu;manual;No entry;;1
@@ -142,32 +142,32 @@ Q8;IQI;budget_target;apu_other_group;disabled;No entry;;1
 Q8;IQI;budget_target;totem;manual;No entry;;1
 Q8;IQI;budget_target;equipment_group;disabled;No entry;;1
 Q8;IQI;budget_target;equipment;disabled;No entry;;1
-Q8;IQI;running_target;company;auto;No Entry – Calculated as sum of all underlying values;;1
-Q8;IQI;running_target;division;auto;No Entry – Calculated as sum of all underlying values;;1
-Q8;IQI;running_target;area;auto;No Entry – Calculated as sum of all underlying values;;1
-Q8;IQI;running_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1
-Q8;IQI;running_target;plant;auto;No Entry – Calculated as sum of all underlying values;;1
+Q8;IQI;running_target;company;auto;Automatically calculated as sum of all underlying values;;1
+Q8;IQI;running_target;division;auto;Automatically calculated as sum of all underlying values;;1
+Q8;IQI;running_target;area;auto;Automatically calculated as sum of all underlying values;;1
+Q8;IQI;running_target;regional;auto;Automatically calculated as sum of all underlying values;;1
+Q8;IQI;running_target;plant;auto;Automatically calculated as sum of all underlying values;;1
 Q8;IQI;running_target;plant_other_group;manual;Enter Target in QTY for the part of the plant that are not covered by underlying APU’s.;;1
 Q8;IQI;running_target;apu;manual;Enter Target in QTY for specific APU;;1
 Q8;IQI;running_target;apu_other_group;disabled;Enter Target in QTY for the part of the APU not covered by underlying Totems;;1
 Q8;IQI;running_target;totem;manual;Enter Target in QTY for Specific Totem;;1
 Q8;IQI;running_target;equipment_group;disabled;No entry;;1
 Q8;IQI;running_target;equipment;disabled;No entry;;1
-Q8;IQI;manual_input_actual;company;disabled;Only coming automatically from group standard system source QIP;;1
-Q8;IQI;manual_input_actual;division;disabled;Only coming automatically from group standard system source QIP;;1
-Q8;IQI;manual_input_actual;area;disabled;Only coming automatically from group standard system source QIP;;1
-Q8;IQI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source QIP;;1
-Q8;IQI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source QIP;;1
-Q8;IQI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source QIP;;1
-Q8;IQI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source QIP;;1
-Q8;IQI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source QIP;;1
-Q8;IQI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;company;auto;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;division;auto;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;area;auto;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;regional;auto;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;plant;auto;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;apu;auto;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source QIP;;1
+Q8;IQI;manual_input_actual;totem;auto;Only coming automatically from group standard system source QIP;;1
 Q8;IQI;manual_input_actual;equipment_group;disabled;No entry;;1
 Q8;IQI;manual_input_actual;equipment;disabled;No entry;;1
-Q2;CQI;budget_target;company;auto;No Entry – Calculated as sum of all underlying values;;1
-Q2;CQI;budget_target;division;auto;No Entry – Calculated as sum of all underlying values;;1
-Q2;CQI;budget_target;area;auto;No Entry – Calculated as sum of all underlying values;;1
-Q2;CQI;budget_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;budget_target;company;auto;Automatically calculated as sum of all underlying values;;1
+Q2;CQI;budget_target;division;auto;Automatically calculated as sum of all underlying values;;1
+Q2;CQI;budget_target;area;auto;Automatically calculated as sum of all underlying values;;1
+Q2;CQI;budget_target;regional;auto;Automatically calculated as sum of all underlying values;;1
 Q2;CQI;budget_target;plant;auto;Enter Target in QTY for the plant;;1
 Q2;CQI;budget_target;plant_other_group;manual;No entry;;1
 Q2;CQI;budget_target;apu;manual;No entry;;1
@@ -175,26 +175,26 @@ Q2;CQI;budget_target;apu_other_group;disabled;No entry;;1
 Q2;CQI;budget_target;totem;manual;No entry;;1
 Q2;CQI;budget_target;equipment_group;disabled;No entry;;1
 Q2;CQI;budget_target;equipment;disabled;No entry;;1
-Q2;CQI;running_target;company;auto;No Entry – Calculated as sum of all underlying values;;1
-Q2;CQI;running_target;division;auto;No Entry – Calculated as sum of all underlying values;;1
-Q2;CQI;running_target;area;auto;No Entry – Calculated as sum of all underlying values;;1
-Q2;CQI;running_target;regional;auto;No Entry – Calculated as sum of all underlying values;;1
-Q2;CQI;running_target;plant;auto;No Entry – Calculated as sum of all underlying values;;1
+Q2;CQI;running_target;company;auto;Automatically calculated as sum of all underlying values;;1
+Q2;CQI;running_target;division;auto;Automatically calculated as sum of all underlying values;;1
+Q2;CQI;running_target;area;auto;Automatically calculated as sum of all underlying values;;1
+Q2;CQI;running_target;regional;auto;Automatically calculated as sum of all underlying values;;1
+Q2;CQI;running_target;plant;auto;Automatically calculated as sum of all underlying values;;1
 Q2;CQI;running_target;plant_other_group;manual;Enter Target in QTY for the part of the plant that are not covered by underlying APU’s.;;1
 Q2;CQI;running_target;apu;manual;Enter Target in QTY for specific APU;;1
 Q2;CQI;running_target;apu_other_group;disabled;Enter Target in QTY for the part of the APU not covered by underlying Totems;;1
 Q2;CQI;running_target;totem;manual;Enter Target in QTY for Specific Totem;;1
 Q2;CQI;running_target;equipment_group;disabled;No entry;;1
 Q2;CQI;running_target;equipment;disabled;No entry;;1
-Q2;CQI;manual_input_actual;company;disabled;Only coming automatically from group standard system source QIP;;1
-Q2;CQI;manual_input_actual;division;disabled;Only coming automatically from group standard system source QIP;;1
-Q2;CQI;manual_input_actual;area;disabled;Only coming automatically from group standard system source QIP;;1
-Q2;CQI;manual_input_actual;regional;disabled;Only coming automatically from group standard system source QIP;;1
-Q2;CQI;manual_input_actual;plant;disabled;Only coming automatically from group standard system source QIP;;1
-Q2;CQI;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source QIP;;1
-Q2;CQI;manual_input_actual;apu;disabled;Only coming automatically from group standard system source QIP;;1
-Q2;CQI;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source QIP;;1
-Q2;CQI;manual_input_actual;totem;disabled;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;company;auto;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;division;auto;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;area;auto;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;regional;auto;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;plant;auto;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;apu;auto;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source QIP;;1
+Q2;CQI;manual_input_actual;totem;auto;Only coming automatically from group standard system source QIP;;1
 Q2;CQI;manual_input_actual;equipment_group;disabled;No entry;;1
 Q2;CQI;manual_input_actual;equipment;disabled;No entry;;1
 Q11;Scrap PPM;budget_target;company;;;;0
@@ -351,15 +351,15 @@ D8;OTTR;running_target;apu_other_group;manual;Enter Target in % for the part of 
 D8;OTTR;running_target;totem;manual;Enter Target in % for the specific Totem.;;1
 D8;OTTR;running_target;equipment_group;disabled;No entry;;1
 D8;OTTR;running_target;equipment;disabled;No entry;;1
-D8;OTTR;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1
-D8;OTTR;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1
-D8;OTTR;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1
-D8;OTTR;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1
-D8;OTTR;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1
-D8;OTTR;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1
-D8;OTTR;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1
-D8;OTTR;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1
-D8;OTTR;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;company;auto;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;division;auto;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;area;auto;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;regional;auto;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;plant;auto;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;apu;auto;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source SAP;;1
+D8;OTTR;manual_input_actual;totem;auto;Only coming automatically from group standard system source SAP;;1
 D8;OTTR;manual_input_actual;equipment_group;disabled;No entry;;1
 D8;OTTR;manual_input_actual;equipment;disabled;No entry;;1
 D6;Output vs Plan;budget_target;company;disabled;No entry;;1
@@ -417,15 +417,15 @@ D11;P-Order;running_target;apu_other_group;manual;Enter Target in % for the part
 D11;P-Order;running_target;totem;manual;Enter Target in % for the specific Totem.;;1
 D11;P-Order;running_target;equipment_group;disabled;No entry;;1
 D11;P-Order;running_target;equipment;disabled;No entry;;1
-D11;P-Order;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1
-D11;P-Order;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1
-D11;P-Order;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1
-D11;P-Order;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1
-D11;P-Order;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1
-D11;P-Order;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1
-D11;P-Order;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1
-D11;P-Order;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1
-D11;P-Order;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;company;auto;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;division;auto;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;area;auto;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;regional;auto;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;plant;auto;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;apu;auto;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source SAP;;1
+D11;P-Order;manual_input_actual;totem;auto;Only coming automatically from group standard system source SAP;;1
 D11;P-Order;manual_input_actual;equipment_group;disabled;No entry;;1
 D11;P-Order;manual_input_actual;equipment;disabled;No entry;;1
 D5;COTTR;budget_target;company;disabled;Enter Target in %;;1
@@ -450,15 +450,15 @@ D5;COTTR;running_target;apu_other_group;manual;Enter Target in % for the part of
 D5;COTTR;running_target;totem;manual;Enter Target in % for the specific Totem.;;1
 D5;COTTR;running_target;equipment_group;disabled;No entry;;1
 D5;COTTR;running_target;equipment;disabled;No entry;;1
-D5;COTTR;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;1
-D5;COTTR;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;1
-D5;COTTR;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;1
-D5;COTTR;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;1
-D5;COTTR;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;1
-D5;COTTR;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;1
-D5;COTTR;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;1
-D5;COTTR;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;1
-D5;COTTR;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;company;auto;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;division;auto;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;area;auto;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;regional;auto;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;plant;auto;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;apu;auto;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source SAP;;1
+D5;COTTR;manual_input_actual;totem;auto;Only coming automatically from group standard system source SAP;;1
 D5;COTTR;manual_input_actual;equipment_group;disabled;No entry;;1
 D5;COTTR;manual_input_actual;equipment;disabled;No entry;;1
 D2;1st Confirmed;budget_target;company;disabled;Enter Target in %;;0
@@ -483,15 +483,15 @@ D2;1st Confirmed;running_target;apu_other_group;manual;Enter Target in % for the
 D2;1st Confirmed;running_target;totem;manual;Enter Target in % for the specific Totem.;;0
 D2;1st Confirmed;running_target;equipment_group;disabled;No entry;;0
 D2;1st Confirmed;running_target;equipment;disabled;No entry;;0
-D2;1st Confirmed;manual_input_actual;company;disabled;Only coming automatically from group standard system source SAP;;0
-D2;1st Confirmed;manual_input_actual;division;disabled;Only coming automatically from group standard system source SAP;;0
-D2;1st Confirmed;manual_input_actual;area;disabled;Only coming automatically from group standard system source SAP;;0
-D2;1st Confirmed;manual_input_actual;regional;disabled;Only coming automatically from group standard system source SAP;;0
-D2;1st Confirmed;manual_input_actual;plant;disabled;Only coming automatically from group standard system source SAP;;0
-D2;1st Confirmed;manual_input_actual;plant_other_group;disabled;Only coming automatically from group standard system source SAP;;0
-D2;1st Confirmed;manual_input_actual;apu;disabled;Only coming automatically from group standard system source SAP;;0
-D2;1st Confirmed;manual_input_actual;apu_other_group;disabled;Only coming automatically from group standard system source SAP;;0
-D2;1st Confirmed;manual_input_actual;totem;disabled;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;company;auto;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;division;auto;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;area;auto;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;regional;auto;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;plant;auto;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;plant_other_group;auto;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;apu;auto;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;apu_other_group;auto;Only coming automatically from group standard system source SAP;;0
+D2;1st Confirmed;manual_input_actual;totem;auto;Only coming automatically from group standard system source SAP;;0
 D2;1st Confirmed;manual_input_actual;equipment_group;disabled;No entry;;0
 D2;1st Confirmed;manual_input_actual;equipment;disabled;No entry;;0
 I1;DoS 3M;budget_target;company;;;;0
