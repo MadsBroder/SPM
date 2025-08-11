@@ -22,19 +22,37 @@
         }
         .page-container { display: flex; flex-direction: column; height: 100%; }
         .page-header, .page-footer {
-            flex-shrink: 0; background-color: #f8f9fa; padding: 15px; z-index: 10;
+            flex-shrink: 0; z-index: 10;
         }
-        .page-header { position: relative; border-bottom: 1px solid #e0e0e0; }
-        .page-footer { border-top: 1px solid #e0e0e0; position: relative; }
+        .page-header { position: relative; }
+        .page-footer { position: relative; background-color: #11497B; color: var(--text-light); border-top: 1px solid #4A7D9F;}
+        .header-main-title {
+            background-color: #092844;
+            color: var(--text-light);
+            padding: 15px;
+            position: relative;
+        }
         .page-main { flex-grow: 1; overflow-y: auto; overflow-x: hidden; position: relative; }
-        h1 { color: var(--node-l1); text-align: center; margin: 0 0 15px 0; }
-        .controls { display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; }
-        .controls label, .controls select, .controls .toggle-btn { font-size: 14px; }
+        h1 { color: var(--text-light); text-align: center; margin: 0; }
+        .controls { 
+            display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; 
+            background-color: #11497B;
+            padding: 15px;
+            border-bottom: 1px solid #4A7D9F;
+        }
+        .controls label { font-size: 14px; color: var(--text-light); }
+        .controls select { font-size: 14px; border-radius: 6px; padding: 6px 8px; border: 1px solid #ccc; }
         .toggle-container { display: flex; gap: 10px; }
-        .toggle-btn { padding: 8px 12px; border-radius: 8px; border: 1px solid #ccc; cursor: pointer; background-color: white; }
-        .toggle-btn.active { background-color: var(--node-l3); color: var(--text-light); border-color: var(--node-l3); }
+        .toggle-btn { 
+            padding: 8px 12px; border-radius: 8px; cursor: pointer;
+            background-color: #E9ECEF; color: var(--text-dark); border: 1px solid #CED4DA;
+            font-size: 14px;
+        }
+        .toggle-btn.active { 
+            background-color: var(--node-l4); color: var(--text-light); border-color: var(--node-l4); 
+        }
         .status-indicator {
-            position: absolute; top: 15px; right: 15px; padding: 6px 12px;
+            position: absolute; top: 50%; transform: translateY(-50%); right: 15px; padding: 6px 12px;
             border-radius: 16px; font-size: 12px; font-weight: 600;
         }
         .status-indicator.under-review { background-color: var(--status-review-bg); color: var(--status-review-text); }
@@ -61,10 +79,9 @@
             font-weight: 500; width: 180px; text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .node-l-1 { background-color: #003B5C; } .node-l-2 { background-color: #005A8C; }
-        .node-l-3 { background-color: #0077B6; } .node-l-4 { background-color: #48A2D4; }
-        .node-l-5 { background-color: #87CEEB; } .node-l-6 { background-color: #00b4d8; }
-        .node-l-7 { background-color: #48cae4; } .node-l-8 { background-color: #90e0ef; }
+        .node-l-1, .node-l-2, .node-l-3, .node-l-4, .node-l-5, .node-l-6, .node-l-7, .node-l-8 { 
+            background-color: #495057; 
+        }
         .node.disabled { background-color: #BDBDBD; }
         .info-box {
             padding: 10px; border: 2px dashed; border-radius: 8px;
@@ -84,10 +101,10 @@
         .info-box p { margin: 2px 0; white-space: normal; }
         .info-box .maintext { font-size: 12px; }
         .info-box .subtext { font-size: 11px; color: #666; margin-top: 4px; }
-        #kpi-details-footer { background-color: white; padding: 20px; }
-        #kpi-details-footer h2 { margin-top: 0; color: var(--node-l1); }
+        #kpi-details-footer { padding: 20px; }
+        #kpi-details-footer h2 { margin-top: 0; color: var(--text-light); }
         .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .detail-item strong { color: var(--node-l3); }
+        .detail-item strong { color: var(--node-l5); }
         .detail-item .detail-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
         .loader { text-align: center; padding: 40px; font-size: 18px; color: #666; }
 
@@ -160,8 +177,10 @@
 <body>
 <div class="page-container">
     <header class="page-header">
-        <div id="status-indicator" class="status-indicator"></div>
-        <h1>KPI Data Flow Visualization</h1>
+        <div class="header-main-title">
+            <div id="status-indicator" class="status-indicator"></div>
+            <h1>KPI Data Flow Visualization</h1>
+        </div>
         <div class="controls">
             <label for="kpi-select">Select KPI:</label>
             <select id="kpi-select">
