@@ -489,14 +489,22 @@
             parentPath.setAttribute('fill', 'none');
             svg.appendChild(parentPath);
             
+            // --- FIX START ---
+            // The horizontal bus must span from the parent's X to the full range of children's X positions
+            // to ensure the connecting lines always meet.
+            const busMinX = Math.min(pX, minX);
+            const busMaxX = Math.max(pX, maxX);
+
             if (childElements.length > 1 || Math.abs(pX - minX) > 1) {
                 const busPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                busPath.setAttribute('d', `M ${minX} ${busY} H ${maxX}`);
+                // Use the corrected, wider range for the bus line.
+                busPath.setAttribute('d', `M ${busMinX} ${busY} H ${busMaxX}`);
                 busPath.setAttribute('stroke', '#6c757d');
                 busPath.setAttribute('stroke-width', '1.5');
                 busPath.setAttribute('fill', 'none');
                 svg.appendChild(busPath);
             }
+            // --- FIX END ---
             
             childElements.forEach(childWrapper => {
                 const cX = childWrapper.offsetLeft + childWrapper.offsetWidth / 2;
