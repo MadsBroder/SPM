@@ -21,7 +21,7 @@ S4;LTI;running_target;apu_other_group;manual;Enter Target for full year in Janua
 S4;LTI;running_target;totem;auto;Target is always 0;;1
 S4;LTI;running_target;equipment_group;disabled;No entry;;1
 S4;LTI;running_target;equipment;disabled;No entry;;1
-S4;LTI;manual_input_actual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;1
+S4;LTI;manual_input_actual;company;auto;Only coming automatically from group standard system source Sphera;;1
 S4;LTI;manual_input_actual;division;auto;Only coming automatically from group standard system source Sphera;;1
 S4;LTI;manual_input_actual;area;auto;Only coming automatically from group standard system source Sphera;;1
 S4;LTI;manual_input_actual;regional;auto;Only coming automatically from group standard system source Sphera;;1
