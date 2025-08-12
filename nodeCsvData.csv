@@ -135,11 +135,11 @@ Q8;IQI;budget_target;company;auto;Automatically calculated as sum of all underly
 Q8;IQI;budget_target;division;auto;Automatically calculated as sum of all underlying values;;1
 Q8;IQI;budget_target;area;auto;Automatically calculated as sum of all underlying values;;1
 Q8;IQI;budget_target;regional;auto;Automatically calculated as sum of all underlying values;;1
-Q8;IQI;budget_target;plant;auto;Enter Target in QTY for the plant;;1
-Q8;IQI;budget_target;plant_other_group;manual;No entry;;1
-Q8;IQI;budget_target;apu;manual;No entry;;1
+Q8;IQI;budget_target;plant;manual;Enter Target in QTY for the plant;;1
+Q8;IQI;budget_target;plant_other_group;disabled;No entry;;1
+Q8;IQI;budget_target;apu;disabled;No entry;;1
 Q8;IQI;budget_target;apu_other_group;disabled;No entry;;1
-Q8;IQI;budget_target;totem;manual;No entry;;1
+Q8;IQI;budget_target;totem;disabled;No entry;;1
 Q8;IQI;budget_target;equipment_group;disabled;No entry;;1
 Q8;IQI;budget_target;equipment;disabled;No entry;;1
 Q8;IQI;running_target;company;auto;Automatically calculated as sum of all underlying values;;1
@@ -168,11 +168,11 @@ Q2;CQI;budget_target;company;auto;Automatically calculated as sum of all underly
 Q2;CQI;budget_target;division;auto;Automatically calculated as sum of all underlying values;;1
 Q2;CQI;budget_target;area;auto;Automatically calculated as sum of all underlying values;;1
 Q2;CQI;budget_target;regional;auto;Automatically calculated as sum of all underlying values;;1
-Q2;CQI;budget_target;plant;auto;Enter Target in QTY for the plant;;1
-Q2;CQI;budget_target;plant_other_group;manual;No entry;;1
-Q2;CQI;budget_target;apu;manual;No entry;;1
+Q2;CQI;budget_target;plant;manual;Enter Target in QTY for the plant;;1
+Q2;CQI;budget_target;plant_other_group;disabled;No entry;;1
+Q2;CQI;budget_target;apu;disabled;No entry;;1
 Q2;CQI;budget_target;apu_other_group;disabled;No entry;;1
-Q2;CQI;budget_target;totem;manual;No entry;;1
+Q2;CQI;budget_target;totem;disabled;No entry;;1
 Q2;CQI;budget_target;equipment_group;disabled;No entry;;1
 Q2;CQI;budget_target;equipment;disabled;No entry;;1
 Q2;CQI;running_target;company;auto;Automatically calculated as sum of all underlying values;;1
@@ -272,8 +272,8 @@ Q1;NQC;budget_target;plant_other_group;disabled;No entry;;0
 Q1;NQC;budget_target;apu;disabled;No entry;;0
 Q1;NQC;budget_target;apu_other_group;disabled;No entry;;0
 Q1;NQC;budget_target;totem;disabled;No entry;;0
-Q1;NQC;budget_target;equipment_group;;;;0
-Q1;NQC;budget_target;equipment;;;;0
+Q1;NQC;budget_target;equipment_group;disabled;No entry;;0
+Q1;NQC;budget_target;equipment;disabled;No entry;;0
 Q1;NQC;running_target;company;;;;0
 Q1;NQC;running_target;division;;;;0
 Q1;NQC;running_target;area;;;;0
@@ -283,8 +283,8 @@ Q1;NQC;running_target;plant_other_group;;;;0
 Q1;NQC;running_target;apu;;;;0
 Q1;NQC;running_target;apu_other_group;;;;0
 Q1;NQC;running_target;totem;;;;0
-Q1;NQC;running_target;equipment_group;;;;0
-Q1;NQC;running_target;equipment;;;;0
+Q1;NQC;running_target;equipment_group;disabled;No entry;;0
+Q1;NQC;running_target;equipment;disabled;No entry;;0
 Q1;NQC;manual_input_actual;company;;;;0
 Q1;NQC;manual_input_actual;division;;;;0
 Q1;NQC;manual_input_actual;area;;;;0
@@ -621,7 +621,7 @@ C6;Industrial Prod.;manual_input_actual;area;auto;Actual Direct Hours and/or Act
 C6;Industrial Prod.;manual_input_actual;regional;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1
 C6;Industrial Prod.;manual_input_actual;plant;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1
 C6;Industrial Prod.;manual_input_actual;plant_other_group;manual;Enter Actual Direct Hours and/or Activity Hours that belongs to the plant but isn’t covered by the underlying APU’s.;;1
-C6;Industrial Prod.;manual_input_actual;apu;disabled;No entry;;1
+C6;Industrial Prod.;manual_input_actual;apu;auto;Actual Direct Hours and/or Activity Hours accumulated automatically from the level below.;;1
 C6;Industrial Prod.;manual_input_actual;apu_other_group;manual;Enter Actual Direct Hours and/or Activity Hours that belongs to the APU, but not the underlying Totems.;;1
 C6;Industrial Prod.;manual_input_actual;totem;manual;Enter Actual Direct Hours and/or Activity Hours for the specific Totem.;;1
 C6;Industrial Prod.;manual_input_actual;equipment_group;disabled;No entry;;1
@@ -762,7 +762,7 @@ P3;IP;budget_target;company;auto;Target in QTY automatically calculated as Sum o
 P3;IP;budget_target;division;auto;Target in QTY automatically calculated as Sum of below level.;;1
 P3;IP;budget_target;area;auto;Target in QTY automatically calculated as Sum of below level.;;1
 P3;IP;budget_target;regional;auto;Target in QTY automatically calculated as Sum of below level.;;1
-P3;IP;budget_target;plant;auto;Enter Target in QTY;;1
+P3;IP;budget_target;plant;manual;Enter Target in QTY;;1
 P3;IP;budget_target;plant_other_group;disabled;No entry;;1
 P3;IP;budget_target;apu;disabled;No entry;;1
 P3;IP;budget_target;apu_other_group;disabled;No entry;;1
