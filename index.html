@@ -4,570 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPI Data Flow Visualization</title>
-    <style>
-        :root {
-            --node-l1: #003B5C; --node-l2: #005A8C; --node-l3: #0077B6;
-            --node-l4: #48A2D4; --node-l5: #87CEEB;
-            --manual-bg: #FFEBEB; --manual-border: #E57373;
-            --auto-bg: #E3F2FD; --auto-border: #64B5F6;
-            --disabled-bg: #F5F5F5;
-            --text-light: #FFFFFF; --text-dark: #333333;
-            --status-review-bg: #FFEBEE; --status-review-text: #D32F2F;
-            --status-approved-bg: #E8F5E9; --status-approved-text: #388E3C;
-        }
-        html, body {
-            height: 100vh; max-height: 100vh; overflow: hidden; margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        .page-container { display: flex; flex-direction: column; height: 100%; }
-        .page-header, .page-footer {
-            flex-shrink: 0; z-index: 10;
-        }
-        .page-header { position: relative; }
-        .page-footer { position: relative; background-color: #11497B; color: var(--text-light); border-top: 1px solid #4A7D9F;}
-        .header-main-title {
-            background-color: #092844;
-            color: var(--text-light);
-            padding: 15px;
-            position: relative;
-        }
-        .page-main { flex-grow: 1; overflow-y: auto; overflow-x: hidden; position: relative; }
-        h1 { color: var(--text-light); text-align: center; margin: 0; }
-        .controls { 
-            display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; 
-            background-color: #11497B;
-            padding: 15px;
-            border-bottom: 1px solid #4A7D9F;
-        }
-        .controls label { font-size: 14px; color: var(--text-light); }
-        .controls select { font-size: 14px; border-radius: 6px; padding: 6px 8px; border: 1px solid #ccc; }
-        .toggle-container { display: flex; gap: 10px; }
-        .toggle-btn { 
-            padding: 8px 12px; border-radius: 8px; cursor: pointer;
-            background-color: #E9ECEF; color: var(--text-dark); border: 1px solid #CED4DA;
-            font-size: 14px;
-        }
-        .toggle-btn.active { 
-            background-color: var(--node-l4); color: var(--text-light); border-color: var(--node-l4); 
-        }
-        .status-indicator {
-            position: absolute; top: 50%; transform: translateY(-50%); right: 15px; padding: 6px 12px;
-            border-radius: 16px; font-size: 12px; font-weight: 600;
-        }
-        .status-indicator.under-review { background-color: var(--status-review-bg); color: var(--status-review-text); }
-        .status-indicator.approved { background-color: var(--status-approved-bg); color: var(--status-approved-text); }
-        .hierarchy-container {
-            display: flex; flex-direction: column; align-items: center;
-            padding: 20px 10px; position: relative;
-        }
-        #connector-svg {
-            position: absolute; top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none; z-index: 1;
-        }
-        .hierarchy-level {
-            display: flex; justify-content: center; flex-wrap: wrap;
-            gap: 20px; width: 100%; margin-bottom: 40px;
-        }
-        .node-wrapper {
-            display: flex; flex-direction: column; align-items: center; gap: 8px;
-            position: relative; z-index: 2; background: #f8f9fa; padding: 0 5px;
-        }
-        .node {
-            padding: 8px 15px; border-radius: 8px; color: var(--text-light);
-            font-weight: 500; width: 180px; text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .node-l-1, .node-l-2, .node-l-3, .node-l-4, .node-l-5, .node-l-6, .node-l-7, .node-l-8 { 
-            background-color: #495057; 
-        }
-        .node.disabled { background-color: #BDBDBD; }
-        .info-box {
-            padding: 10px; border: 2px dashed; border-radius: 8px;
-            width: 180px; min-height: 70px;
-            display: flex; flex-direction: column; justify-content: center;
-            position: relative; text-align: center;
-        }
-        .info-box::before {
-            content: attr(data-type); position: absolute; top: -12px; left: 50%;
-            transform: translateX(-50%); background: #f8f9fa; padding: 2px 8px;
-            border-radius: 12px; font-size: 12px; font-weight: bold;
-            border: 1px solid #e0e0e0; white-space: nowrap;
-        }
-        .info-box.manual { background-color: var(--manual-bg); border-color: var(--manual-border); }
-        .info-box.auto { background-color: var(--auto-bg); border-color: var(--auto-border); }
-        .info-box.disabled { background-color: var(--disabled-bg); border-color: #ddd; }
-        .info-box p { margin: 2px 0; white-space: normal; }
-        .info-box .maintext { font-size: 12px; }
-        .info-box .subtext { font-size: 11px; color: #666; margin-top: 4px; }
-        #kpi-details-footer { padding: 20px; }
-        #kpi-details-footer h2 { margin-top: 0; color: var(--text-light); }
-        .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .detail-item strong { color: var(--node-l5); }
-        .detail-item .detail-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-        .loader { text-align: center; padding: 40px; font-size: 18px; color: #666; }
-
-        /* --- Info Tooltip Styles --- */
-        .info-tooltip {
-            position: relative;
-            display: inline-block;
-        }
-        .info-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background-color: #a0aec0;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 14px;
-            font-weight: bold;
-            font-style: italic;
-            line-height: 18px;
-            text-align: center;
-            cursor: help;
-            user-select: none; /* Prevent text selection */
-        }
-        .info-tooltip .tooltip-text {
-            visibility: hidden;
-            width: 250px;
-            background-color: #2d3748;
-            color: #fff;
-            text-align: left;
-            border-radius: 6px;
-            padding: 10px;
-            position: absolute;
-            z-index: 100;
-            bottom: 150%; 
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            font-size: 12px;
-            font-weight: normal;
-            line-height: 1.4;
-        }
-        .info-tooltip .tooltip-text::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #2d3748 transparent transparent transparent;
-        }
-        .info-tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-        .priority-toggle-container {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            display: flex;
-            gap: 10px;
-        }
-    </style>
+    <!-- Babel to transpile JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React libraries -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 </head>
 <body>
-<div class="page-container">
-    <header class="page-header">
-        <div class="header-main-title">
-            <div id="status-indicator" class="status-indicator"></div>
-            <h1>KPI Data Flow Visualization</h1>
-        </div>
-        <div class="controls">
-            <label for="kpi-select">Select KPI:</label>
-            <select id="kpi-select">
-                <!-- Options will be dynamically populated -->
-            </select>
-            <div class="toggle-container">
-                <button class="toggle-btn active" data-view="budget_target">Budget Targets</button>
-                <button class="toggle-btn" data-view="running_target">Running Targets</button>
-                <button class="toggle-btn" data-view="manual_input_actual">Manual Input - Actuals</button>
-            </div>
-        </div>
-    </header>
+    <div id="root"></div>
 
-    <main class="page-main">
-        <div id="hierarchy-container" class="hierarchy-container">
-            <svg id="connector-svg"></svg>
-            <div id="hierarchy-nodes">
-                 <div class="loader">Loading KPI data...</div>
-            </div>
-        </div>
-    </main>
+    <script type="text/babel">
+        // The React component from the Canvas is placed here.
+        // I've included the entire component but will only show the start and end for brevity.
+        const { useState, useEffect, useLayoutEffect, useRef, useMemo } = React;
 
-    <footer class="page-footer">
-        <div id="kpi-details-footer"></div>
-        <div class="priority-toggle-container">
-            <button class="toggle-btn active" data-priority="1">Active KPIs</button>
-            <button class="toggle-btn" data-priority="0">Inactive KPIs</button>
-        </div>
-    </footer>
-</div>
-
-<script>
-    // This variable will hold the data processed from the fetched CSV files.
-    let kpiDataStore = {};
-    let currentView = 'budget_target';
-    let kpiFilter = '1'; // '1' for Active, '0' for Inactive
-
-    // HIERARCHY TREE: Defines the static structure of the organization.
-    const hierarchyTree = {
-        id: 'n-company',
-        name: 'Company',
-        type: 'company',
-        level: 1,
-        children: [
-            { id: 'n-non-div', name: 'Non Division', type: 'division', level: 2, children: [] },
-            { id: 'n-div1', name: 'Division 1', type: 'division', level: 2, children: [] },
-            {
-                id: 'n-div2',
-                name: 'Division 2',
-                type: 'division',
-                level: 2,
-                children: [
-                    { id: 'n-area-a', name: 'Division Area A', type: 'area', level: 3, children: [] },
-                    {
-                        id: 'n-area-b',
-                        name: 'Division Area B',
-                        type: 'area',
-                        level: 3,
-                        children: [
-                            { id: 'n-reg1', name: 'Regional Division 1', type: 'regional', level: 4, children: [] },
-                            {
-                                id: 'n-reg2',
-                                name: 'Regional Division 2',
-                                type: 'regional',
-                                level: 4,
-                                children: [
-                                    { id: 'n-plant-a', name: 'Plant A', type: 'plant', level: 5, children: [] },
-                                    {
-                                        id: 'n-plant-b',
-                                        name: 'Plant B',
-                                        type: 'plant',
-                                        level: 5,
-                                        children: [
-                                            { id: 'n-pbo', name: 'Plant B Other*', type: 'plant_other_group', level: 6, children: [] },
-                                            { id: 'n-apu1', name: 'APU 1', type: 'apu', level: 6, children: [] },
-                                            {
-                                                id: 'n-apu2',
-                                                name: 'APU 2',
-                                                type: 'apu',
-                                                level: 6,
-                                                children: [
-                                                    { id: 'n-apu2o', name: 'APU 2 Other**', type: 'apu_other_group', level: 7, children: [] },
-                                                    { id: 'n-totem-a', name: 'Totem A', type: 'totem', level: 7, children: [] },
-                                                    {
-                                                        id: 'n-totem-b',
-                                                        name: 'Totem B',
-                                                        type: 'totem',
-                                                        level: 7,
-                                                        children: [
-                                                            {
-                                                                id: 'n-eg1',
-                                                                name: 'Equipment Group 1',
-                                                                type: 'equipment_group',
-                                                                level: 8,
-                                                                children: []
-                                                            },
-                                                            {
-                                                                id: 'n-eg2',
-                                                                name: 'Equipment Group 2',
-                                                                type: 'equipment_group',
-                                                                level: 8,
-                                                                children: [
-                                                                    { id: 'n-equip-b', name: 'Equipment B', type: 'equipment', level: 9, children: [] },
-                                                                    { id: 'n-equip-a', name: 'Equipment A', type: 'equipment', level: 9, children: [] }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    };
-    
-    // DOM Element references
-    const nodesContainer = document.getElementById('hierarchy-nodes');
-    const detailsFooter = document.getElementById('kpi-details-footer');
-    const kpiSelect = document.getElementById('kpi-select');
-    const toggleButtons = document.querySelectorAll('.toggle-container .toggle-btn');
-    const priorityToggleButtons = document.querySelectorAll('.priority-toggle-container .toggle-btn');
-    const statusIndicator = document.getElementById('status-indicator');
-    const mainContent = document.querySelector('.page-main');
-    
-    /**
-     * Fetches a CSV file from a specified URL.
-     * @param {string} url - The URL of the CSV file.
-     * @returns {Promise<string>} A promise that resolves with the text content of the file.
-     */
-    async function fetchCsvData(url) {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
-        }
-        return response.text();
-    }
-
-    /**
-     * Parses a CSV string into an array of objects.
-     * @param {string} csvText - The CSV content as a string.
-     * @param {string} delimiter - The delimiter used in the CSV file.
-     * @returns {Array<Object>} An array of objects representing the CSV rows.
-     */
-    function parseCSV(csvText, delimiter = ',') {
-        const lines = csvText.trim().split('\r\n').filter(line => line);
-        const headers = lines[0].split(delimiter).map(h => h.trim());
-        const rows = [];
-
-        for (let i = 1; i < lines.length; i++) {
-            const values = lines[i].split(new RegExp(`${delimiter}(?=(?:(?:[^"]*"){2})*[^"]*$)`));
-            const rowObject = {};
-            headers.forEach((header, index) => {
-                let value = (values[index] || '').trim();
-                if (value.startsWith('"') && value.endsWith('"')) {
-                    value = value.substring(1, value.length - 1);
+        // HIERARCHY TREE: Defines the static structure of the organization.
+        const hierarchyTree = {
+            id: 'n-company', name: 'Company', type: 'company', level: 1,
+            children: [
+                { id: 'n-non-div', name: 'Non Division', type: 'division', level: 2, children: [] },
+                { id: 'n-div1', name: 'Division 1', type: 'division', level: 2, children: [] },
+                {
+                    id: 'n-div2', name: 'Division 2', type: 'division', level: 2,
+                    children: [
+                        { id: 'n-area-a', name: 'Division Area A', type: 'area', level: 3, children: [] },
+                        {
+                            id: 'n-area-b', name: 'Division Area B', type: 'area', level: 3,
+                            children: [
+                                { id: 'n-reg1', name: 'Regional Division 1', type: 'regional', level: 4, children: [] },
+                                {
+                                    id: 'n-reg2', name: 'Regional Division 2', type: 'regional', level: 4,
+                                    children: [
+                                        { id: 'n-plant-a', name: 'Plant A', type: 'plant', level: 5, children: [] },
+                                        {
+                                            id: 'n-plant-b', name: 'Plant B', type: 'plant', level: 5,
+                                            children: [
+                                                { id: 'n-pbo', name: 'Plant B Other*', type: 'plant_other_group', level: 6, children: [] },
+                                                { id: 'n-apu1', name: 'APU 1', type: 'apu', level: 6, children: [] },
+                                                {
+                                                    id: 'n-apu2', name: 'APU 2', type: 'apu', level: 6,
+                                                    children: [
+                                                        { id: 'n-apu2o', name: 'APU 2 Other**', type: 'apu_other_group', level: 7, children: [] },
+                                                        { id: 'n-totem-a', name: 'Totem A', type: 'totem', level: 7, children: [] },
+                                                        {
+                                                            id: 'n-totem-b', name: 'Totem B', type: 'totem', level: 7,
+                                                            children: [
+                                                                { id: 'n-eg1', name: 'Equipment Group 1', type: 'equipment_group', level: 8, children: [] },
+                                                                {
+                                                                    id: 'n-eg2', name: 'Equipment Group 2', type: 'equipment_group', level: 8,
+                                                                    children: [
+                                                                        { id: 'n-equip-b', name: 'Equipment B', type: 'equipment', level: 9, children: [] },
+                                                                        { id: 'n-equip-a', name: 'Equipment A', type: 'equipment', level: 9, children: [] }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
-                rowObject[header] = value;
-            });
-            rows.push(rowObject);
-        }
-        return rows;
-    }
+            ]
+        };
 
-    /**
-     * Processes the fetched CSV data and populates the data store.
-     */
-    async function loadAndProcessData() {
-        try {
-            // Construct the raw GitHub content URLs
-            const user = "MadsBroder";
-            const repo = "SPM";
-            const branch = "main";
-            
-            const detailsFileUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/detailsCsvData.csv`;
-            const nodeFileUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/nodeCsvData.csv`;
-
-            // Fetch both CSV files concurrently
-            const [detailsCsvText, nodeCsvText] = await Promise.all([
-                fetchCsvData(detailsFileUrl),
-                fetchCsvData(nodeFileUrl)
-            ]);
-            
-            const detailsData = parseCSV(detailsCsvText, ';');
-            const nodeData = parseCSV(nodeCsvText, ';');
-            
-            const processedData = {};
-            console.log("--- Reading KPI Priorities from CSV ---");
-
-            // Process details and create the main structure
-            detailsData.forEach(detail => {
-                const kpiShortName = detail.kpi_short_name;
-                
-                // Find the priority key regardless of case ('Priority', 'priority', 'PRIORITY', etc.)
-                const priorityKey = Object.keys(detail).find(key => key.toLowerCase() === 'priority');
-                const priorityValue = priorityKey ? detail[priorityKey] : undefined;
-                
-                // Log the found KPI and its priority for debugging
-                console.log(`KPI: ${kpiShortName}, Priority Value: '${priorityValue}'`);
-
-                if (!processedData[kpiShortName]) {
-                    processedData[kpiShortName] = {
-                        kpi_expanded_name: detail.kpi_expanded_name,
-                        priority: priorityValue
-                    };
-                }
-                const view = detail.view_id.toLowerCase();
-                processedData[kpiShortName][view] = {
-                    nodes: {},
-                    details: {
-                        title: detail.detail_title,
-                        status: {
-                            state: detail.status_state.toLowerCase().replace(' ', '-'),
-                            text: detail.status_text
-                        },
-                        inputValueType: detail.input_value_type,
-                        period: detail.period,
-                        functionalScope: detail.functional_scope,
-                        aggregationSplit: detail.aggregation_split,
-                        guardRails: detail.guard_rails
-                    }
-                };
-            });
-             console.log("------------------------------------");
-
-            // Process node data and populate the nodes within the structure
-            nodeData.forEach(node => {
-                const kpiShortName = node.kpi_short_name;
-                const view = node.view_id.toLowerCase();
-                if (processedData[kpiShortName] && processedData[kpiShortName][view]) {
-                    processedData[kpiShortName][view].nodes[node.node_type] = {
-                        type: node.input_type ? node.input_type.toLowerCase() : 'disabled',
-                        text: node.main_text,
-                        sub: node.sub_text
-                    };
-                }
-            });
-            
-            kpiDataStore = processedData;
-            
-            populateKpiSelect();
-            updateView();
-
-        } catch (error) {
-            console.error("Error loading or processing data:", error);
-            nodesContainer.innerHTML = `<p style="color:red; text-align:center;">Failed to load visualization data from GitHub. Please check the repository structure and file names. See console for details.</p>`;
-        }
-    }
-
-    /**
-     * Filters and populates the KPI dropdown based on the selected priority.
-     */
-    function populateKpiSelect() {
-        const kpiNames = Object.keys(kpiDataStore);
-
-        const filteredKpis = kpiNames.filter(kpiShortName => {
-            // Use loose equality (==) to handle potential type differences (e.g., 1 == '1')
-            return kpiDataStore[kpiShortName].priority == kpiFilter;
-        });
-
-        const sortedKpis = filteredKpis.sort((a, b) => {
-            const nameA = kpiDataStore[a].kpi_expanded_name.toLowerCase();
-            const nameB = kpiDataStore[b].kpi_expanded_name.toLowerCase();
-            if (nameA < nameB) return -1;
-            if (nameA > nameB) return 1;
-            return 0;
-        });
-
-        kpiSelect.innerHTML = sortedKpis.map(kpiShortName => 
-            `<option value="${kpiShortName}">${kpiDataStore[kpiShortName].kpi_expanded_name}</option>`
-        ).join('');
-
-        if (sortedKpis.length === 0) {
-            nodesContainer.innerHTML = `<p style="text-align:center;">No ${kpiFilter === '1' ? 'Active' : 'Inactive'} KPIs found.</p>`;
-            detailsFooter.innerHTML = '';
-            statusIndicator.style.display = 'none';
-            const svg = document.getElementById('connector-svg');
-            if (svg) svg.innerHTML = '';
-        }
-    }
-
-    /**
-     * Draws SVG connecting lines between parent and child nodes in the hierarchy.
-     */
-    function drawConnectingLines() {
-        const svg = document.getElementById('connector-svg');
-        const container = document.getElementById('hierarchy-container');
-        if (!svg || !container) return;
-        
-        svg.innerHTML = '';
-        svg.style.height = container.scrollHeight + 'px';
-
-        function draw(node) {
-            if (!node.children || node.children.length === 0) return;
-            const parentWrapper = document.querySelector(`[data-node-id='${node.id}']`);
-            if (!parentWrapper) return;
-            
-            const pX = parentWrapper.offsetLeft + parentWrapper.offsetWidth / 2;
-            const pY = parentWrapper.offsetTop + parentWrapper.offsetHeight;
-
-            let minX = Infinity, maxX = -Infinity;
-            const childElements = node.children.map(childNode => {
-                const childWrapper = document.querySelector(`[data-node-id='${childNode.id}']`);
-                if (childWrapper) {
-                    const cX = childWrapper.offsetLeft + childWrapper.offsetWidth / 2;
-                    minX = Math.min(minX, cX);
-                    maxX = Math.max(maxX, cX);
-                }
-                return childWrapper;
-            }).filter(Boolean);
-
-            if (!childElements.length) return; 
-
-            const busY = pY + 20;
-
-            const parentPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-            parentPath.setAttribute('d', `M ${pX} ${pY} V ${busY}`);
-            parentPath.setAttribute('stroke', '#6c757d');
-            parentPath.setAttribute('stroke-width', '1.5');
-            parentPath.setAttribute('fill', 'none');
-            svg.appendChild(parentPath);
-            
-            // --- FIX START ---
-            // The horizontal bus must span from the parent's X to the full range of children's X positions
-            // to ensure the connecting lines always meet.
-            const busMinX = Math.min(pX, minX);
-            const busMaxX = Math.max(pX, maxX);
-
-            if (childElements.length > 1 || Math.abs(pX - minX) > 1) {
-                const busPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                // Use the corrected, wider range for the bus line.
-                busPath.setAttribute('d', `M ${busMinX} ${busY} H ${busMaxX}`);
-                busPath.setAttribute('stroke', '#6c757d');
-                busPath.setAttribute('stroke-width', '1.5');
-                busPath.setAttribute('fill', 'none');
-                svg.appendChild(busPath);
-            }
-            // --- FIX END ---
-            
-            childElements.forEach(childWrapper => {
-                const cX = childWrapper.offsetLeft + childWrapper.offsetWidth / 2;
-                const cY = childWrapper.offsetTop;
-                const childPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                childPath.setAttribute('d', `M ${cX} ${busY} V ${cY}`);
-                childPath.setAttribute('stroke', '#6c757d');
-                childPath.setAttribute('stroke-width', '1.5');
-                childPath.setAttribute('fill', 'none');
-                svg.appendChild(childPath);
-            });
-            
-            node.children.forEach(draw);
-        }
-        draw(hierarchyTree);
-    }
-
-    /**
-     * Main function to update the entire view based on current selections.
-     */
-    function updateView() {
-        try {
-            if (Object.keys(kpiDataStore).length === 0) {
-                return;
-            }
-            const selectedKpi = kpiSelect.value;
-            if (!selectedKpi) {
-                 // Message is already handled by populateKpiSelect if list is empty
-                 if (kpiSelect.options.length > 0) {
-                    nodesContainer.innerHTML = `<p style="text-align:center;">Select a KPI to begin.</p>`;
-                 }
-                 return;
-            }
-
-            const kpi = kpiDataStore[selectedKpi];
-            const data = kpi[currentView];
-
-            if (!data || !data.nodes) {
-                nodesContainer.innerHTML = `<p style="color:red; text-align:center;">Error: Data for this view is not available.</p>`;
-                detailsFooter.innerHTML = '';
-                statusIndicator.style.display = 'none';
-                return;
-            }
-            
+        const renderHierarchyLevels = (data) => {
             const levels = {};
             function traverse(node) {
                 if (!levels[node.level]) levels[node.level] = [];
@@ -575,146 +80,446 @@
                 if (node.children) node.children.forEach(traverse);
             }
             traverse(hierarchyTree);
-
-            let finalHtml = '';
             const sortedLevels = Object.keys(levels).sort((a, b) => a - b);
-            sortedLevels.forEach(level => {
-                const nodesHtml = levels[level].map(node => {
-                    const defaultNodeData = { type: 'disabled', text: 'Data not defined', sub: `For type: ${node.type}` };
-                    const nodeData = data.nodes[node.type] || defaultNodeData;
-
-                    const typeLabel = nodeData.type.charAt(0).toUpperCase() + nodeData.type.slice(1);
-                    const nodeColorClass = `node-l-${Math.min(node.level, 8)}`;
-                    return `
-                        <div class="node-wrapper" data-node-id="${node.id}">
-                            <div class="node ${nodeColorClass} ${nodeData.type === 'disabled' ? 'disabled' : ''}">${node.name}</div>
-                            <div class="info-box ${nodeData.type}" data-type="⚪ ${typeLabel}">
-                                <p class="maintext">${nodeData.text || ''}</p>
-                                ${nodeData.sub ? `<p class="subtext">${nodeData.sub}</p>` : ''}
+            return sortedLevels.map(level => (
+                <div className="hierarchy-level" key={level}>
+                    {levels[level].map(node => {
+                        const defaultNodeData = { type: 'disabled', text: 'Data not defined', sub: `For type: ${node.type}` };
+                        const nodeData = data?.nodes?.[node.type] || defaultNodeData;
+                        const typeLabel = nodeData.type.charAt(0).toUpperCase() + nodeData.type.slice(1);
+                        const nodeColorClass = `node-l-${Math.min(node.level, 8)}`;
+                        return (
+                            <div className="node-wrapper" data-node-id={node.id} key={node.id}>
+                                <div className={`node ${nodeColorClass} ${nodeData.type === 'disabled' ? 'disabled' : ''}`}>{node.name}</div>
+                                <div className={`info-box ${nodeData.type}`} data-type={typeLabel}>
+                                    <p className="maintext">{nodeData.text || ''}</p>
+                                    {nodeData.sub && <p className="subtext">{nodeData.sub}</p>}
+                                </div>
                             </div>
-                        </div>`;
-                }).join('');
-                finalHtml += `<div class="hierarchy-level">${nodesHtml}</div>`;
-            });
-            nodesContainer.innerHTML = finalHtml;
-            
-            renderFooterDetails(data.details);
-            updateStatus(data.details.status);
-
-            document.querySelectorAll('.info-box.manual').forEach(el => el.dataset.type = '🔴 Manual');
-            document.querySelectorAll('.info-box.auto').forEach(el => el.dataset.type = '🔵 Automatic');
-            
-            requestAnimationFrame(() => setTimeout(drawConnectingLines, 50));
-        } catch (error) {
-            console.error("A critical error occurred during view update:", error);
-            nodesContainer.innerHTML = `<p style="color:red; text-align:center;">A critical error occurred. Please check the console for details.</p>`;
-        }
-    }
-    
-    function updateStatus(status) {
-        if (!status || !status.state) {
-            statusIndicator.style.display = 'none';
-            return;
-        }
-        statusIndicator.style.display = 'inline-block';
-        statusIndicator.textContent = status.text;
-        statusIndicator.className = 'status-indicator';
-        statusIndicator.classList.add(status.state);
-    }
-
-    function renderFooterDetails(details) {
-        // Hardcoded tooltip text. You can change these values.
-        const tooltips = {
-            inputValueType: "Define if the value is a percentage, an absolute number, currency, etc.",
-            period: "Define the time period for which this KPI is available (e.g. shift, day, month, year).",
-            functionalScope: "Describe the hierarchical levels this KPI is available on.",
-            aggregationSplit: "Describe the rules for aggregating data upwards or splitting the data downwards in the hierarchy as well as for multi select. E.g. weighted according to x, or aggregated as flat average.",
-            guardRails: "Define any constraints, limits, or validation rules for the input values."
+                        );
+                    })}
+                </div>
+            ));
         };
 
-        detailsFooter.innerHTML = `
-            <h2>KPI Details: ${details.title || ''}</h2>
-            <div class="details-grid">
-                <div class="detail-item">
-                    <div class="detail-heading">
-                        <strong>Input Value Type</strong>
-                        <div class="info-tooltip">
-                            <span class="info-icon">i</span>
-                            <span class="tooltip-text">${tooltips.inputValueType}</span>
-                        </div>
-                    </div>
-                    <span>${details.inputValueType || 'N/A'}</span>
-                </div>
-                <div class="detail-item">
-                    <div class="detail-heading">
-                        <strong>Period</strong>
-                        <div class="info-tooltip">
-                            <span class="info-icon">i</span>
-                            <span class="tooltip-text">${tooltips.period}</span>
-                        </div>
-                    </div>
-                    <span>${details.period || 'N/A'}</span>
-                </div>
-                <div class="detail-item">
-                     <div class="detail-heading">
-                        <strong>Functional Scope</strong>
-                        <div class="info-tooltip">
-                            <span class="info-icon">i</span>
-                            <span class="tooltip-text">${tooltips.functionalScope}</span>
-                        </div>
-                    </div>
-                    <span>${details.functionalScope || 'N/A'}</span>
-                </div>
-                <div class="detail-item">
-                    <div class="detail-heading">
-                        <strong>Aggregation/Split</strong>
-                        <div class="info-tooltip">
-                            <span class="info-icon">i</span>
-                            <span class="tooltip-text">${tooltips.aggregationSplit}</span>
-                        </div>
-                    </div>
-                    <span>${details.aggregationSplit || 'N/A'}</span>
-                </div>
-                <div class="detail-item">
-                    <div class="detail-heading">
-                        <strong>Guard Rails</strong>
-                        <div class="info-tooltip">
-                            <span class="info-icon">i</span>
-                            <span class="tooltip-text">${tooltips.guardRails}</span>
-                        </div>
-                    </div>
-                    <span>${details.guardRails || 'N/A'}</span>
-                </div>
-            </div>`;
-    }
+        const InfoTooltip = ({ text, children }) => (
+            <div className="info-tooltip">
+                <span className="info-icon">i</span>
+                <span className="tooltip-text">{text}</span>
+                {children}
+            </div>
+        );
 
-    function handleToggleClick(e) {
-        toggleButtons.forEach(btn => btn.classList.remove('active'));
-        e.target.classList.add('active');
-        currentView = e.target.dataset.view;
-        updateView();
-    }
+        const App = () => {
+            const [kpiDataStore, setKpiDataStore] = useState({});
+            const [currentView, setCurrentView] = useState('budget_target');
+            const [kpiFilter, setKpiFilter] = useState('1');
+            const [selectedKpi, setSelectedKpi] = useState('');
+            const [isLoading, setIsLoading] = useState(true);
+            const [error, setError] = useState(null);
+            const containerRef = useRef(null);
+            const svgRef = useRef(null);
+            const mainContentRef = useRef(null);
 
-    function handlePriorityToggleClick(e) {
-        priorityToggleButtons.forEach(btn => btn.classList.remove('active'));
-        e.currentTarget.classList.add('active');
-        kpiFilter = e.currentTarget.dataset.priority;
-        populateKpiSelect();
-        updateView();
-    }
+            useEffect(() => {
+                const fetchCsvData = async (url) => {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+                    return response.text();
+                };
+                const parseCSV = (csvText, delimiter = ',') => {
+                    const lines = csvText.trim().split(/\r?\n/).filter(line => line);
+                    if (lines.length < 1) return [];
+                    const headers = lines[0].split(delimiter).map(h => h.trim());
+                    const rows = [];
+                    for (let i = 1; i < lines.length; i++) {
+                        const values = lines[i].split(new RegExp(`${delimiter}(?=(?:(?:[^"]*"){2})*[^"]*$)`));
+                        const rowObject = {};
+                        headers.forEach((header, index) => {
+                            let value = (values[index] || '').trim();
+                            if (value.startsWith('"') && value.endsWith('"')) value = value.substring(1, value.length - 1);
+                            rowObject[header] = value;
+                        });
+                        rows.push(rowObject);
+                    }
+                    return rows;
+                };
+                const loadAndProcessData = async () => {
+                    setIsLoading(true);
+                    setError(null);
+                    try {
+                        const user = "MadsBroder", repo = "SPM", branch = "main";
+                        const detailsFileUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/detailsCsvData.csv`;
+                        const nodeFileUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/nodeCsvData.csv`;
+                        const [detailsCsvText, nodeCsvText] = await Promise.all([fetchCsvData(detailsFileUrl), fetchCsvData(nodeFileUrl)]);
+                        const detailsData = parseCSV(detailsCsvText, ';');
+                        const nodeData = parseCSV(nodeCsvText, ';');
+                        const processedData = {};
+                        detailsData.forEach(detail => {
+                            const kpiShortName = detail.kpi_short_name;
+                            const priorityKey = Object.keys(detail).find(key => key.toLowerCase() === 'priority');
+                            const priorityValue = priorityKey ? detail[priorityKey] : undefined;
+                            if (!processedData[kpiShortName]) {
+                                processedData[kpiShortName] = { kpi_expanded_name: detail.kpi_expanded_name, priority: priorityValue };
+                            }
+                            const view = detail.view_id.toLowerCase();
+                            processedData[kpiShortName][view] = {
+                                nodes: {},
+                                details: {
+                                    title: detail.detail_title,
+                                    status: { state: detail.status_state.toLowerCase().replace(' ', '-'), text: detail.status_text },
+                                    inputValueType: detail.input_value_type,
+                                    period: detail.period,
+                                    functionalScope: detail.functional_scope,
+                                    aggregationSplit: detail.aggregation_split,
+                                    guardRails: detail.guard_rails
+                                }
+                            };
+                        });
+                        nodeData.forEach(node => {
+                            const kpiShortName = node.kpi_short_name;
+                            const view = node.view_id.toLowerCase();
+                            if (processedData[kpiShortName] && processedData[kpiShortName][view]) {
+                                processedData[kpiShortName][view].nodes[node.node_type] = {
+                                    type: node.input_type ? node.input_type.toLowerCase() : 'disabled',
+                                    text: node.main_text,
+                                    sub: node.sub_text
+                                };
+                            }
+                        });
+                        setKpiDataStore(processedData);
+                    } catch (err) {
+                        console.error("Error loading or processing data:", err);
+                        setError("Failed to load visualization data. Please check the data source and console for details.");
+                    } finally {
+                        setIsLoading(false);
+                    }
+                };
+                loadAndProcessData();
+            }, []);
 
-    // --- EVENT LISTENERS ---
-    kpiSelect.addEventListener('change', updateView);
-    toggleButtons.forEach(btn => btn.addEventListener('click', handleToggleClick));
-    priorityToggleButtons.forEach(btn => btn.addEventListener('click', handlePriorityToggleClick));
-    
-    new ResizeObserver(drawConnectingLines).observe(nodesContainer);
-    mainContent.addEventListener('scroll', drawConnectingLines);
-    
-    // --- INITIALIZATION ---
-    document.addEventListener('DOMContentLoaded', () => {
-        loadAndProcessData();
-    });
-</script>
+            const sortedKpis = useMemo(() => {
+                return Object.keys(kpiDataStore)
+                    .filter(kpiShortName => kpiDataStore[kpiShortName].priority == kpiFilter)
+                    .sort((a, b) => kpiDataStore[a].kpi_expanded_name.localeCompare(kpiDataStore[b].kpi_expanded_name));
+            }, [kpiDataStore, kpiFilter]);
+
+            useEffect(() => {
+                if (sortedKpis.length > 0 && !selectedKpi) {
+                    setSelectedKpi(sortedKpis[0]);
+                } else if (sortedKpis.length > 0 && !sortedKpis.includes(selectedKpi)) {
+                    setSelectedKpi(sortedKpis[0]);
+                } else if (sortedKpis.length === 0) {
+                    setSelectedKpi('');
+                }
+            }, [sortedKpis, selectedKpi]);
+
+            useLayoutEffect(() => {
+                const drawConnectingLines = () => {
+                    const svg = svgRef.current;
+                    const container = containerRef.current;
+                    if (!svg || !container) return;
+                    svg.innerHTML = '';
+                    svg.style.height = container.scrollHeight + 'px';
+                    function draw(node) {
+                        if (!node.children || node.children.length === 0) return;
+                        const parentWrapper = container.querySelector(`[data-node-id='${node.id}']`);
+                        if (!parentWrapper) return;
+                        const pX = parentWrapper.offsetLeft + parentWrapper.offsetWidth / 2;
+                        const pY = parentWrapper.offsetTop + parentWrapper.offsetHeight;
+                        let minX = Infinity, maxX = -Infinity;
+                        const childElements = node.children.map(childNode => {
+                            const childWrapper = container.querySelector(`[data-node-id='${childNode.id}']`);
+                            if (childWrapper) {
+                                const cX = childWrapper.offsetLeft + childWrapper.offsetWidth / 2;
+                                minX = Math.min(minX, cX);
+                                maxX = Math.max(maxX, cX);
+                            }
+                            return childWrapper;
+                        }).filter(Boolean);
+                        if (!childElements.length) return;
+                        const busY = pY + 20;
+                        const createPath = (d) => {
+                            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                            path.setAttribute('d', d);
+                            path.setAttribute('stroke', '#6c757d');
+                            path.setAttribute('stroke-width', '1.5');
+                            path.setAttribute('fill', 'none');
+                            return path;
+                        };
+                        svg.appendChild(createPath(`M ${pX} ${pY} V ${busY}`));
+                        const busMinX = Math.min(pX, minX);
+                        const busMaxX = Math.max(pX, maxX);
+                        if (childElements.length > 1 || Math.abs(pX - minX) > 1) {
+                            svg.appendChild(createPath(`M ${busMinX} ${busY} H ${busMaxX}`));
+                        }
+                        childElements.forEach(childWrapper => {
+                            const cX = childWrapper.offsetLeft + childWrapper.offsetWidth / 2;
+                            const cY = childWrapper.offsetTop;
+                            svg.appendChild(createPath(`M ${cX} ${busY} V ${cY}`));
+                        });
+                        node.children.forEach(draw);
+                    }
+                    draw(hierarchyTree);
+                };
+                const timer = setTimeout(drawConnectingLines, 50);
+                const resizeObserver = new ResizeObserver(drawConnectingLines);
+                if (containerRef.current) resizeObserver.observe(containerRef.current);
+                const mainContentEl = mainContentRef.current;
+                if (mainContentEl) mainContentEl.addEventListener('scroll', drawConnectingLines);
+                return () => {
+                    clearTimeout(timer);
+                    resizeObserver.disconnect();
+                    if (mainContentEl) mainContentEl.removeEventListener('scroll', drawConnectingLines);
+                };
+            }, [selectedKpi, currentView, kpiDataStore, sortedKpis]);
+
+            const currentKpiData = kpiDataStore[selectedKpi];
+            const currentDisplayData = currentKpiData?.[currentView];
+            const status = currentDisplayData?.details?.status;
+            const tooltips = {
+                inputValueType: "Define if the value is a percentage, an absolute number, currency, etc.",
+                period: "Define the time period for which this KPI is available (e.g. shift, day, month, year).",
+                functionalScope: "Describe the hierarchical levels this KPI is available on.",
+                aggregationSplit: "Describe the rules for aggregating data upwards or splitting the data downwards in the hierarchy as well as for multi select. E.g. weighted according to x, or aggregated as flat average.",
+                guardRails: "Define any constraints, limits, or validation rules for the input values."
+            };
+
+            return (
+                <>
+                <style>{`
+                    :root {
+                        --node-l1: #003B5C; --node-l2: #005A8C; --node-l3: #0077B6;
+                        --node-l4: #48A2D4; --node-l5: #87CEEB;
+                        --manual-bg: #FFEBEB; --manual-border: #E57373;
+                        --auto-bg: #E3F2FD; --auto-border: #64B5F6;
+                        --disabled-bg: #F5F5F5;
+                        --text-light: #FFFFFF; --text-dark: #333333;
+                        --status-review-bg: #FFEBEE; --status-review-text: #D32F2F;
+                        --status-approved-bg: #E8F5E9; --status-approved-text: #388E3C;
+                    }
+                    html, body, #root {
+                        height: 100vh; max-height: 100vh; overflow: hidden; margin: 0;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                        background-color: #f8f9fa;
+                    }
+                    .page-container { display: flex; flex-direction: column; height: 100%; }
+                    .page-header, .page-footer { flex-shrink: 0; z-index: 10; }
+                    .page-header { position: relative; }
+                    .page-footer { position: relative; background-color: #11497B; color: var(--text-light); border-top: 1px solid #4A7D9F;}
+                    .header-main-title {
+                        background-color: #092844; color: var(--text-light); padding: 10px 20px;
+                        position: relative; display: flex; align-items: center; gap: 15px;
+                    }
+                    .header-icon { height: 40px; width: 40px; }
+                    .page-main { flex-grow: 1; overflow-y: auto; overflow-x: hidden; position: relative; }
+                    h1 {
+                        color: var(--text-light); text-align: center; margin: 0; flex-grow: 1;
+                        font-size: 1.8rem; font-weight: 700;
+                    }
+                    .controls { 
+                        display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; 
+                        background-color: #11497B; padding: 15px; border-bottom: 1px solid #4A7D9F;
+                    }
+                    .controls label { font-size: 14px; color: var(--text-light); }
+                    .controls select { font-size: 14px; border-radius: 6px; padding: 6px 8px; border: 1px solid #ccc; color: var(--text-dark); }
+                    .toggle-container { display: flex; gap: 10px; }
+                    .toggle-btn { 
+                        padding: 8px 12px; border-radius: 8px; cursor: pointer;
+                        background-color: #E9ECEF; color: var(--text-dark); border: 1px solid #CED4DA;
+                        font-size: 14px;
+                    }
+                    .toggle-btn.active { background-color: var(--node-l4); color: var(--text-light); border-color: var(--node-l4); }
+                    .status-indicator {
+                        position: absolute; top: 50%; transform: translateY(-50%); right: 15px; padding: 6px 12px;
+                        border-radius: 16px; font-size: 12px; font-weight: 600;
+                    }
+                    .status-indicator.under-review { background-color: var(--status-review-bg); color: var(--status-review-text); }
+                    .status-indicator.approved { background-color: var(--status-approved-bg); color: var(--status-approved-text); }
+                    .hierarchy-container {
+                        display: flex; flex-direction: column; align-items: center;
+                        padding: 20px 10px; position: relative;
+                    }
+                    #connector-svg {
+                        position: absolute; top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        pointer-events: none; z-index: 1;
+                    }
+                    .hierarchy-level {
+                        display: flex; justify-content: center; flex-wrap: wrap;
+                        gap: 20px; width: 100%; margin-bottom: 40px;
+                    }
+                    .node-wrapper {
+                        display: flex; flex-direction: column; align-items: center; gap: 8px;
+                        position: relative; z-index: 2; background: #f8f9fa; padding: 0 5px;
+                    }
+                    .node {
+                        padding: 8px 15px; border-radius: 8px; color: var(--text-light);
+                        font-weight: 500; width: 180px; text-align: center;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    }
+                    .node-l-1 { background-color: var(--node-l1); }
+                    .node-l-2 { background-color: var(--node-l2); }
+                    .node-l-3 { background-color: var(--node-l3); }
+                    .node-l-4 { background-color: var(--node-l4); }
+                    .node-l-5 { background-color: var(--node-l5); }
+                    .node-l-6 { background-color: #a3d5f0; }
+                    .node-l-7 { background-color: #bce1f4; }
+                    .node-l-8 { background-color: #d6edf8; color: var(--text-dark); }
+                    .node.disabled { background-color: #BDBDBD; }
+                    .info-box {
+                        padding: 10px; border: 2px dashed; border-radius: 8px;
+                        width: 180px; min-height: 70px;
+                        display: flex; flex-direction: column; justify-content: center;
+                        position: relative; text-align: center;
+                    }
+                    .info-box::before {
+                        content: attr(data-type); position: absolute; top: -12px; left: 50%;
+                        transform: translateX(-50%); background: #f8f9fa; padding: 2px 8px;
+                        border-radius: 12px; font-size: 12px; font-weight: bold;
+                        border: 1px solid #e0e0e0; white-space: nowrap; color: var(--text-dark);
+                    }
+                    .info-box.manual { background-color: var(--manual-bg); border-color: var(--manual-border); }
+                    .info-box.auto { background-color: var(--auto-bg); border-color: var(--auto-border); }
+                    .info-box.disabled { background-color: var(--disabled-bg); border-color: #ddd; }
+                    .info-box p { margin: 2px 0; white-space: normal; color: var(--text-dark);}
+                    .info-box .maintext { font-size: 12px; }
+                    .info-box .subtext { font-size: 11px; color: #666; margin-top: 4px; }
+                    #kpi-details-footer { padding: 20px; }
+                    #kpi-details-footer h2 {
+                        margin-top: 0; color: var(--text-light); font-weight: bold;
+                    }
+                    .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+                    .detail-item strong { color: var(--node-l5); }
+                    .detail-item .detail-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+                    .loader { text-align: center; padding: 40px; font-size: 18px; color: #666; }
+                    .info-tooltip { position: relative; display: inline-block; }
+                    .info-icon {
+                        display: inline-flex; align-items: center; justify-content: center;
+                        width: 18px; height: 18px; border-radius: 50%; background-color: #a0aec0;
+                        color: white; font-family: 'Times New Roman', Times, serif; font-size: 14px;
+                        font-weight: bold; font-style: italic; line-height: 18px;
+                        text-align: center; cursor: help; user-select: none;
+                    }
+                    .info-tooltip .tooltip-text {
+                        visibility: hidden; width: 250px; background-color: #2d3748;
+                        color: #fff; text-align: left; border-radius: 6px; padding: 10px;
+                        position: absolute; z-index: 100; bottom: 150%; left: 50%;
+                        transform: translateX(-50%); opacity: 0; transition: opacity 0.3s ease;
+                        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                        font-size: 12px; font-weight: normal; line-height: 1.4;
+                    }
+                    .info-tooltip .tooltip-text::after {
+                        content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px;
+                        border-width: 5px; border-style: solid; border-color: #2d3748 transparent transparent transparent;
+                    }
+                    .info-tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+                    .priority-toggle-container {
+                        position: absolute; bottom: 15px; right: 15px; display: flex; gap: 10px;
+                    }
+                `}</style>
+                <div className="page-container">
+                    <header className="page-header">
+                        <div className="header-main-title">
+                            <img src="https://raw.githubusercontent.com/MadsBroder/SPM/main/archimedes_white.png" alt="SPM Logo" className="header-icon" />
+                            <h1>SPM - KPI Data Input Overview</h1>
+                             {status?.state && (
+                                <div id="status-indicator" className={`status-indicator ${status.state}`}>
+                                    {status.text}
+                                </div>
+                            )}
+                        </div>
+                        <div className="controls">
+                            <label htmlFor="kpi-select">Select KPI:</label>
+                            <select id="kpi-select" value={selectedKpi} onChange={(e) => setSelectedKpi(e.target.value)} disabled={sortedKpis.length === 0}>
+                                {sortedKpis.map(kpiShortName => (
+                                    <option key={kpiShortName} value={kpiShortName}>
+                                        {kpiDataStore[kpiShortName].kpi_expanded_name}
+                                    </option>
+                                ))}
+                            </select>
+                            <div className="toggle-container">
+                                <button className={`toggle-btn ${currentView === 'budget_target' ? 'active' : ''}`} onClick={() => setCurrentView('budget_target')}>Budget Targets</button>
+                                <button className={`toggle-btn ${currentView === 'running_target' ? 'active' : ''}`} onClick={() => setCurrentView('running_target')}>Running Targets</button>
+                                <button className={`toggle-btn ${currentView === 'manual_input_actual' ? 'active' : ''}`} onClick={() => setCurrentView('manual_input_actual')}>Manual Input - Actuals</button>
+                            </div>
+                        </div>
+                    </header>
+                    <main className="page-main" ref={mainContentRef}>
+                        <div id="hierarchy-container" className="hierarchy-container" ref={containerRef}>
+                            <svg id="connector-svg" ref={svgRef}></svg>
+                            <div id="hierarchy-nodes">
+                                {isLoading && <div className="loader">Loading KPI data...</div>}
+                                {error && <p className="text-red-500 text-center">{error}</p>}
+                                {!isLoading && !error && (
+                                    sortedKpis.length === 0
+                                        ? <p style={{textAlign: 'center'}}>No {kpiFilter === '1' ? 'Active' : 'Inactive'} KPIs found.</p>
+                                        : !currentDisplayData?.nodes
+                                            ? <p className="text-red-500 text-center">Error: Data for this view is not available.</p>
+                                            : renderHierarchyLevels(currentDisplayData)
+                                )}
+                            </div>
+                        </div>
+                    </main>
+                    <footer className="page-footer">
+                        <div id="kpi-details-footer">
+                           {currentDisplayData?.details && (
+                                <>
+                                    <h2>KPI Details: {currentDisplayData.details.title || ''}</h2>
+                                    <div className="details-grid">
+                                        <div className="detail-item">
+                                            <div className="detail-heading">
+                                                <strong>Input Value Type</strong>
+                                                <InfoTooltip text={tooltips.inputValueType} />
+                                            </div>
+                                            <span>{currentDisplayData.details.inputValueType || 'N/A'}</span>
+                                        </div>
+                                        <div className="detail-item">
+                                            <div className="detail-heading">
+                                                <strong>Period</strong>
+                                                <InfoTooltip text={tooltips.period} />
+                                            </div>
+                                            <span>{currentDisplayData.details.period || 'N/A'}</span>
+                                        </div>
+                                        <div className="detail-item">
+                                            <div className="detail-heading">
+                                                <strong>Functional Scope</strong>
+                                                <InfoTooltip text={tooltips.functionalScope} />
+                                            </div>
+                                            <span>{currentDisplayData.details.functionalScope || 'N/A'}</span>
+                                        </div>
+                                        <div className="detail-item">
+                                            <div className="detail-heading">
+                                                <strong>Aggregation/Split</strong>
+                                                <InfoTooltip text={tooltips.aggregationSplit} />
+                                            </div>
+                                            <span>{currentDisplayData.details.aggregationSplit || 'N/A'}</span>
+                                        </div>
+                                        <div className="detail-item">
+                                            <div className="detail-heading">
+                                                <strong>Guard Rails</strong>
+                                                <InfoTooltip text={tooltips.guardRails} />
+                                            </div>
+                                            <span>{currentDisplayData.details.guardRails || 'N/A'}</span>
+                                        </div>
+                                    </div>
+                                </>
+                           )}
+                        </div>
+                        <div className="priority-toggle-container">
+                            <button className={`toggle-btn ${kpiFilter === '1' ? 'active' : ''}`} onClick={() => setKpiFilter('1')}>Active KPIs</button>
+                            <button className={`toggle-btn ${kpiFilter === '0' ? 'active' : ''}`} onClick={() => setKpiFilter('0')}>Inactive KPIs</button>
+                        </div>
+                    </footer>
+                </div>
+                </>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+
+    </script>
 </body>
 </html>
+
